@@ -1,7 +1,7 @@
 import data.DataTaux;
+import dataAccess.DaoData;
 import parse.ParseCSV;
 import parse.ReadCSV;
-import persistence.DaoData;
 
 import java.util.ArrayList;
 import java.util.List;

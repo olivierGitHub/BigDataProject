@@ -1,11 +1,13 @@
-package persistence;
+package dataAccess;
 
 import data.DataTaux;
+
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+
 
 /**
  * Created by oliver on 24/01/15.
