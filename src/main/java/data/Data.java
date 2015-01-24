@@ -1,10 +1,18 @@
 package data;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  * Created by oliver on 24/01/15.
  */
+@Entity
 public class Data {
 
+    @Id
+    @GeneratedValue
+    private int id;
     private String country;
     private String year2011;
     private String year2012;
@@ -12,6 +20,10 @@ public class Data {
     private String year2014;
 
     public Data(){
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getCountry() {

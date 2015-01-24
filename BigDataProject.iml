@@ -9,7 +9,7 @@
           <factory-entry name="BigDataProjectPU" value="abf43051-0f61-4400-9735-63f774b0f41e" />
           <factory-entry name="NewPersistenceUnit" value="b04b1012-6918-4d8b-8a31-d1c9dd65dc23" />
         </datasource-mapping>
-        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/java/META-INF/persistence.xml" />
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>
     </facet>
   </component>

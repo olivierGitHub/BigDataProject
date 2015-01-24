@@ -1,6 +1,7 @@
 import data.Data;
 import parse.ParseCSV;
 import parse.ReadCSV;
+import persistence.DAOdata;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +20,7 @@ public class Main {
 
         list = parse.parseCsvFile();
         for(Data data : list){
+            DAOdata.getInstance().create(data);
             System.out.println(data.getCountry());
         }
     }
