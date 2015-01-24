@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eaccb8c3-b305-4cfb-8c61-e6c8830e65ad" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/persistence/DaoData.java" afterPath="$PROJECT_DIR$/src/main/java/persistence/DaoData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/persistence/DaoData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BigDataProject.iws" />
@@ -74,7 +73,7 @@
       <file leaf-file-name="persistence.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="59" selection-start="804" selection-end="804" vertical-scroll-proportion="0.39464286" vertical-offset="0" max-vertical-offset="560">
+            <state line="19" column="0" selection-start="1032" selection-end="1032" vertical-scroll-proportion="0.57678574" vertical-offset="0" max-vertical-offset="560">
               <folding />
             </state>
           </provider>
@@ -587,7 +586,7 @@
       <workItem from="1422059986812" duration="9236000" />
       <workItem from="1422070040585" duration="4500000" />
       <workItem from="1422074627459" duration="2962000" />
-      <workItem from="1422077946793" duration="471000" />
+      <workItem from="1422077946793" duration="498000" />
     </task>
     <task id="LOCAL-00001" summary="ajout config JPA&#10;&#10;au cas ou&#10;">
       <created>1422060590477</created>
@@ -645,11 +644,15 @@
       <created>1422078270710</created>
       <updated>1422078270710</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="refactor&#10;&#10;pour clarté&#10;">
+      <created>1422078429466</created>
+      <updated>1422078429466</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17169000" />
+    <option name="totallyTimeSpent" value="17196000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -973,7 +976,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="59" selection-start="804" selection-end="804" vertical-scroll-proportion="0.39464286" vertical-offset="0" max-vertical-offset="560">
+        <state line="19" column="0" selection-start="1032" selection-end="1032" vertical-scroll-proportion="0.57678574" vertical-offset="0" max-vertical-offset="560">
           <folding />
         </state>
       </provider>
