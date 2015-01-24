@@ -12,7 +12,6 @@ public class ReadCSV {
 
     private String file;
 
-
     public ReadCSV(String file){
         this.file = file;
     }

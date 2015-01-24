@@ -15,11 +15,9 @@ public class ParseCSV {
 
     private BufferedReader br;
 
-
     public ParseCSV(BufferedReader br){
         this.br = br;
     }
-
 
     public int countLines(){
         String line;
@@ -42,7 +40,6 @@ public class ParseCSV {
 
         try{
             while ((line=br.readLine())!=null){
-
                 DataTaux dataTaux = new DataTaux();
                 st = new StringTokenizer(line,";");
                 while (st.hasMoreTokens()){
@@ -64,13 +61,11 @@ public class ParseCSV {
                 list.add(dataTaux);
                 count =0;
                 }
-
         }catch(IOException ioEx){
               ioEx.printStackTrace();
             }
         return list;
         }
-
     }
 
 
