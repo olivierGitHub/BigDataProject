@@ -521,7 +521,7 @@
       <updated>1422059982418</updated>
       <workItem from="1422059986812" duration="9236000" />
       <workItem from="1422070040585" duration="4500000" />
-      <workItem from="1422074627459" duration="647000" />
+      <workItem from="1422074627459" duration="658000" />
     </task>
     <task id="LOCAL-00001" summary="ajout config JPA&#10;&#10;au cas ou&#10;">
       <created>1422060590477</created>
@@ -555,11 +555,15 @@
       <created>1422075228046</created>
       <updated>1422075228046</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ajout persistence (JPA) uniquement &quot;create&quot; et &quot;read&quot;&#10;&#10;au cas où, à voir si on part plus sur une archi JDBC avec une BDD crée manuellement ou si on conserve une création de base automatisé&#10;">
+      <created>1422075283316</created>
+      <updated>1422075283316</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14383000" />
+    <option name="totallyTimeSpent" value="14394000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
