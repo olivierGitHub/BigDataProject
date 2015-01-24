@@ -1,4 +1,4 @@
-import data.Data;
+import data.DataTaux;
 import org.testng.annotations.BeforeMethod;
 import static org.fest.assertions.api.Assertions.assertThat;
 
@@ -39,7 +39,7 @@ public class BigDataProjectTEST {
     public void shouldParseFileToDataObject(){
         BufferedReader br = getBufferedReader();
         ParseCSV parse = new ParseCSV(br);
-        List<Data> list = new ArrayList<Data>();
+        List<DataTaux> list = new ArrayList<DataTaux>();
 
         list = parse.parseCsvFile();
 

@@ -1,11 +1,9 @@
 package parse;
 
-import data.Data;
+import data.DataTaux;
 
 import java.io.BufferedReader;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -36,8 +34,8 @@ public class ParseCSV {
         return count;
     }
 
-    public List<Data> parseCsvFile(){
-        List<Data> list = new ArrayList<Data>();
+    public List<DataTaux> parseCsvFile(){
+        List<DataTaux> list = new ArrayList<DataTaux>();
         StringTokenizer st = null;
         String line = null;
         int count=0;
@@ -45,25 +43,25 @@ public class ParseCSV {
         try{
             while ((line=br.readLine())!=null){
 
-                Data data = new Data();
+                DataTaux dataTaux = new DataTaux();
                 st = new StringTokenizer(line,";");
                 while (st.hasMoreTokens()){
                     count++;
                     if (count==1)
-                        data.setCountry(st.nextToken());
+                        dataTaux.setCountry(st.nextToken());
 
                     else if (count==13)
-                        data.setYear2011(st.nextToken());
+                        dataTaux.setYear2011(st.nextToken());
                     else if (count==14)
-                        data.setYear2012(st.nextToken());
+                        dataTaux.setYear2012(st.nextToken());
                     else if (count==15)
-                        data.setYear2013(st.nextToken());
+                        dataTaux.setYear2013(st.nextToken());
                     else if (count==16)
-                        data.setYear2014(st.nextToken());
+                        dataTaux.setYear2014(st.nextToken());
                     else
                         st.nextToken();
                 }
-                list.add(data);
+                list.add(dataTaux);
                 count =0;
                 }
 

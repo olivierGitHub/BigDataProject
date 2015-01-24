@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eaccb8c3-b305-4cfb-8c61-e6c8830e65ad" name="Default" comment="ajout persistence (JPA) uniquement &quot;create&quot; et &quot;read&quot;&#10;&#10;au cas où, à voir si on part plus sur une archi JDBC avec une BDD crée manuellement ou si on conserve une création de base automatisé&#10;">
+    <list default="true" id="eaccb8c3-b305-4cfb-8c61-e6c8830e65ad" name="Default" comment="">
       <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/persistence/DaoData.java" afterPath="$PROJECT_DIR$/src/main/java/persistence/DaoData.java" />
+      <change type="MOVED" beforePath="C:\Users\oliver\INFORMATIQUE - Projets\IdeaProjectWorkspace\BigDataProject\src\main\java\data\Data.java" afterPath="$PROJECT_DIR$/src/main/java/data/DataTaux.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/BigDataProjectTEST.java" afterPath="$PROJECT_DIR$/src/test/java/BigDataProjectTEST.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/parse/ParseCSV.java" afterPath="$PROJECT_DIR$/src/main/java/parse/ParseCSV.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BigDataProject.iws" />
@@ -74,7 +78,7 @@
       <file leaf-file-name="DiscriminatingFactor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/algorithme/DiscriminatingFactor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="33" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+            <state line="5" column="33" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="221">
               <folding />
             </state>
           </provider>
@@ -83,10 +87,8 @@
       <file leaf-file-name="DaoData.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/persistence/DaoData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="23" selection-start="1360" selection-end="1360" vertical-scroll-proportion="0.0" vertical-offset="725" max-vertical-offset="1190">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="53" column="23" selection-start="1400" selection-end="1400" vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="1224">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -94,7 +96,7 @@
       <file leaf-file-name="ReadCSV.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/parse/ReadCSV.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="4" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="612">
+            <state line="23" column="4" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="697">
               <folding />
             </state>
           </provider>
@@ -103,11 +105,8 @@
       <file leaf-file-name="BigDataProjectTEST.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/BigDataProjectTEST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="40" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.0" vertical-offset="664" max-vertical-offset="1071">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#942#948#0" expanded="true" />
-              </folding>
+            <state line="51" column="40" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.0" vertical-offset="664" max-vertical-offset="1071">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -121,13 +120,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Data.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/data/Data.java">
+      <file leaf-file-name="DataTaux.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/data/DataTaux.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="833">
+            <state line="7" column="50" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#457#458#0" expanded="true" />
+                <element signature="e#525#526#0" expanded="true" />
+                <element signature="e#550#551#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,30 +135,28 @@
       <file leaf-file-name="ParseCSV.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/parse/ParseCSV.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1462">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="persistence.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="65" selection-start="875" selection-end="875" vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="425">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="persistence.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="59" selection-start="804" selection-end="804" vertical-scroll-proportion="0.6387283" vertical-offset="0" max-vertical-offset="425">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="48" selection-start="664" selection-end="664" vertical-scroll-proportion="0.8526012" vertical-offset="147" max-vertical-offset="612">
+            <state line="29" column="23" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0" vertical-offset="259" max-vertical-offset="646">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#427#433#0" expanded="true" />
+                <element signature="e#435#445#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -193,6 +190,7 @@
         <option value="$PROJECT_DIR$/src/main/java/persistence/DAOdata.java" />
         <option value="$PROJECT_DIR$/src/test/java/BigDataProjectTEST.java" />
         <option value="$PROJECT_DIR$/src/main/java/persistence/DaoData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/data/DataTaux.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
       </list>
@@ -247,6 +245,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -335,35 +334,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigDataProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigDataProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="persistence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -382,6 +354,7 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager" selected="Application.BigDataProject">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
@@ -576,12 +549,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
-      <method />
-    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -599,6 +566,12 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <configuration default="false" name="BigDataProject" type="Application" factoryName="Application">
@@ -689,7 +662,8 @@
       <created>1422059982418</created>
       <updated>1422059982418</updated>
       <workItem from="1422059986812" duration="9236000" />
-      <workItem from="1422070040585" duration="4390000" />
+      <workItem from="1422070040585" duration="4500000" />
+      <workItem from="1422074627459" duration="550000" />
     </task>
     <task id="LOCAL-00001" summary="ajout config JPA&#10;&#10;au cas ou&#10;">
       <created>1422060590477</created>
@@ -711,11 +685,15 @@
       <created>1422073276359</created>
       <updated>1422073276359</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ajout persistence (JPA) uniquement &quot;create&quot; et &quot;read&quot;&#10;&#10;au cas où, à voir si on part plus sur une archi JDBC avec une BDD crée manuellement ou si on conserve une création de base automatisé&#10;">
+      <created>1422074446697</created>
+      <updated>1422074446697</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13626000" />
+    <option name="totallyTimeSpent" value="14286000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -723,32 +701,32 @@
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.50127226" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.49872774" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935154" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.50127226" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.49872774" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935154" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -777,6 +755,75 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/algorithme/DiscriminatingFactor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="33" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/persistence/DaoData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="23" selection-start="1360" selection-end="1360" vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/parse/ReadCSV.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="4" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/BigDataProjectTEST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="40" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.0" vertical-offset="664" max-vertical-offset="1071">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_20/src.zip!/java/lang/NumberFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="0" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.0" vertical-offset="1088" max-vertical-offset="1241">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/data/DataTaux.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1173">
+          <folding>
+            <element signature="e#525#526#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/parse/ParseCSV.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="65" selection-start="875" selection-end="875" vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="48" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="612">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#435#445#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="21" selection-start="1394" selection-end="1394" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
@@ -794,10 +841,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/BigDataProjectTEST.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="16" selection-start="873" selection-end="873" vertical-scroll-proportion="0.0" vertical-offset="609" max-vertical-offset="1190">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#942#948#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -808,12 +852,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/data/Data.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/data/DataTaux.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="5" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="969">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#525#526#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -821,9 +865,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/parse/ParseCSV.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="62" column="0" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1360">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -832,7 +874,7 @@
         <state line="6" column="0" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="255">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#427#433#0" expanded="true" />
+            <element signature="e#435#445#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -868,55 +910,48 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/parse/ParseCSV.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1462">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/data/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="833">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/BigDataProjectTEST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="40" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.0" vertical-offset="664" max-vertical-offset="1071">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#942#948#0" expanded="true" />
-          </folding>
+        <state line="51" column="40" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.0" vertical-offset="664" max-vertical-offset="1071">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/persistence/DaoData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="23" selection-start="1360" selection-end="1360" vertical-scroll-proportion="0.0" vertical-offset="725" max-vertical-offset="1190">
+        <state line="53" column="23" selection-start="1400" selection-end="1400" vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/data/DataTaux.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="50" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+          <folding>
+            <element signature="e#525#526#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="23" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0" vertical-offset="259" max-vertical-offset="646">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#435#445#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="65" selection-start="875" selection-end="875" vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="425">
+        <state line="13" column="59" selection-start="804" selection-end="804" vertical-scroll-proportion="0.6387283" vertical-offset="0" max-vertical-offset="425">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="48" selection-start="664" selection-end="664" vertical-scroll-proportion="0.8526012" vertical-offset="147" max-vertical-offset="612">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#427#433#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

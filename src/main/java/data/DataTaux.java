@@ -5,10 +5,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
- * Created by oliver on 24/01/15.
+ * Données issues du fichier du prof Olifirenkoff "OCDE Taux d'interet et taux de change" onglet "TauxChangeEffectifs"
  */
 @Entity
-public class Data {
+public class DataTaux {
 
     @Id
     @GeneratedValue
@@ -19,7 +19,7 @@ public class Data {
     private String year2013;
     private String year2014;
 
-    public Data(){
+    public DataTaux(){
     }
 
     public int getId() {

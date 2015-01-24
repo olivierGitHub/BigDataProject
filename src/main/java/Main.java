@@ -1,4 +1,4 @@
-import data.Data;
+import data.DataTaux;
 import parse.ParseCSV;
 import parse.ReadCSV;
 import persistence.DaoData;
@@ -16,15 +16,17 @@ public class Main {
         ReadCSV csv = new ReadCSV(file);
         ParseCSV parse = new ParseCSV(csv.readFile());
 
-        List<Data> list = new ArrayList<Data>();
+        List<DataTaux> list = new ArrayList<DataTaux>();
 
         list = parse.parseCsvFile();
-        for(Data data : list){
-            DaoData.getInstance().create(data);
-            System.out.println(data.getCountry());
+        for(DataTaux dataTaux : list){
+            DaoData.getInstance().create(dataTaux);
+            System.out.println(dataTaux.getCountry());
         }
 
-        Data data = DaoData.getInstance().read(4);
-        System.out.println("It works, let's go to " +data.getCountry());
+        DataTaux dataTaux = DaoData.getInstance().read(4);
+        System.out.println("It works, let's go to " + dataTaux.getCountry());
+
+        System.exit(0);
     }
 }

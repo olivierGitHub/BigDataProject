@@ -1,6 +1,6 @@
 package persistence;
 
-import data.Data;
+import data.DataTaux;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -22,15 +22,15 @@ public class DaoData {
         emf = Persistence.createEntityManagerFactory("BigDataProjectPU");
     }
 
-    public int create(Data data){
+    public int create(DataTaux dataTaux){
         EntityManager em = emf.createEntityManager();
         EntityTransaction t = em.getTransaction();
         int id =0;
         try{
             t.begin();
-            em.persist(data);
+            em.persist(dataTaux);
             em.flush();
-            id = data.getId();
+            id = dataTaux.getId();
             t.commit();
             return id;
         }catch(Exception e){
@@ -44,13 +44,13 @@ public class DaoData {
         return id;
     }
 
-    public Data read(int id){
+    public DataTaux read(int id){
         EntityManager em = emf.createEntityManager();
         EntityTransaction t = em.getTransaction();
-        Data data = null;
+        DataTaux dataTaux = null;
         try{
             t.begin();
-            data = em.find(Data.class,id);
+            dataTaux = em.find(DataTaux.class,id);
             t.commit();
         }catch(Exception e){
             e.printStackTrace();
@@ -60,7 +60,7 @@ public class DaoData {
                 em.close();
             }
         }
-        return data;
+        return dataTaux;
     }
 
 }
