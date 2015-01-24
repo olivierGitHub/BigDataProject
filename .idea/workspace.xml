@@ -90,7 +90,7 @@
       <file leaf-file-name="BigDataProjectTEST.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/BigDataProjectTEST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="40" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.70055455" vertical-offset="318" max-vertical-offset="901">
+            <state line="51" column="40" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.70315397" vertical-offset="318" max-vertical-offset="901">
               <folding />
             </state>
           </provider>
@@ -675,7 +675,7 @@
       <workItem from="1422059986812" duration="9236000" />
       <workItem from="1422070040585" duration="4500000" />
       <workItem from="1422074627459" duration="2962000" />
-      <workItem from="1422077946793" duration="24000" />
+      <workItem from="1422077946793" duration="33000" />
     </task>
     <task id="LOCAL-00001" summary="ajout config JPA&#10;&#10;au cas ou&#10;">
       <created>1422060590477</created>
@@ -721,11 +721,15 @@
       <created>1422077676273</created>
       <updated>1422077676273</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="refactor&#10;&#10;pour clarté&#10;">
+      <created>1422077975255</created>
+      <updated>1422077975255</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16722000" />
+    <option name="totallyTimeSpent" value="16731000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -746,6 +750,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -758,7 +763,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1049,7 +1053,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/BigDataProjectTEST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="40" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.70055455" vertical-offset="318" max-vertical-offset="901">
+        <state line="51" column="40" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.70315397" vertical-offset="318" max-vertical-offset="901">
           <folding />
         </state>
       </provider>
