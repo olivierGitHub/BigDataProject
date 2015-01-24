@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eaccb8c3-b305-4cfb-8c61-e6c8830e65ad" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\oliver\INFORMATIQUE - Projets\IdeaProjectWorkspace\BigDataProject\essai.csv" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/BigDataProjectTEST.java" afterPath="$PROJECT_DIR$/src/test/java/BigDataProjectTEST.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BigDataProject.iws" />
@@ -654,7 +652,7 @@
       <created>1422059982418</created>
       <updated>1422059982418</updated>
       <workItem from="1422059986812" duration="9236000" />
-      <workItem from="1422070040585" duration="3214000" />
+      <workItem from="1422070040585" duration="3224000" />
     </task>
     <task id="LOCAL-00001" summary="ajout config JPA&#10;&#10;au cas ou&#10;">
       <created>1422060590477</created>
@@ -668,11 +666,15 @@
       <created>1422072972834</created>
       <updated>1422072972834</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ajout persistence (JPA) uniquement &quot;create&quot; et &quot;read&quot;&#10;&#10;au cas où, à voir si on part plus sur une archi JDBC avec une BDD crée manuellement ou si on conserve une création de base automatisé&#10;">
+      <created>1422073269257</created>
+      <updated>1422073269257</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12450000" />
+    <option name="totallyTimeSpent" value="12460000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
