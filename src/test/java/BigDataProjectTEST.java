@@ -17,11 +17,9 @@ public class BigDataProjectTEST {
 
 
     String file;
-    String fileTest;
 
     @BeforeMethod
     public void createFile() throws Exception {
-        fileTest = "essai.csv";
         file = "OCDE_file.csv";
     }
 
@@ -37,8 +35,6 @@ public class BigDataProjectTEST {
         assertThat(br).isNotNull();
     }
 
-
-
     @Test
     public void shouldParseFileToDataObject(){
         BufferedReader br = getBufferedReader();
@@ -53,7 +49,7 @@ public class BigDataProjectTEST {
 
     //@Test(expectedExceptions = FileNotFoundException.class)
     public void shouldThrowsFileNotFoundException(){
-        ReadCSV csv = new ReadCSV("essai3.csv");
+        ReadCSV csv = new ReadCSV("essai.csv");
         BufferedReader br = csv.readFile();
     }
 
