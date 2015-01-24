@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eaccb8c3-b305-4cfb-8c61-e6c8830e65ad" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/persistence/DaoData.java" afterPath="$PROJECT_DIR$/src/main/java/persistence/DaoData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BigDataProject.iws" />
@@ -675,7 +676,7 @@
       <workItem from="1422059986812" duration="9236000" />
       <workItem from="1422070040585" duration="4500000" />
       <workItem from="1422074627459" duration="2962000" />
-      <workItem from="1422077946793" duration="33000" />
+      <workItem from="1422077946793" duration="306000" />
     </task>
     <task id="LOCAL-00001" summary="ajout config JPA&#10;&#10;au cas ou&#10;">
       <created>1422060590477</created>
@@ -725,11 +726,15 @@
       <created>1422077975255</created>
       <updated>1422077975255</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="refactor&#10;&#10;pour clarté&#10;">
+      <created>1422077983589</created>
+      <updated>1422077983589</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16731000" />
+    <option name="totallyTimeSpent" value="17004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
