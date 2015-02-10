@@ -1,5 +1,6 @@
 package excelParse;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 /**
@@ -10,4 +11,8 @@ public interface ExcelReader {
     Collection<Double> takeLineDouble(int sheetNumber, int ligneNumber);
     Collection<String> takePays();
     Collection<String> takeYears();
+    int takeNumberOfLine(int sheet);
+    Collection<ArrayList<String>> takeAllLineString(int sheet);
+    Collection<ArrayList<ArrayList<String>>> takeAllSheetLineString();
+
 }

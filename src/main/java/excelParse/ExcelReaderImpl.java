@@ -6,7 +6,6 @@ import jxl.read.biff.BiffException;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -94,4 +93,35 @@ public class ExcelReaderImpl implements ExcelReader{
         return years;
     }
 
+    @Override
+    public int takeNumberOfLine(int sheet) {
+        Sheet sheets = workbook.getSheet(sheet);
+        int y = 1;
+        do{
+            y++;
+        }while (!sheets.getCell(0, y).getContents().equals(""));
+        return --y;
+    }
+
+    @Override
+    public Collection<ArrayList<String>> takeAllLineString(int sheet) {
+        Collection<ArrayList<String>> collection = new ArrayList<ArrayList<String>>();
+        int y = 1;
+        do {
+            collection.add((ArrayList<String>) takeLineString(sheet,y));
+            y++;
+        }while(y<=takeNumberOfLine(sheet));
+        return collection;
+    }
+
+    @Override
+    public Collection<ArrayList<ArrayList<String>>> takeAllSheetLineString() {
+        Collection<ArrayList<ArrayList<String>>> allSheet = new ArrayList<ArrayList<ArrayList<String>>>();
+        int sheet = 0;
+        do {
+            allSheet.add((ArrayList<ArrayList<String>>) takeAllLineString(sheet));
+            sheet++;
+        }while(sheet < workbook.getNumberOfSheets());
+        return allSheet;
+    }
 }
