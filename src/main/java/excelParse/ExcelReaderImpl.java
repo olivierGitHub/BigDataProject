@@ -38,6 +38,12 @@ public class ExcelReaderImpl implements ExcelReader{
         return ligne;
     }
 
+    /***
+     *  Return -1 for all cells have "..." value
+     * @param sheetNumber
+     * @param rowNumber
+     * @return
+     */
     @Override
     public Collection<Double> takeLineDouble(int sheetNumber, int rowNumber) {
         Collection<Double> ligne = new ArrayList<Double>();
@@ -114,6 +120,11 @@ public class ExcelReaderImpl implements ExcelReader{
         return collection;
     }
 
+    /***
+     * Return -1 for all cells have "..." value
+     * @param sheet
+     * @return
+     */
     @Override
     public Collection<ArrayList<Double>> takeAllLineDouble(int sheet) {
         Collection<ArrayList<Double>> collection = new ArrayList<ArrayList<Double>>();
@@ -136,6 +147,10 @@ public class ExcelReaderImpl implements ExcelReader{
         return allSheet;
     }
 
+    /***
+     * Return -1 for all cells have "..." value
+     * @return
+     */
     @Override
     public Collection<ArrayList<ArrayList<Double>>> takeAllSheetLineDouble() {
         Collection<ArrayList<ArrayList<Double>>> allSheet = new ArrayList<ArrayList<ArrayList<Double>>>();

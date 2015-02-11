@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eaccb8c3-b305-4cfb-8c61-e6c8830e65ad" name="Default" comment="">
+    <list default="true" id="eaccb8c3-b305-4cfb-8c61-e6c8830e65ad" name="Default" comment="Refactors des noms de méthodes.&#10;Modification du fichier OCDE_file.xls.&#10;Rajout de Méthode a la class &quot;ExcelReader&quot;.&#10;Réaliser en tdd avec la class &quot;ExcelReaderTest&quot;.&#10;Pour comprendre si c'est pas explicite dite le moi sinon lizer les Test ^^&#10;Je vois si il manque quelque méthodes qui pourais être utile.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OCDE_file.xls" afterPath="$PROJECT_DIR$/OCDE_file.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/excelParse/ExcelReader.java" afterPath="$PROJECT_DIR$/src/main/java/excelParse/ExcelReader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/excelParse/ExcelReaderImpl.java" afterPath="$PROJECT_DIR$/src/main/java/excelParse/ExcelReaderImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ExcelReaderTest.java" afterPath="$PROJECT_DIR$/src/test/java/ExcelReaderTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BigDataProject.iws" />
@@ -99,32 +97,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExcelReaderImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ExcelReaderImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/excelParse/ExcelReaderImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.2925854" vertical-offset="2499" max-vertical-offset="3162">
-              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2295" max-vertical-offset="3417">
+              <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#646#654#0" expanded="true" />
-                <element signature="e#1364#1372#0" expanded="true" />
-                <element signature="e#2238#2246#0" expanded="true" />
-                <element signature="e#2691#2699#0" expanded="true" />
-                <element signature="e#3427#3446#0" expanded="true" />
-                <element signature="e#3800#3819#0" expanded="true" />
-                <element signature="e#4190#4220#0" expanded="true" />
-                <element signature="e#4616#4646#0" expanded="true" />
-                <element signature="e#5392#5400#0" expanded="true" />
+                <element signature="e#1495#1503#0" expanded="true" />
+                <element signature="e#2369#2377#0" expanded="true" />
+                <element signature="e#2822#2830#0" expanded="true" />
+                <element signature="e#3558#3577#0" expanded="true" />
+                <element signature="e#4031#4050#0" expanded="true" />
+                <element signature="e#4421#4451#0" expanded="true" />
+                <element signature="e#4927#4957#0" expanded="true" />
+                <element signature="e#5703#5711#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExcelReaderTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ExcelReaderTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ExcelReaderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4019" max-vertical-offset="4505">
-              <caret line="243" column="0" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.54526746" vertical-offset="2795" max-vertical-offset="4505">
+              <caret line="180" column="54" selection-start-line="180" selection-start-column="54" selection-end-line="180" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#948#956#0" expanded="true" />
@@ -146,7 +144,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/excelParse/ExcelReader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+              <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -260,9 +258,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/excelParse/ExcelReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/excelParse/ExcelReaderImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/ExcelReaderTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/excelParse/ExcelReader.java" />
       </list>
     </option>
   </component>
@@ -998,7 +996,13 @@
       <option name="project" value="LOCAL" />
       <updated>1423586778156</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Refactors des noms de méthodes.&#10;Modification du fichier OCDE_file.xls.&#10;Rajout de Méthode a la class &quot;ExcelReader&quot;.&#10;Réaliser en tdd avec la class &quot;ExcelReaderTest&quot;.&#10;Pour comprendre si c'est pas explicite dite le moi sinon lizer les Test ^^&#10;Je vois si il manque quelque méthodes qui pourais être utile.">
+      <created>1423644235370</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1423644235370</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1039,7 +1043,7 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" x="31" y="125" width="1256" height="676" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29261744" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29261744" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.49872774" order="0" side_tool="false" content_ui="combo" />
@@ -1082,7 +1086,8 @@
     <MESSAGE value="refactor&#10;&#10;pour clarté&#10;" />
     <MESSAGE value="Création d'une classe ExcelReader permettant la lecture du fichier Excel OCDEfile.&#10;Deux classe de test:&#10; ExcelReaderTest: test de la class de lecture&#10;JExcelAPITest Permettant d'apprendre a ce servir de jExcelAPI&#10;" />
     <MESSAGE value="Rajout de Méthode a la class &quot;ExcelReader&quot;.&#10;Réaliser en tdd avec la class &quot;ExcelReaderTest&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rajout de Méthode a la class &quot;ExcelReader&quot;.&#10;Réaliser en tdd avec la class &quot;ExcelReaderTest&quot;" />
+    <MESSAGE value="Refactors des noms de méthodes.&#10;Modification du fichier OCDE_file.xls.&#10;Rajout de Méthode a la class &quot;ExcelReader&quot;.&#10;Réaliser en tdd avec la class &quot;ExcelReaderTest&quot;.&#10;Pour comprendre si c'est pas explicite dite le moi sinon lizer les Test ^^&#10;Je vois si il manque quelque méthodes qui pourais être utile." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactors des noms de méthodes.&#10;Modification du fichier OCDE_file.xls.&#10;Rajout de Méthode a la class &quot;ExcelReader&quot;.&#10;Réaliser en tdd avec la class &quot;ExcelReaderTest&quot;.&#10;Pour comprendre si c'est pas explicite dite le moi sinon lizer les Test ^^&#10;Je vois si il manque quelque méthodes qui pourais être utile." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1615,10 +1620,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/excelParse/ExcelReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/excelParse/ExcelReaderImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2295" max-vertical-offset="3417">
+          <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#646#654#0" expanded="true" />
+            <element signature="e#1495#1503#0" expanded="true" />
+            <element signature="e#2369#2377#0" expanded="true" />
+            <element signature="e#2822#2830#0" expanded="true" />
+            <element signature="e#3558#3577#0" expanded="true" />
+            <element signature="e#4031#4050#0" expanded="true" />
+            <element signature="e#4421#4451#0" expanded="true" />
+            <element signature="e#4927#4957#0" expanded="true" />
+            <element signature="e#5703#5711#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ExcelReaderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3900" max-vertical-offset="4505">
-          <caret line="243" column="0" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.54526746" vertical-offset="2795" max-vertical-offset="4505">
+          <caret line="180" column="54" selection-start-line="180" selection-start-column="54" selection-end-line="180" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#948#956#0" expanded="true" />
@@ -1631,35 +1665,6 @@
             <element signature="e#5701#5720#0" expanded="true" />
             <element signature="e#6349#6379#0" expanded="true" />
             <element signature="e#8279#8287#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/excelParse/ExcelReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/excelParse/ExcelReaderImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.2925854" vertical-offset="2499" max-vertical-offset="3162">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#646#654#0" expanded="true" />
-            <element signature="e#1364#1372#0" expanded="true" />
-            <element signature="e#2238#2246#0" expanded="true" />
-            <element signature="e#2691#2699#0" expanded="true" />
-            <element signature="e#3427#3446#0" expanded="true" />
-            <element signature="e#3800#3819#0" expanded="true" />
-            <element signature="e#4190#4220#0" expanded="true" />
-            <element signature="e#4616#4646#0" expanded="true" />
-            <element signature="e#5392#5400#0" expanded="true" />
           </folding>
         </state>
       </provider>
