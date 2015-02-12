@@ -8,7 +8,6 @@ import java.util.Map;
  * Created by alexandre on 12/02/2015.
  */
 public interface WorldData {
-    String toString();
     String getSheetName();
     void setSheetName(String sheetName);
     Map<String, Country> getCountryByName();

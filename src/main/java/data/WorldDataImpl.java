@@ -28,7 +28,7 @@ public class WorldDataImpl implements WorldData {
     public void setSheetName(String sheetName) {
         this.sheetName = sheetName;
     }
-    
+
     public Map<String, Country> getCountryByName() {
         return countryByName;
     }
