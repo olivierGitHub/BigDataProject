@@ -1,3 +1,5 @@
+package Excel;
+
 import excelParse.ExcelReader;
 import excelParse.ExcelReaderImpl;
 import jxl.read.biff.BiffException;
@@ -78,7 +80,7 @@ public class ExcelReaderTest {
         try {
             ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
             Collection<String> country = new ArrayList<String>();
-            country = excelReader.takeAllCountry();
+            country = excelReader.getAllCountry();
             assertThat(country).contains("Australie", "Autriche", "Belgique", "Etats-Unis");
             assertThat(country).doesNotContain("");
         } catch (IOException e) {
@@ -93,7 +95,7 @@ public class ExcelReaderTest {
         try {
             ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
             Collection<String> years = new ArrayList<String>();
-            years = excelReader.takeAllYears();
+            years = excelReader.getAllYears();
             assertThat(years).contains("1999","2000","2002","2015");
             assertThat(years).doesNotContain("");
         } catch (IOException e) {
@@ -256,4 +258,17 @@ public class ExcelReaderTest {
             e.printStackTrace();
         }
     }
+
+/*    @Test
+    public void shouldGetAUniteMonetaire(){
+        try {
+            ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+            String found = excelReader.getUniteMonetaire(2);
+            assertThat(found).isEqualTo("Dollar");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (BiffException e) {
+            e.printStackTrace();
+        }
+    }*/
 }

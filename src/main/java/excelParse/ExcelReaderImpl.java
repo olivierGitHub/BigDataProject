@@ -7,7 +7,6 @@ import jxl.read.biff.BiffException;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 
 /**
  * Created by alco on 09/02/2015.
@@ -20,12 +19,15 @@ public class ExcelReaderImpl implements ExcelReader{
     }
 
     @Override
-    public Collection<String> takeLineString(int sheetNumber, int rowNumber) throws IllegalArgumentException{
-        Collection<String> ligne = new ArrayList<String>();
+    public ArrayList<String> takeLineString(int sheetNumber, int rowNumber) throws IllegalArgumentException{
+        ArrayList<String> ligne = new ArrayList<String>();
         int numberOfSheets = workbook.getNumberOfSheets();
         String contentValue = null;
         if (sheetNumber >= numberOfSheets || sheetNumber < 0){
             throw new IllegalArgumentException("sheetNumber is not correct!");
+        }
+        if (rowNumber <= 0 || rowNumber > takeNumberOfLine(sheetNumber)){
+            throw new IllegalArgumentException("rowNumber is not correct!");
         }
         Sheet sheet = workbook.getSheet(sheetNumber);
 
@@ -45,13 +47,16 @@ public class ExcelReaderImpl implements ExcelReader{
      * @return
      */
     @Override
-    public Collection<Double> takeLineDouble(int sheetNumber, int rowNumber) {
-        Collection<Double> ligne = new ArrayList<Double>();
+    public ArrayList<Double> takeLineDouble(int sheetNumber, int rowNumber) {
+        ArrayList<Double> ligne = new ArrayList<Double>();
         int numberOfSheets = workbook.getNumberOfSheets();
         String contentValue = null;
         double value;
         if (sheetNumber >= numberOfSheets || sheetNumber < 0){
             throw new IllegalArgumentException("sheetNumber is not correct!");
+        }
+        if (rowNumber <= 0 || rowNumber > takeNumberOfLine(sheetNumber)){
+            throw new IllegalArgumentException("rowNumber is not correct!");
         }
         Sheet sheet = workbook.getSheet(sheetNumber);
 
@@ -70,8 +75,8 @@ public class ExcelReaderImpl implements ExcelReader{
     }
 
     @Override
-    public Collection<String> takeAllCountry() {
-        Collection<String> country = new ArrayList<String>();
+    public ArrayList<String> getAllCountry() {
+        ArrayList<String> country = new ArrayList<String>();
         Sheet sheet = workbook.getSheet(0);
         String contentValue = null;
 
@@ -85,8 +90,8 @@ public class ExcelReaderImpl implements ExcelReader{
     }
 
     @Override
-    public Collection<String> takeAllYears() {
-        Collection<String> years = new ArrayList<String>();
+    public ArrayList<String> getAllYears() {
+        ArrayList<String> years = new ArrayList<String>();
         Sheet sheet = workbook.getSheet(0);
         String contentValue = null;
 
@@ -110,8 +115,8 @@ public class ExcelReaderImpl implements ExcelReader{
     }
 
     @Override
-    public Collection<ArrayList<String>> takeAllLineString(int sheet) {
-        Collection<ArrayList<String>> collection = new ArrayList<ArrayList<String>>();
+    public ArrayList<ArrayList<String>> takeAllLineString(int sheet) {
+        ArrayList<ArrayList<String>> collection = new ArrayList<ArrayList<String>>();
         int y = 1;
         do {
             collection.add((ArrayList<String>) takeLineString(sheet,y));
@@ -126,8 +131,8 @@ public class ExcelReaderImpl implements ExcelReader{
      * @return
      */
     @Override
-    public Collection<ArrayList<Double>> takeAllLineDouble(int sheet) {
-        Collection<ArrayList<Double>> collection = new ArrayList<ArrayList<Double>>();
+    public ArrayList<ArrayList<Double>> takeAllLineDouble(int sheet) {
+        ArrayList<ArrayList<Double>> collection = new ArrayList<ArrayList<Double>>();
         int y = 1;
         do {
             collection.add((ArrayList<Double>) takeLineDouble(sheet, y));
@@ -137,8 +142,8 @@ public class ExcelReaderImpl implements ExcelReader{
     }
 
     @Override
-    public Collection<ArrayList<ArrayList<String>>> takeAllSheetLineString() {
-        Collection<ArrayList<ArrayList<String>>> allSheet = new ArrayList<ArrayList<ArrayList<String>>>();
+    public ArrayList<ArrayList<ArrayList<String>>> takeAllSheetLineString() {
+        ArrayList<ArrayList<ArrayList<String>>> allSheet = new ArrayList<ArrayList<ArrayList<String>>>();
         int sheet = 0;
         do {
             allSheet.add((ArrayList<ArrayList<String>>) takeAllLineString(sheet));
@@ -152,8 +157,8 @@ public class ExcelReaderImpl implements ExcelReader{
      * @return
      */
     @Override
-    public Collection<ArrayList<ArrayList<Double>>> takeAllSheetLineDouble() {
-        Collection<ArrayList<ArrayList<Double>>> allSheet = new ArrayList<ArrayList<ArrayList<Double>>>();
+    public ArrayList<ArrayList<ArrayList<Double>>> takeAllSheetLineDouble() {
+        ArrayList<ArrayList<ArrayList<Double>>> allSheet = new ArrayList<ArrayList<ArrayList<Double>>>();
         int sheet = 0;
         do {
             allSheet.add((ArrayList<ArrayList<Double>>) takeAllLineDouble(sheet));
@@ -177,8 +182,8 @@ public class ExcelReaderImpl implements ExcelReader{
     }
 
     @Override
-    public Collection<String> getAllNameSheet() {
-        Collection<String> sheetNames = new ArrayList<String>();
+    public ArrayList<String> getAllNameSheet() {
+        ArrayList<String> sheetNames = new ArrayList<String>();
         String[] sheetsName = new String[workbook.getNumberOfSheets()];
         sheetsName = workbook.getSheetNames();
         for (String sheet : sheetsName) {
@@ -193,4 +198,14 @@ public class ExcelReaderImpl implements ExcelReader{
         sheetsName = workbook.getSheetNames();
         return sheetsName[sheet];
     }
+
+/*    @Override
+    public String getUniteMonetaire(int y) {
+        String cell;
+        Range[] foundCell;
+        foundCell = workbook.findByName("Unite monetaire");
+        cell = workbook.find
+
+        return null;
+    }*/
 }
