@@ -1,6 +1,7 @@
 package data;
 
 import excelParse.ExcelReader;
+import model.Country;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,8 +12,8 @@ import java.util.Objects;
  * Created by alexandre on 12/02/2015.
  */
 public class WorldData {
-    String sheetName;
     private final Map<String, Country> countryByName = new HashMap<String, Country>();
+    String sheetName;
 
     @Override
          public String toString() {
@@ -38,17 +39,17 @@ public class WorldData {
         return countryByName.get(countryName);
     }
 
-    public void addCountry(Country country) {
-        countryByName.put(country.getCountryName(), country);
-    }
+//    public void addCountry(Country country) {
+//        countryByName.put(country.getCountryName(), country);
+//    }
 
     public void addSheet(int sheetNumber, ExcelReader excelReader) {
         ArrayList<String> allCounrty = excelReader.getAllCountry();
         Country country = new Country();
         int i = 1;
         for (String countryName : allCounrty) {
-            country.setCountryName(countryName);
-            country.addCountry(excelReader.getCountry(i), excelReader.takeLineString(sheetNumber, i), excelReader.getAllYears());
+//            country.setCountryName(countryName);
+//            country.addCountry(excelReader.getCountry(i), excelReader.takeLineString(sheetNumber, i), excelReader.getAllYears());
             this.countryByName.put(countryName, country);
             i++;
         }
