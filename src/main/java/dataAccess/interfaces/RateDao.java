@@ -1,7 +1,6 @@
 package dataAccess.interfaces;
 
 import model.Rate;
-import model.RateType;
 
 import java.util.List;
 
@@ -10,5 +9,8 @@ import java.util.List;
  */
 public interface RateDao extends Dao<Rate> {
 
-    public List<Rate> getAllByType(RateType type);
+    public List<Rate> getRatesByYear(Integer rateGroupId, String year);
+
+    public List<Rate> getRates(Integer rateGroupId);
+
 }
