@@ -47,7 +47,7 @@ public class CountryJpaDao extends BaseJpa implements CountryDao {
     }
 
     @Override
-    public List<Country> readAll() {
+    public List<Country> getCountries() {
         return null;
     }
 }

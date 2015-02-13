@@ -14,17 +14,36 @@ import java.util.Objects;
 @Entity
 public class Country {
 
-    //    SHORT_TERM,LONG_TERM,NOMINATIVE,EFFECTIVE
     @OneToMany(mappedBy = "country")
-    private final List<Rate> shortTermRates = new ArrayList<Rate>();
+    private final List<RateGroup> rateGroups = new ArrayList<RateGroup>();
     String countryName;
     @GeneratedValue
     @Id
     private Integer id;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public List<RateGroup> getRateGroups() {
+        return rateGroups;
+    }
+
+    public String getCountryName() {
+        return countryName;
+    }
+
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
+    }
+
     @Override
     public int hashCode() {
-        return Objects.hash(id, countryName, shortTermRates);
+        return Objects.hash(id, rateGroups, countryName);
     }
 
     @Override
@@ -37,7 +56,16 @@ public class Country {
         }
         final Country other = (Country) obj;
         return Objects.equals(this.id, other.id)
-                && Objects.equals(this.countryName, other.countryName)
-                && Objects.equals(this.shortTermRates, other.shortTermRates);
+                && Objects.equals(this.rateGroups, other.rateGroups)
+                && Objects.equals(this.countryName, other.countryName);
+    }
+
+    @Override
+    public String toString() {
+        return "Country{" +
+                "id=" + id +
+                ", rateGroups=" + rateGroups +
+                ", countryName='" + countryName + '\'' +
+                '}';
     }
 }
