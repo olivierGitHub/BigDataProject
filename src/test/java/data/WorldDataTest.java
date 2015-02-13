@@ -18,13 +18,13 @@ public class WorldDataTest {
         ExcelReader excelReader = null;
         try {
             excelReader = new ExcelReaderImpl("OCDE_file.xls");
-            WorldData world = new WorldDataImpl();
+            WorldData world = new WorldData();
             
-            Country australie = new CountryImpl();
+            Country australie = new Country();
             australie.addCountry(excelReader.getCountry(1),excelReader.takeLineString(0,1),excelReader.getAllYears());
             world.addCountry(australie);
             
-            Country irlande = new CountryImpl();
+            Country irlande = new Country();
             irlande.addCountry(excelReader.getCountry(15),excelReader.takeLineString(0,15),excelReader.getAllYears());
             world.addCountry(irlande);
 
@@ -42,14 +42,14 @@ public class WorldDataTest {
         ExcelReader excelReader = null;
         try {
             excelReader = new ExcelReaderImpl("OCDE_file.xls");
-            WorldData world = new WorldDataImpl();
+            WorldData world = new WorldData();
             world.setSheetName(excelReader.getNameSheet(0));
             
-            Country australie = new CountryImpl();
+            Country australie = new Country();
             australie.addCountry(excelReader.getCountry(1),excelReader.takeLineString(0,1),excelReader.getAllYears());
             world.addCountry(australie);
 
-            Country irlande = new CountryImpl();
+            Country irlande = new Country();
             irlande.addCountry(excelReader.getCountry(15),excelReader.takeLineString(0,15),excelReader.getAllYears());
             world.addCountry(irlande);
             
@@ -68,14 +68,14 @@ public class WorldDataTest {
         ExcelReader excelReader = null;
         try {
             excelReader = new ExcelReaderImpl("OCDE_file.xls");
-            WorldData world = new WorldDataImpl();
+            WorldData world = new WorldData();
             world.addSheet(0, excelReader);
             
-            Country australie = new CountryImpl();
+            Country australie = new Country();
             australie.setCountryName("Australie");
             australie.addCountry(excelReader.getCountry(1),excelReader.takeLineString(0,1),excelReader.getAllYears());
 
-            Country irlande = new CountryImpl();
+            Country irlande = new Country();
             irlande.addCountry(excelReader.getCountry(15),excelReader.takeLineString(0,15),excelReader.getAllYears());
 
             assertThat(world.getCountryByName("Australie")).isEqualTo(australie);

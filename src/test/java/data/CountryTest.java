@@ -16,7 +16,7 @@ import static org.fest.assertions.api.Assertions.assertThat;
 public class CountryTest {
     @Test
     public void shouldAddCountry(){
-        Country country = new CountryImpl();
+        Country country = new Country();
         try {
             ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
             country.addCountry(excelReader.getCountry(1),excelReader.takeLineString(0,1),excelReader.getAllYears());
@@ -35,7 +35,7 @@ public class CountryTest {
 
     @Test
          public void shouldGetCountry(){
-        Country country = new CountryImpl();
+        Country country = new Country();
         try {
             ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
             country.addCountry(excelReader.getCountry(1),excelReader.takeLineString(0,1),excelReader.getAllYears());
