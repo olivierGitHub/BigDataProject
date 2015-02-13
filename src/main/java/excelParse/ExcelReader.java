@@ -19,5 +19,6 @@ public interface ExcelReader {
     String getYear(int column);
     ArrayList<String> getAllNameSheet();
     String getNameSheet(int sheet);
-//    String getUniteMonetaire(int y);
+    String getUniteMonetaire(int y);
+    ArrayList<String> getAllUniteMonetaire();
 }

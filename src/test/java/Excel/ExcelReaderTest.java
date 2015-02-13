@@ -259,16 +259,44 @@ public class ExcelReaderTest {
         }
     }
 
-/*    @Test
+    @Test
     public void shouldGetAUniteMonetaire(){
         try {
             ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
-            String found = excelReader.getUniteMonetaire(2);
+            String found = excelReader.getUniteMonetaire(4);
             assertThat(found).isEqualTo("Dollar");
+            String found2 = excelReader.getUniteMonetaire(5);
+            assertThat(found2).isEqualTo("Peso");
         } catch (IOException e) {
             e.printStackTrace();
         } catch (BiffException e) {
             e.printStackTrace();
         }
-    }*/
+    }
+
+    @Test (expectedExceptions = IllegalArgumentException.class)
+    public void shouldGetAUniteMonetaireExceptionTitle() throws IOException, BiffException {
+            ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+            String foundnull = excelReader.getUniteMonetaire(0);
+    }
+
+    @Test (expectedExceptions = IllegalArgumentException.class)
+    public void shouldGetAUniteMonetaireExceptionIndex() throws IOException, BiffException {
+        ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+        String foundnull2 = excelReader.getUniteMonetaire(45);
+    }
+
+    @Test
+    public void shouldGetAllUniteMonetaire(){
+        try {
+            ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+            ArrayList<String> found = excelReader.getAllUniteMonetaire();
+            assertThat(found).containsOnly("Euro", "Dollar", "Peso", "Couronne", "Forint", "Sheqel", "Yen", "Won", "Zloty", "Tolar", "Franc", "Lire", "Livre");
+            assertThat(found).doesNotContain("");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (BiffException e) {
+            e.printStackTrace();
+        }
+    }
 }
