@@ -13,6 +13,7 @@ import java.util.ArrayList;
  */
 public class ExcelReaderImpl implements ExcelReader{
     Workbook workbook;
+    private String CURRENCY_UNIT = "Unite monetaire";
     private double DEFAULT_VALUE_THREEDOT = -1;
     public ExcelReaderImpl(String workbook) throws IOException,BiffException{
         this.workbook = Workbook.getWorkbook(new File(workbook));
@@ -199,13 +200,45 @@ public class ExcelReaderImpl implements ExcelReader{
         return sheetsName[sheet];
     }
 
-/*    @Override
+    /***
+     * @param y
+     * @return
+     * @return null if bad y
+     */
+    @Override
     public String getUniteMonetaire(int y) {
-        String cell;
-        Range[] foundCell;
-        foundCell = workbook.findByName("Unite monetaire");
-        cell = workbook.find
+        int z = 0;
+        while(!(workbook.getSheet(2).getCell(z, 0).getContents().equals(CURRENCY_UNIT))){
+            z++;
+        }
+        
+        String content = workbook.getSheet(2).getCell(z,y).getContents();
+        if(content.equals(DEFAULT_VALUE_THREEDOT)){
+            throw new IllegalArgumentException("This country have no Currency Unit!");
+        }
+        else if(content.equals("")){
+            throw new IllegalArgumentException("Bad indice have no country in correspondance!");
+        }
+        else if(content.equals(CURRENCY_UNIT)){
+            throw new IllegalArgumentException("Bad indice you found the title!");
+        }
+        return content.trim();
+    }
 
-        return null;
-    }*/
+    @Override
+    public ArrayList<String> getAllUniteMonetaire() {
+        int z = 0;
+        int y = 1;
+        ArrayList<String> content = new ArrayList<String>();
+        while(!(workbook.getSheet(2).getCell(z, 0).getContents().equals(CURRENCY_UNIT))){
+            z++;
+        }
+
+        while(!workbook.getSheet(2).getCell(z,y).getContents().equals("")){
+            content.add(workbook.getSheet(2).getCell(z,y).getContents().trim());
+            y++;
+        }
+        
+        return content;
+    }
 }
