@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class ExcelReaderImpl implements ExcelReader{
     Workbook workbook;
-
+    private double DEFAULT_VALUE_THREEDOT = -1;
     public ExcelReaderImpl(String workbook) throws IOException,BiffException{
         this.workbook = Workbook.getWorkbook(new File(workbook));
     }
@@ -66,7 +66,7 @@ public class ExcelReaderImpl implements ExcelReader{
             try{
                 value = Double.parseDouble(contentValue.replace(',','.'));
             }catch  (Exception e){
-                value = -1;
+                value = DEFAULT_VALUE_THREEDOT;
             }
             ligne.add(value);
             x++;
