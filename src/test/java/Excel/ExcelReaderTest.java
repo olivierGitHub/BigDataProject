@@ -1,6 +1,6 @@
 package Excel;
 
-import excelParse.ExcelReader;
+import excelParse.FileReader;
 import excelParse.ExcelReaderImpl;
 import jxl.read.biff.BiffException;
 import org.testng.annotations.Test;
@@ -17,11 +17,15 @@ import static org.fest.assertions.api.Assertions.assertThat;
 
 
 public class ExcelReaderTest {
-
+    private String SHORT_TERM = "SHORT_TERM";
+    private String LONG_TERM = "LONG_TERM";
+    private String NOMINATIVE =  "NOMINATIVE";
+    private String EFFECTIVE = "EFFECTIVE";
+    
     @Test
     public void shouldTakeWorkbook(){
         try {
-            ExcelReader excelReader = new ExcelReaderImpl("Nofile.xls");
+            FileReader excelReader = new ExcelReaderImpl("Nofile.xls");
             assertThat(false).isTrue();
         } catch (BiffException e) {
             e.printStackTrace();
@@ -35,7 +39,7 @@ public class ExcelReaderTest {
     @Test
     public void shouldTakeALineWithSheetAndRowInString(){
         try {
-            ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+            FileReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
             Collection<String> ligne = new ArrayList<String>();
             ligne = excelReader.takeLineString(0, 1);
             assertThat(ligne).containsOnly("5,0","6,2","4,9","4,7","4,9","5,5","5,6","6,0","6,7","7,0","3,4","4,7","4,8","3,7","2,7","2,4","2,5");
@@ -49,7 +53,7 @@ public class ExcelReaderTest {
     @Test
     public void shouldTakeALineWithSheetAndRowInStringWithoutNull(){
         try {
-            ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+            FileReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
             Collection<String> ligne = new ArrayList<String>();
             ligne = excelReader.takeLineString(0, 2);
             assertThat(ligne).containsOnly("...");
@@ -63,7 +67,7 @@ public class ExcelReaderTest {
     @Test
     public void shouldTakeALineWithSheetAndRowInDouble(){
         try {
-            ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+            FileReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
             Collection<Double> ligne = new ArrayList<Double>();
             ligne = excelReader.takeLineDouble(0,1);
             assertThat(ligne).contains(5.0,6.2,4.9,4.7,4.9,5.5,5.6,6.0,6.7,2.4,2.5);
@@ -78,7 +82,7 @@ public class ExcelReaderTest {
     @Test
     public void shouldTakeCountryFromFirstSheet(){
         try {
-            ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+            FileReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
             Collection<String> country = new ArrayList<String>();
             country = excelReader.getAllCountry();
             assertThat(country).contains("Australie", "Autriche", "Belgique", "Etats-Unis");
@@ -93,7 +97,7 @@ public class ExcelReaderTest {
     @Test
     public void shouldTakeYearsFromFirstSheet(){
         try {
-            ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+            FileReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
             Collection<String> years = new ArrayList<String>();
             years = excelReader.getAllYears();
             assertThat(years).contains("1999","2000","2002","2015");
@@ -108,7 +112,7 @@ public class ExcelReaderTest {
     @Test
     public void shouldTakeNumberOfLineForSheet(){
         try {
-            ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+            FileReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
             int allLine;
             allLine = excelReader.takeNumberOfLine(0);
             assertThat(allLine).isEqualTo(34);
@@ -122,7 +126,7 @@ public class ExcelReaderTest {
     @Test
     public void shouldTakeAllLineFromASheetInString(){
         try {
-            ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+            FileReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
             Collection<ArrayList<String>> allLine = new ArrayList<ArrayList<String>>();
             allLine = excelReader.takeAllLineString(0);
             for (ArrayList<String> collect : allLine) {
@@ -140,7 +144,7 @@ public class ExcelReaderTest {
     @Test
     public void shouldTakeAllSheetLineInString() {
         try {
-            ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+            FileReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
             Collection<ArrayList<ArrayList<String>>> allSheetLine = new ArrayList<ArrayList<ArrayList<String>>>();
             allSheetLine = excelReader.takeAllSheetLineString();
             for (ArrayList<ArrayList<String>> sheetLists : allSheetLine) {
@@ -161,7 +165,7 @@ public class ExcelReaderTest {
     @Test
     public void shouldTakeAllLineFromASheetInDouble(){
         try {
-            ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+            FileReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
             Collection<ArrayList<Double>> allLine = new ArrayList<ArrayList<Double>>();
             allLine = excelReader.takeAllLineDouble(0);
             for (ArrayList<Double> collect : allLine) {
@@ -178,7 +182,7 @@ public class ExcelReaderTest {
     @Test
     public void shouldTakeAllSheetLineInDouble() {
         try {
-            ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+            FileReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
             Collection<ArrayList<ArrayList<Double>>> allSheetLine = new ArrayList<ArrayList<ArrayList<Double>>>();
             allSheetLine = excelReader.takeAllSheetLineDouble();
             for (ArrayList<ArrayList<Double>> sheetLists : allSheetLine) {
@@ -199,7 +203,7 @@ public class ExcelReaderTest {
     @Test
     public void shouldGetCountryForACell(){
         try {
-            ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+            FileReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
             int x =1,y=1;
             String countryFound = excelReader.getCountry(y);
             assertThat(countryFound).isEqualTo("Australie");
@@ -216,7 +220,7 @@ public class ExcelReaderTest {
     @Test
     public void shouldGetYearForACell(){
         try {
-            ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+            FileReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
             int x =1,y=1;
             String yearFound = excelReader.getYear(x);
             assertThat(yearFound).isEqualTo("1999");
@@ -234,9 +238,9 @@ public class ExcelReaderTest {
     public void shouldGetAllNameSheet(){
         try {
             Collection<String> allNameSheet = new ArrayList<String>();
-            ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+            FileReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
             allNameSheet = excelReader.getAllNameSheet();
-            assertThat(allNameSheet).containsOnly("TauxInteretCourtTerme","TauxInteretLongTerme","TauxChangeNominaux","TauxChangeEffectifs");
+            assertThat(allNameSheet).containsOnly(SHORT_TERM, LONG_TERM, NOMINATIVE, EFFECTIVE);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (BiffException e) {
@@ -247,11 +251,11 @@ public class ExcelReaderTest {
     @Test
     public void shouldGetNameSheet(){
         try {
-            ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+            FileReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
             String found = excelReader.getNameSheet(0);
-            assertThat(found).isEqualTo("TauxInteretCourtTerme");
+            assertThat(found).isEqualTo(SHORT_TERM);
             String found2 = excelReader.getNameSheet(2);
-            assertThat(found2).isEqualTo("TauxChangeNominaux");
+            assertThat(found2).isEqualTo(NOMINATIVE);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (BiffException e) {
@@ -262,7 +266,7 @@ public class ExcelReaderTest {
     @Test
     public void shouldGetAUniteMonetaire(){
         try {
-            ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+            FileReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
             String found = excelReader.getUniteMonetaire(4);
             assertThat(found).isEqualTo("Dollar");
             String found2 = excelReader.getUniteMonetaire(5);
@@ -276,20 +280,20 @@ public class ExcelReaderTest {
 
     @Test (expectedExceptions = IllegalArgumentException.class)
     public void shouldGetAUniteMonetaireExceptionTitle() throws IOException, BiffException {
-            ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+            FileReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
             String foundnull = excelReader.getUniteMonetaire(0);
     }
 
     @Test (expectedExceptions = IllegalArgumentException.class)
     public void shouldGetAUniteMonetaireExceptionIndex() throws IOException, BiffException {
-        ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+        FileReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
         String foundnull2 = excelReader.getUniteMonetaire(45);
     }
 
     @Test
     public void shouldGetAllUniteMonetaire(){
         try {
-            ExcelReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
+            FileReader excelReader = new ExcelReaderImpl("OCDE_file.xls");
             ArrayList<String> found = excelReader.getAllUniteMonetaire();
             assertThat(found).containsOnly("Euro", "Dollar", "Peso", "Couronne", "Forint", "Sheqel", "Yen", "Won", "Zloty", "Tolar", "Franc", "Lire", "Livre");
             assertThat(found).doesNotContain("");
