@@ -11,7 +11,7 @@ import java.util.ArrayList;
 /**
  * Created by alco on 09/02/2015.
  */
-public class ExcelReaderImpl implements ExcelReader{
+public class ExcelReaderImpl implements FileReader {
     Workbook workbook;
     private String CURRENCY_UNIT = "Unite monetaire";
     private double DEFAULT_VALUE_THREEDOT = -1;

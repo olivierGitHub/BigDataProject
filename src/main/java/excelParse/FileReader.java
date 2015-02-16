@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by alco on 10/02/2015.
  */
-public interface ExcelReader {
+public interface FileReader {
     ArrayList<String> takeLineString(int sheetNumber, int rowNumber);
     ArrayList<Double> takeLineDouble(int sheetNumber, int rowNumber);
     ArrayList<String> getAllCountry();
