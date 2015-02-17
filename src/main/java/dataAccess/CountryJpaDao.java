@@ -15,7 +15,7 @@ public class CountryJpaDao extends BaseJpa implements CountryDao {
 
     @Override
     public void create(Country obj) {
-        EntityManager em = getEntityManagerFactory().createEntityManager();
+        EntityManager em = super.getEntityManagerFactory().createEntityManager();
         EntityTransaction t = em.getTransaction();
         try {
             t.begin();
