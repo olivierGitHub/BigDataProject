@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eaccb8c3-b305-4cfb-8c61-e6c8830e65ad" name="Default" comment="refactor&#10;&#10;pour clarté&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="DELETED" beforePath="C:\Users\oliver\INFORMATIQUE - Projets\IdeaProjectWorkspace\BigDataProject\src\main\java\data\WorldData.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BigDataProject.iml" afterPath="$PROJECT_DIR$/BigDataProject.iml" />
+    <list default="true" id="eaccb8c3-b305-4cfb-8c61-e6c8830e65ad" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/userInterface/output/BubbleChartOutput.java" afterPath="$PROJECT_DIR$/src/main/java/userInterface/output/BubbleChartOutput.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dataAccess/DaoData.java" afterPath="$PROJECT_DIR$/src/main/java/dataAccess/DaoData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BigDataProject.iws" />
@@ -82,7 +74,7 @@
       <file leaf-file-name="BubbleChartOutput.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/userInterface/output/BubbleChartOutput.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="8" selection-start="1850" selection-end="1850" vertical-scroll-proportion="0.107344635" vertical-offset="676" max-vertical-offset="1105">
+            <state line="28" column="64" selection-start="746" selection-end="746" vertical-scroll-proportion="0.6101695" vertical-offset="56" max-vertical-offset="1105">
               <folding />
             </state>
           </provider>
@@ -100,7 +92,7 @@
       <file leaf-file-name="Bubble.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/userInterface/output/Bubble.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="13" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="714">
+            <state line="7" column="13" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
               <folding />
             </state>
           </provider>
@@ -121,7 +113,7 @@
       <file leaf-file-name="BubblesList.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/userInterface/output/BubblesList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="646">
+            <state line="8" column="13" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="107" max-vertical-offset="561">
               <folding />
             </state>
           </provider>
@@ -261,6 +253,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -745,7 +741,7 @@
       <workItem from="1423740330328" duration="199000" />
       <workItem from="1424142338534" duration="3732000" />
       <workItem from="1424168800906" duration="961000" />
-      <workItem from="1424212604211" duration="1784000" />
+      <workItem from="1424212604211" duration="2741000" />
     </task>
     <task id="LOCAL-00001" summary="ajout config JPA&#10;&#10;au cas ou&#10;">
       <created>1422060590477</created>
@@ -815,11 +811,15 @@
       <created>1422078682744</created>
       <updated>1422078682744</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Ajout UI output&#10;&#10;RAF: refactoring&#10;         résoudre souci  inversion axe x y">
+      <created>1424214474517</created>
+      <updated>1424214474517</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34429000" />
+    <option name="totallyTimeSpent" value="35386000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -892,7 +892,8 @@
     <MESSAGE value="ajout Lecture du fichier CSV et squelette parsage&#10;&#10;avoir une base pour démarrer le projet&#10;" />
     <MESSAGE value="ajout persistence (JPA) uniquement &quot;create&quot; et &quot;read&quot;&#10;&#10;au cas où, à voir si on part plus sur une archi JDBC avec une BDD crée manuellement ou si on conserve une création de base automatisé&#10;" />
     <MESSAGE value="refactor&#10;&#10;pour clarté&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor&#10;&#10;pour clarté&#10;" />
+    <MESSAGE value="Ajout UI output&#10;&#10;RAF: refactoring&#10;         résoudre souci  inversion axe x y" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout UI output&#10;&#10;RAF: refactoring&#10;         résoudre souci  inversion axe x y" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1190,20 +1191,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/userInterface/output/Bubble.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0" vertical-offset="313" max-vertical-offset="680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/userInterface/output/BubblesList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="134" max-vertical-offset="561">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="62" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="272">
@@ -1228,9 +1215,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/userInterface/output/BubblesList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="134" max-vertical-offset="561">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/userInterface/output/Bubble.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0" vertical-offset="313" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/userInterface/output/BubbleChartOutput.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="8" selection-start="1850" selection-end="1850" vertical-scroll-proportion="0.107344635" vertical-offset="676" max-vertical-offset="1105">
+        <state line="28" column="64" selection-start="746" selection-end="746" vertical-scroll-proportion="0.6101695" vertical-offset="56" max-vertical-offset="1105">
           <folding />
         </state>
       </provider>
