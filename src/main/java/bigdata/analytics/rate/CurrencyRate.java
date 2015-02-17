@@ -1,4 +1,4 @@
-package model;
+package bigdata.analytics.rate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,38 +24,10 @@ public class CurrencyRate {
      */
     public int getId() { return id;}
 
-    private enum unitySymbol {
-        Dollar("$"),
-        Euro("€"),
-        Livre("£"),
-        Peso("C"),
-        Couronne("K"),
-        Sheqel("₪"),
-        Yen("¥"),
-        Won("₩"),
-        Zloty("z"),
-        Tolar("tolars"),
-        Franc("F"),
-        Lire("T");
-
-        private String symbol = "";
-        //Constructeur
-        unitySymbol(String name){
-            this.symbol = name;
-        }
-        public String toString(){
-            return symbol;
-        }
-
-        public String getSymbol() {
-            return symbol;
-        }
-    }
-    
     public String getCurrencyName() {
         return currencyName;
     }
-
+    
     public void setCurrencyName(String currencyName) {
         this.currencyName = currencyName;
     }
@@ -85,5 +57,35 @@ public class CurrencyRate {
         return Objects.equals(this.id, other.id)
                 && Objects.equals(this.currencyName, other.currencyName)
                 && Objects.equals(this.currencyCode, other.currencyCode);
+    }
+
+    private enum unitySymbol {
+        Dollar("$"),
+        Euro("€"),
+        Livre("£"),
+        Peso("C"),
+        Couronne("K"),
+        Sheqel("₪"),
+        Yen("¥"),
+        Won("₩"),
+        Zloty("z"),
+        Tolar("tolars"),
+        Franc("F"),
+        Lire("T");
+
+        private String symbol = "";
+
+        //Constructeur
+        unitySymbol(String name) {
+            this.symbol = name;
+        }
+
+        public String toString() {
+            return symbol;
+        }
+
+        public String getSymbol() {
+            return symbol;
+        }
     }
 }

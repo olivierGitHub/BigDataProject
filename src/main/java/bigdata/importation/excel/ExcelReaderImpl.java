@@ -1,10 +1,13 @@
 package bigdata.importation.excel;
 
+import bigdata.analytics.rategroup.RateGroupType;
 import bigdata.importation.FileReader;
+import bigdata.importation.RateItem;
+import bigdata.importation.RateKey;
+import bigdata.importation.RateValue;
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
-import model.RateGroupType;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,9 +18,9 @@ import java.util.List;
  * Created by alco on 09/02/2015.
  */
 public class ExcelReaderImpl implements FileReader {
-    Workbook workbook;
     private static final String CURRENCY_UNIT = "Unite monetaire";
     private static final double DEFAULT_VALUE_THREEDOT = -1;
+    Workbook workbook;
 
     public ExcelReaderImpl(){}
 

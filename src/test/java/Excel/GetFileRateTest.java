@@ -1,6 +1,10 @@
 package Excel;
 
-import excelParse.*;
+import bigdata.importation.FileReader;
+import bigdata.importation.RateItem;
+import bigdata.importation.RateKey;
+import bigdata.importation.RateValue;
+import bigdata.importation.excel.ExcelReaderImpl;
 import jxl.read.biff.BiffException;
 import org.testng.annotations.Test;
 
