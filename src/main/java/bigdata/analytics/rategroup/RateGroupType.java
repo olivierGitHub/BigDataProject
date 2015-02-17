@@ -1,4 +1,4 @@
-package model;
+package bigdata.analytics.rategroup;
 
 /**
  * Created by Arnaud on 12/02/2015.

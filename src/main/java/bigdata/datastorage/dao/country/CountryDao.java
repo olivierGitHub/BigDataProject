@@ -1,6 +1,7 @@
-package dataAccess.interfaces;
+package bigdata.datastorage.dao.country;
 
-import model.Country;
+import bigdata.analytics.country.Country;
+import bigdata.datastorage.dao.Dao;
 
 import java.util.List;
 

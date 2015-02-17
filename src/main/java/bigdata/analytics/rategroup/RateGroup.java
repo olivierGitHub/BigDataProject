@@ -1,4 +1,8 @@
-package model;
+package bigdata.analytics.rategroup;
+
+import bigdata.analytics.country.Country;
+import bigdata.analytics.rate.CurrencyRate;
+import bigdata.analytics.rate.Rate;
 
 import javax.persistence.*;
 import java.util.ArrayList;

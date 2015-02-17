@@ -1,4 +1,6 @@
-package model;
+package bigdata.analytics.country;
+
+import bigdata.analytics.rategroup.RateGroup;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

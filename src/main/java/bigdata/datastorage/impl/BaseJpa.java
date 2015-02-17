@@ -1,4 +1,4 @@
-package dataAccess;
+package bigdata.datastorage.impl;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;

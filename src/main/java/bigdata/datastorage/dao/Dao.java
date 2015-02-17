@@ -1,4 +1,4 @@
-package dataAccess.interfaces;
+package bigdata.datastorage.dao;
 
 /**
  * Created by Arnaud on 13/02/2015.

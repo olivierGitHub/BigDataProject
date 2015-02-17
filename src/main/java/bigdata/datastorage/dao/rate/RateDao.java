@@ -1,6 +1,7 @@
-package dataAccess.interfaces;
+package bigdata.datastorage.dao.rate;
 
-import model.Rate;
+import bigdata.analytics.rate.Rate;
+import bigdata.datastorage.dao.Dao;
 
 import java.util.List;
 

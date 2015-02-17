@@ -1,7 +1,7 @@
-package dataAccess;
+package bigdata.datastorage.dao.country;
 
-import dataAccess.interfaces.CountryDao;
-import model.Country;
+import bigdata.analytics.country.Country;
+import bigdata.datastorage.impl.BaseJpa;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;

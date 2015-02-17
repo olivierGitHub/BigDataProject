@@ -1,4 +1,6 @@
-package model;
+package bigdata.analytics.rate;
+
+import bigdata.analytics.rategroup.RateGroup;
 
 import javax.persistence.*;
 

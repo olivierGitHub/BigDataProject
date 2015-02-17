@@ -1,14 +1,14 @@
+import bigdata.parse.ParseCSV;
+import bigdata.parse.ReadCSV;
 import data.DataTaux;
 import org.testng.annotations.BeforeMethod;
-import static org.fest.assertions.api.Assertions.assertThat;
-
 import org.testng.annotations.Test;
-import parse.ParseCSV;
-import parse.ReadCSV;
 
 import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.fest.assertions.api.Assertions.assertThat;
 
 /**
  * Created by oliver on 24/01/15.

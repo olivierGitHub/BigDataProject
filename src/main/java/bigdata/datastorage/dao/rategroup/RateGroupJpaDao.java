@@ -1,8 +1,8 @@
-package dataAccess;
+package bigdata.datastorage.dao.rategroup;
 
-import dataAccess.interfaces.RateGroupDao;
-import model.RateGroup;
-import model.RateGroupType;
+import bigdata.analytics.rategroup.RateGroup;
+import bigdata.analytics.rategroup.RateGroupType;
+import bigdata.datastorage.impl.BaseJpa;
 
 import java.util.List;
 
