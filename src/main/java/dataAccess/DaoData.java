@@ -5,6 +5,8 @@ import model.Country;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.TypedQuery;
+import java.util.List;
 
 /**
  * Created by oliver on 17/02/15.
@@ -60,4 +62,29 @@ public class DaoData extends BaseJpa {
         }
         return dataTaux;
     }
+
+    public List<DataTaux> readALL() {
+        EntityManager em = super.getEntityManagerFactory().createEntityManager();
+        EntityTransaction t = em.getTransaction();
+        List<DataTaux> listDataTaux = null;
+
+        try{
+            t.begin();
+            String sql = "select e from DataTaux e";
+            TypedQuery<DataTaux> query = em.createQuery(sql, DataTaux.class);
+            t.commit();
+            listDataTaux = query.getResultList();
+        }catch(Exception ex){
+            System.out.println("SOUCI lors de la lecture du référentiel");
+            ex.printStackTrace();
+        }finally {
+            if (t.isActive()){
+                t.rollback();
+                em.close();
+            }
+        }
+        return listDataTaux;
+    }
+
+
 }
