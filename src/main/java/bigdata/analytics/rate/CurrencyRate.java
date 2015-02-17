@@ -17,11 +17,16 @@ public class CurrencyRate {
     @GeneratedValue
     private int id;
     private String currencyName;
-    private String currencyCode;
+    private CurrencyCode currencyCode;
 
-    /***
-     * Private enum for set currencyCode with currencyName*
-     */
+    public CurrencyRate() {
+    }
+
+    public CurrencyRate(String currencyName, CurrencyCode currencyCode) {
+        this.currencyName = currencyName;
+        this.currencyCode = currencyCode;
+    }
+
     public int getId() { return id;}
 
     public String getCurrencyName() {
@@ -32,12 +37,12 @@ public class CurrencyRate {
         this.currencyName = currencyName;
     }
 
-    public String getCurrencyCode() {
+    public CurrencyCode getCurrencyCode() {
         return currencyCode;
     }
 
-    public void setCurrencyCode(String currencyCode) {
-        this.currencyCode = unitySymbol.valueOf(currencyName).getSymbol();
+    public void setCurrencyCode(CurrencyCode currencyCode) {
+        this.currencyCode = CurrencyCode.valueOf(currencyName);
     }
 
     @Override
@@ -57,35 +62,5 @@ public class CurrencyRate {
         return Objects.equals(this.id, other.id)
                 && Objects.equals(this.currencyName, other.currencyName)
                 && Objects.equals(this.currencyCode, other.currencyCode);
-    }
-
-    private enum unitySymbol {
-        Dollar("$"),
-        Euro("€"),
-        Livre("£"),
-        Peso("C"),
-        Couronne("K"),
-        Sheqel("₪"),
-        Yen("¥"),
-        Won("₩"),
-        Zloty("z"),
-        Tolar("tolars"),
-        Franc("F"),
-        Lire("T");
-
-        private String symbol = "";
-
-        //Constructeur
-        unitySymbol(String name) {
-            this.symbol = name;
-        }
-
-        public String toString() {
-            return symbol;
-        }
-
-        public String getSymbol() {
-            return symbol;
-        }
     }
 }

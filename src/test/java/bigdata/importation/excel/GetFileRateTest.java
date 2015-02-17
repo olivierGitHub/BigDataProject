@@ -1,10 +1,9 @@
-package Excel;
+package bigdata.importation.excel;
 
 import bigdata.importation.FileReader;
 import bigdata.importation.RateItem;
 import bigdata.importation.RateKey;
 import bigdata.importation.RateValue;
-import bigdata.importation.excel.ExcelReaderImpl;
 import jxl.read.biff.BiffException;
 import org.testng.annotations.Test;
 
@@ -20,7 +19,7 @@ public class GetFileRateTest {
     @Test
     public void shouldGetRateFileCorrectly(){
         try {
-            FileReader excelReader = new ExcelReaderImpl();
+            FileReader excelReader = new ExcelReader();
             excelReader.takeReader(OCDE_FILE);
             List<RateItem> found = excelReader.getFileRate();
             for (RateItem rateItem : found) {

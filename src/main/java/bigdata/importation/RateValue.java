@@ -6,20 +6,20 @@ import java.util.Objects;
  * Created by alexandre on 16/02/2015.
  */
 public class RateValue {
-    private Double taux;
+    private Double rate;
     private String currencyName;
 
     public RateValue(Double taux, String currency) {
-        this.taux = taux;
+        this.rate = taux;
         this.currencyName = currency;
     }
 
-    public Double getTaux() {
-        return taux;
+    public Double getRate() {
+        return rate;
     }
 
-    public void setTaux(Double taux) {
-        this.taux = taux;
+    public void setRate(Double rate) {
+        this.rate = rate;
     }
 
     public String getCurrency() {
@@ -32,7 +32,7 @@ public class RateValue {
 
     @Override
     public int hashCode() {
-        return Objects.hash(taux, currencyName);
+        return Objects.hash(rate, currencyName);
     }
 
     @Override
@@ -44,14 +44,14 @@ public class RateValue {
             return false;
         }
         final RateValue other = (RateValue) obj;
-        return Objects.equals(this.taux, other.taux)
+        return Objects.equals(this.rate, other.rate)
                 && Objects.equals(this.currencyName, other.currencyName);
     }
 
     @Override
     public String toString() {
         return "RateValue{" +
-                "taux=" + taux +
+                "rate=" + rate +
                 ", currencyName='" + currencyName + '\'' +
                 '}';
     }

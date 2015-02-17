@@ -16,12 +16,19 @@ import java.util.Objects;
 @Entity
 public class Country {
 
-    @OneToMany(mappedBy = "country")
+    @OneToMany
     private final List<RateGroup> rateGroups = new ArrayList<RateGroup>();
     String countryName;
     @GeneratedValue
     @Id
     private Integer id;
+
+    public Country() {
+    }
+
+    public Country(String countryName) {
+        this.countryName = countryName;
+    }
 
     public Integer getId() {
         return id;
@@ -69,5 +76,9 @@ public class Country {
                 ", rateGroups=" + rateGroups +
                 ", countryName='" + countryName + '\'' +
                 '}';
+    }
+
+    public void addRateGroup(RateGroup rateGroup) {
+        this.rateGroups.add(rateGroup);
     }
 }

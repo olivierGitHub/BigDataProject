@@ -1,27 +1,29 @@
 package bigdata.importation;
 
+import bigdata.analytics.rategroup.RateGroupType;
+
 import java.util.Objects;
 
 /**
  * Created by alexandre on 16/02/2015.
  */
 public class RateKey {
-    String country;
+    String countryName;
     String year;
-    String rateGroupeType;
+    RateGroupType rateGroupeType;
 
-    public RateKey(String country, String year, String rateGroupeType) {
-        this.country = country;
+    public RateKey(String country, String year, RateGroupType rateGroupeType) {
+        this.countryName = country;
         this.year = year;
         this.rateGroupeType = rateGroupeType;
     }
 
-    public String getCountry() {
-        return country;
+    public String getCountryName() {
+        return countryName;
     }
 
-    public void setCountry(String country) {
-        this.country = country;
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
     }
 
     public String getYear() {
@@ -32,17 +34,17 @@ public class RateKey {
         this.year = year;
     }
 
-    public String getRateGroupeType() {
+    public RateGroupType getRateGroupeType() {
         return rateGroupeType;
     }
 
-    public void setRateGroupeType(String rateGroupeType) {
+    public void setRateGroupeType(RateGroupType rateGroupeType) {
         this.rateGroupeType = rateGroupeType;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(country, year, rateGroupeType);
+        return Objects.hash(countryName, year, rateGroupeType);
     }
 
     @Override
@@ -54,7 +56,7 @@ public class RateKey {
             return false;
         }
         final RateKey other = (RateKey) obj;
-        return Objects.equals(this.country, other.country)
+        return Objects.equals(this.countryName, other.countryName)
                 && Objects.equals(this.year, other.year)
                 && Objects.equals(this.rateGroupeType, other.rateGroupeType);
     }
@@ -62,7 +64,7 @@ public class RateKey {
     @Override
     public String toString() {
         return "RateKey{" +
-                "country='" + country + '\'' +
+                "countryName='" + countryName + '\'' +
                 ", year='" + year + '\'' +
                 ", rateGroupeType='" + rateGroupeType + '\'' +
                 '}';

@@ -3,11 +3,10 @@ package bigdata.datastorage.dao.rate;
 import bigdata.analytics.rate.Rate;
 import bigdata.datastorage.impl.BaseJpa;
 
+import javax.inject.Named;
 import java.util.List;
 
-/**
- * Created by Arnaud on 13/02/2015.
- */
+@Named
 public class RateJpaDao extends BaseJpa implements RateDao {
     @Override
     public List<Rate> getRatesByYear(Integer rateGroupId, String year) {

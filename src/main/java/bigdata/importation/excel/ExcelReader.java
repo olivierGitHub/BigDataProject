@@ -13,16 +13,21 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * Created by alco on 09/02/2015.
  */
-public class ExcelReaderImpl implements FileReader {
+public class ExcelReader implements FileReader {
+
+    private final static Logger logger = Logger.getLogger(ExcelReader.class.getName());
+
     private static final String CURRENCY_UNIT = "Unite monetaire";
     private static final double DEFAULT_VALUE_THREEDOT = -1;
     Workbook workbook;
 
-    public ExcelReaderImpl(){}
+    public ExcelReader() {
+    }
 
     @Override
     public void takeReader(String workbook) throws IOException, BiffException {
@@ -266,27 +271,21 @@ public class ExcelReaderImpl implements FileReader {
         ArrayList<String> sheetNameList = getAllNameSheet();
 
         for (String nameSheet : sheetNameList) {
-            System.out.println(nameSheet);  //*********************************************
             Sheet sheet = workbook.getSheet(sheetNumber);
             try {
-                RateGroupType rateGrouptype = RateGroupType.valueOf(nameSheet);
+                RateGroupType rateGroupType = RateGroupType.valueOf(nameSheet);
                 int x = 1, y = 1;
                 do{
-//                    System.out.println("y = " + y);  //*********************************************
                     do{
-//                        System.out.println("x = " + x);  //*********************************************
                         contentValue = sheet.getCell(x, y).getContents().trim();
                         try{
                             tauxValue = Double.parseDouble(contentValue.replace(',','.'));
                             RateValue rateValue = new RateValue(tauxValue,getUniteMonetaire(y));
-//                            System.out.println("rateValue = " + rateValue);  //*********************************************
-                            RateKey rateKey = new RateKey(getCountry(y),getYear(y),nameSheet);
-//                            System.out.println("rateKey = " + rateKey);  //*********************************************
+                            RateKey rateKey = new RateKey(getCountry(y), getYear(y), rateGroupType);
                             RateItem rateItem = new RateItem(rateKey,rateValue);
-//                            System.out.println("rateItem = " + rateItem);  //*********************************************
                             rateItemList.add(rateItem);
                         }catch  (Exception e1){
-                            e1.printStackTrace();
+                            logger.warning("this is not a valid rate : " + contentValue);
                         }
                         x++;
                     }while (!sheet.getCell(x, y).getContents().equals(""));
@@ -294,6 +293,7 @@ public class ExcelReaderImpl implements FileReader {
                 }while (!sheet.getCell(x, y).getContents().equals("") && x<= takeNumberOfLine(sheetNumber));
                 sheetNumber++;
             }catch (Exception e){
+                logger.severe("this is not a valid rate type : " + nameSheet);
             }
         }
         

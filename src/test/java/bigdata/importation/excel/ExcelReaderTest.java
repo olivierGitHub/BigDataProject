@@ -1,4 +1,4 @@
-package Excel;
+package bigdata.importation.excel;
 
 /**
  * Created by alexandre on 05/02/2015.
@@ -207,10 +207,10 @@ public class ExcelReaderTest {
             FileReader excelReader = new ExcelReaderImpl();
             excelReader.takeReader(OCDE_FILE);
             int x =1,y=1;
-            String countryFound = excelReader.getCountry(y);
+            String countryFound = excelReader.getCountryName(y);
             assertThat(countryFound).isEqualTo("Australie");
             x =2; y=5;
-            String countryFound2 = excelReader.getCountry(y);
+            String countryFound2 = excelReader.getCountryName(y);
             assertThat(countryFound2).isEqualTo("Chili");
         } catch (IOException e) {
             e.printStackTrace();

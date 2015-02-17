@@ -4,11 +4,10 @@ import bigdata.analytics.rategroup.RateGroup;
 import bigdata.analytics.rategroup.RateGroupType;
 import bigdata.datastorage.impl.BaseJpa;
 
+import javax.inject.Named;
 import java.util.List;
 
-/**
- * Created by Arnaud on 13/02/2015.
- */
+@Named
 public class RateGroupJpaDao extends BaseJpa implements RateGroupDao {
     @Override
     public List<RateGroup> getRateGroupsByType(RateGroupType type) {

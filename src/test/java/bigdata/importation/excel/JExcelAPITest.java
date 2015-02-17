@@ -1,4 +1,4 @@
-package Excel;
+package bigdata.importation.excel;
 
 import jxl.Sheet;
 import jxl.Workbook;
