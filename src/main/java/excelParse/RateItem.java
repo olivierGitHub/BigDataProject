@@ -9,6 +9,11 @@ public class RateItem {
     private RateKey rateKey;
     private RateValue rateValue;
 
+    public RateItem(RateKey rateKey, RateValue rateValue) {
+        this.rateKey = rateKey;
+        this.rateValue = rateValue;
+    }
+
     public RateKey getRateKey() {
         return rateKey;
     }

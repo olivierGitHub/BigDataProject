@@ -3,23 +3,29 @@ package excelParse;
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
+import model.RateGroupType;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by alco on 09/02/2015.
  */
 public class ExcelReaderImpl implements FileReader {
     Workbook workbook;
-    private String CURRENCY_UNIT = "Unite monetaire";
-    private double DEFAULT_VALUE_THREEDOT = -1;
-    public ExcelReaderImpl(String workbook) throws IOException,BiffException{
+    private static final String CURRENCY_UNIT = "Unite monetaire";
+    private static final double DEFAULT_VALUE_THREEDOT = -1;
+
+    public ExcelReaderImpl(){}
+
+    @Override
+    public void takeReader(String workbook) throws IOException, BiffException {
         this.workbook = Workbook.getWorkbook(new File(workbook));
     }
 
-    @Override
+    
     public ArrayList<String> takeLineString(int sheetNumber, int rowNumber) throws IllegalArgumentException{
         ArrayList<String> ligne = new ArrayList<String>();
         int numberOfSheets = workbook.getNumberOfSheets();
@@ -47,7 +53,7 @@ public class ExcelReaderImpl implements FileReader {
      * @param rowNumber
      * @return
      */
-    @Override
+    
     public ArrayList<Double> takeLineDouble(int sheetNumber, int rowNumber) {
         ArrayList<Double> ligne = new ArrayList<Double>();
         int numberOfSheets = workbook.getNumberOfSheets();
@@ -75,7 +81,7 @@ public class ExcelReaderImpl implements FileReader {
         return ligne;
     }
 
-    @Override
+    
     public ArrayList<String> getAllCountry() {
         ArrayList<String> country = new ArrayList<String>();
         Sheet sheet = workbook.getSheet(0);
@@ -90,7 +96,7 @@ public class ExcelReaderImpl implements FileReader {
         return country;
     }
 
-    @Override
+    
     public ArrayList<String> getAllYears() {
         ArrayList<String> years = new ArrayList<String>();
         Sheet sheet = workbook.getSheet(0);
@@ -105,7 +111,7 @@ public class ExcelReaderImpl implements FileReader {
         return years;
     }
 
-    @Override
+    
     public int takeNumberOfLine(int sheet) {
         Sheet sheets = workbook.getSheet(sheet);
         int y = 1;
@@ -115,7 +121,7 @@ public class ExcelReaderImpl implements FileReader {
         return --y;
     }
 
-    @Override
+    
     public ArrayList<ArrayList<String>> takeAllLineString(int sheet) {
         ArrayList<ArrayList<String>> collection = new ArrayList<ArrayList<String>>();
         int y = 1;
@@ -131,7 +137,7 @@ public class ExcelReaderImpl implements FileReader {
      * @param sheet
      * @return
      */
-    @Override
+    
     public ArrayList<ArrayList<Double>> takeAllLineDouble(int sheet) {
         ArrayList<ArrayList<Double>> collection = new ArrayList<ArrayList<Double>>();
         int y = 1;
@@ -142,7 +148,7 @@ public class ExcelReaderImpl implements FileReader {
         return collection;
     }
 
-    @Override
+    
     public ArrayList<ArrayList<ArrayList<String>>> takeAllSheetLineString() {
         ArrayList<ArrayList<ArrayList<String>>> allSheet = new ArrayList<ArrayList<ArrayList<String>>>();
         int sheet = 0;
@@ -157,7 +163,7 @@ public class ExcelReaderImpl implements FileReader {
      * Return -1 for all cells have "..." value
      * @return
      */
-    @Override
+    
     public ArrayList<ArrayList<ArrayList<Double>>> takeAllSheetLineDouble() {
         ArrayList<ArrayList<ArrayList<Double>>> allSheet = new ArrayList<ArrayList<ArrayList<Double>>>();
         int sheet = 0;
@@ -168,21 +174,21 @@ public class ExcelReaderImpl implements FileReader {
         return allSheet;
     }
 
-    @Override
+    
     public String getCountry(int row) {
         Sheet sheet = workbook.getSheet(0);
         String content = sheet.getCell(0, row).getContents().trim();
         return content;
     }
 
-    @Override
+    
     public String getYear(int column) {
         Sheet sheet = workbook.getSheet(0);
         String content = sheet.getCell(column, 0).getContents().trim();
         return content;
     }
 
-    @Override
+    
     public ArrayList<String> getAllNameSheet() {
         ArrayList<String> sheetNames = new ArrayList<String>();
         String[] sheetsName = new String[workbook.getNumberOfSheets()];
@@ -193,7 +199,7 @@ public class ExcelReaderImpl implements FileReader {
         return sheetNames;
     }
 
-    @Override
+    
     public String getNameSheet(int sheet) {
         String[] sheetsName = new String[workbook.getNumberOfSheets()];
         sheetsName = workbook.getSheetNames();
@@ -205,7 +211,7 @@ public class ExcelReaderImpl implements FileReader {
      * @return
      * @return null if bad y
      */
-    @Override
+    
     public String getUniteMonetaire(int y) {
         int z = 0;
         while(!(workbook.getSheet(2).getCell(z, 0).getContents().equals(CURRENCY_UNIT))){
@@ -225,7 +231,7 @@ public class ExcelReaderImpl implements FileReader {
         return content.trim();
     }
 
-    @Override
+    
     public ArrayList<String> getAllUniteMonetaire() {
         int z = 0;
         int y = 1;
@@ -240,5 +246,47 @@ public class ExcelReaderImpl implements FileReader {
         }
         
         return content;
+    }
+
+    /***
+     * @return List<RateItem>
+     */
+    @Override
+    public List<RateItem> getFileRate() {
+        List<RateItem> rateItemList = new ArrayList<RateItem>();
+        
+        String contentValue = "";
+        Double tauxValue = -1.0;
+        int sheetNumber = 0;
+
+        ArrayList<String> sheetNameList = getAllNameSheet();
+
+        for (String nameSheet : sheetNameList) {
+            Sheet sheet = workbook.getSheet(sheetNumber);
+            try {
+                RateGroupType rateGrouptype = RateGroupType.valueOf(nameSheet);
+            }catch (Exception e){
+                int x = 1, y = 1;
+                do{
+                    do{
+                        contentValue = sheet.getCell(x, y).getContents().trim();
+                        try{
+                            tauxValue = Double.parseDouble(contentValue.replace(',','.'));
+                            RateValue rateValue = new RateValue(tauxValue,getUniteMonetaire(y));
+                            RateKey rateKey = new RateKey(getCountry(y),getYear(y),nameSheet);
+                            RateItem rateItem = new RateItem(rateKey,rateValue);
+                            rateItemList.add(rateItem);
+                        }catch  (Exception e1){
+                            e1.printStackTrace();
+                        }
+                        x++;
+                    }while (!sheet.getCell(x, y).getContents().equals(""));
+                    y++; x = 1;
+                }while (!sheet.getCell(x, y).getContents().equals("") && x<= takeNumberOfLine(sheetNumber));
+                sheetNumber++;
+            }
+        }
+        
+        return rateItemList;
     }
 }

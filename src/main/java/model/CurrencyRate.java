@@ -11,6 +11,8 @@ import java.util.Objects;
 @Entity
 public class CurrencyRate {
 
+
+
     @Id
     @GeneratedValue
     private int id;
@@ -20,6 +22,8 @@ public class CurrencyRate {
     /***
      * Private enum for set currencyCode with currencyName*
      */
+    public int getId() { return id;}
+
     private enum unitySymbol {
         Dollar("$"),
         Euro("€"),
@@ -48,14 +52,6 @@ public class CurrencyRate {
         }
     }
     
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getCurrencyName() {
         return currencyName;
     }

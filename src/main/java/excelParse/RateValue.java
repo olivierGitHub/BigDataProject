@@ -1,7 +1,5 @@
 package excelParse;
 
-import model.CurrencyRate;
-
 import java.util.Objects;
 
 /**
@@ -9,11 +7,11 @@ import java.util.Objects;
  */
 public class RateValue {
     private Double taux;
-    private CurrencyRate currency;
+    private String currencyName;
 
-    public RateValue(Double taux, CurrencyRate currency) {
+    public RateValue(Double taux, String currency) {
         this.taux = taux;
-        this.currency = currency;
+        this.currencyName = currency;
     }
 
     public Double getTaux() {
@@ -24,17 +22,17 @@ public class RateValue {
         this.taux = taux;
     }
 
-    public CurrencyRate getCurrency() {
-        return currency;
+    public String getCurrency() {
+        return currencyName;
     }
 
-    public void setCurrency(CurrencyRate currency) {
-        this.currency = currency;
+    public void setCurrency(String currency) {
+        this.currencyName = currency;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(taux, currency);
+        return Objects.hash(taux, currencyName);
     }
 
     @Override
@@ -47,6 +45,6 @@ public class RateValue {
         }
         final RateValue other = (RateValue) obj;
         return Objects.equals(this.taux, other.taux)
-                && Objects.equals(this.currency, other.currency);
+                && Objects.equals(this.currencyName, other.currencyName);
     }
 }
