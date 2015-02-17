@@ -58,4 +58,13 @@ public class RateKey {
                 && Objects.equals(this.year, other.year)
                 && Objects.equals(this.rateGroupeType, other.rateGroupeType);
     }
+
+    @Override
+    public String toString() {
+        return "RateKey{" +
+                "country='" + country + '\'' +
+                ", year='" + year + '\'' +
+                ", rateGroupeType='" + rateGroupeType + '\'' +
+                '}';
+    }
 }

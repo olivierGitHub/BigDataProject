@@ -1,12 +1,5 @@
 package Excel;
 
-import excelParse.ExcelReaderImpl;
-import excelParse.FileReader;
-import jxl.read.biff.BiffException;
-import org.testng.annotations.Test;
-
-import java.io.IOException;
-
 /**
  * Created by alexandre on 05/02/2015.
  * */
@@ -319,17 +312,4 @@ public class ExcelReaderTest {
             e.printStackTrace();
         }
     }*/
-    
-    @Test
-    public void shouldGetFileRate(){
-        try {
-            FileReader excelReader = new ExcelReaderImpl();
-            excelReader.takeReader(OCDE_FILE);
-            excelReader.getFileRate();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (BiffException e) {
-            e.printStackTrace();
-        }
-    }
 }

@@ -48,4 +48,11 @@ public class RateItem {
                 && Objects.equals(this.rateValue, other.rateValue);
     }
 
+    @Override
+    public String toString() {
+        return "RateItem{" +
+                "rateKey=" + rateKey +
+                ", rateValue=" + rateValue +
+                '}';
+    }
 }

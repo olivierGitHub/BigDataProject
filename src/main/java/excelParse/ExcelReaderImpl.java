@@ -262,19 +262,24 @@ public class ExcelReaderImpl implements FileReader {
         ArrayList<String> sheetNameList = getAllNameSheet();
 
         for (String nameSheet : sheetNameList) {
+            System.out.println(nameSheet);  //*********************************************
             Sheet sheet = workbook.getSheet(sheetNumber);
             try {
                 RateGroupType rateGrouptype = RateGroupType.valueOf(nameSheet);
-            }catch (Exception e){
                 int x = 1, y = 1;
                 do{
+//                    System.out.println("y = " + y);  //*********************************************
                     do{
+//                        System.out.println("x = " + x);  //*********************************************
                         contentValue = sheet.getCell(x, y).getContents().trim();
                         try{
                             tauxValue = Double.parseDouble(contentValue.replace(',','.'));
                             RateValue rateValue = new RateValue(tauxValue,getUniteMonetaire(y));
+//                            System.out.println("rateValue = " + rateValue);  //*********************************************
                             RateKey rateKey = new RateKey(getCountry(y),getYear(y),nameSheet);
+//                            System.out.println("rateKey = " + rateKey);  //*********************************************
                             RateItem rateItem = new RateItem(rateKey,rateValue);
+//                            System.out.println("rateItem = " + rateItem);  //*********************************************
                             rateItemList.add(rateItem);
                         }catch  (Exception e1){
                             e1.printStackTrace();
@@ -284,6 +289,7 @@ public class ExcelReaderImpl implements FileReader {
                     y++; x = 1;
                 }while (!sheet.getCell(x, y).getContents().equals("") && x<= takeNumberOfLine(sheetNumber));
                 sheetNumber++;
+            }catch (Exception e){
             }
         }
         

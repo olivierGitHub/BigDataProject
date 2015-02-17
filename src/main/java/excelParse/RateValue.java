@@ -47,4 +47,12 @@ public class RateValue {
         return Objects.equals(this.taux, other.taux)
                 && Objects.equals(this.currencyName, other.currencyName);
     }
+
+    @Override
+    public String toString() {
+        return "RateValue{" +
+                "taux=" + taux +
+                ", currencyName='" + currencyName + '\'' +
+                '}';
+    }
 }
