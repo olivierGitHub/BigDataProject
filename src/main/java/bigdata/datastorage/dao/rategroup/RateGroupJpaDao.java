@@ -1,5 +1,6 @@
 package bigdata.datastorage.dao.rategroup;
 
+import bigdata.analytics.dto.CountryRateGroupDto;
 import bigdata.analytics.rategroup.RateGroup;
 import bigdata.analytics.rategroup.RateGroupType;
 import bigdata.datastorage.impl.BaseJpa;
@@ -21,6 +22,11 @@ public class RateGroupJpaDao extends BaseJpa implements RateGroupDao {
 
     @Override
     public List<RateGroup> getRateGroups(Integer countryId) {
+        return null;
+    }
+
+    @Override
+    public List<CountryRateGroupDto> getRateGroupDtoByRateGroupType(RateGroupType rateGroupType) {
         return null;
     }
 
