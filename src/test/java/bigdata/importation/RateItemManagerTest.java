@@ -38,28 +38,122 @@ public class RateItemManagerTest {
     @Before
     public void setUp() throws Exception {
         when(rateAssembler.fromRateItem(any(RateItem.class))).thenCallRealMethod();
+        when(rateGroupAssembler.fromRateItem(any(RateItem.class), any(RateGroup.class))).thenCallRealMethod();
         when(rateGroupAssembler.fromRateItem(any(RateItem.class))).thenCallRealMethod();
     }
 
     @Test
     public void testRateItemListToModel() throws Exception {
+        List<RateItem> rateItemList = generateRateItemList();
+        List<Country> modelExpected = generateModelExpected();
+        assertThat(rateItemManager.rateItemListToModel(rateItemList), is(modelExpected));
+    }
+
+    private List<Country> generateModelExpected() {
+        List<Country> modelExpected = new ArrayList<Country>();
+        Country country;
+        RateGroup rateGroup;
+        Rate rate;
+
+        country = createCountry("France");
+        rateGroup = addNewRateGroupToCountry(
+                country,
+                createCurrencyRate("Euro", CurrencyCode.Euro),
+                RateGroupType.EFFECTIVE
+        );
+        rate = addNewRateToRateGroup(rateGroup, "2010", rate(1.12));
+        rate = addNewRateToRateGroup(rateGroup, "2009", rate(1.14));
+        rateGroup = addNewRateGroupToCountry(
+                country,
+                createCurrencyRate("Euro", CurrencyCode.Euro),
+                RateGroupType.NOMINATIVE
+        );
+        rate = addNewRateToRateGroup(rateGroup, "2010", rate(1.16));
+        rate = addNewRateToRateGroup(rateGroup, "2008", rate(1.17));
+        modelExpected.add(country);
+
+        country = createCountry("Allemagne");
+        rateGroup = addNewRateGroupToCountry(
+                country,
+                createCurrencyRate("Euro", CurrencyCode.Euro),
+                RateGroupType.EFFECTIVE
+        );
+        rate = addNewRateToRateGroup(rateGroup, "2010", rate(1.13));
+        modelExpected.add(country);
+
+        country = createCountry("USA");
+        rateGroup = addNewRateGroupToCountry(
+                country,
+                createCurrencyRate("Dollar", CurrencyCode.Dollar),
+                RateGroupType.NOMINATIVE
+        );
+        rate = addNewRateToRateGroup(rateGroup, "2010", rate(1.15));
+        modelExpected.add(country);
+
+        return modelExpected;
+    }
+
+    private double rate(double rate) {
+        return rate;
+    }
+
+    private Rate addNewRateToRateGroup(RateGroup rateGroup, String year, double rateValue) {
+        Rate rate = new Rate();
+        rate.setYear(year);
+        rate.setValue(rateValue);
+        rateGroup.addRate(rate);
+        return rate;
+    }
+
+    private CurrencyRate createCurrencyRate(String currencyName, CurrencyCode currencyCode) {
+        return new CurrencyRate(currencyName, currencyCode);
+    }
+
+    private RateGroup addNewRateGroupToCountry(Country country, CurrencyRate currencyRate, RateGroupType rateGroupType) {
+        RateGroup rateGroup = new RateGroup();
+        rateGroup.setCurrency(currencyRate);
+        rateGroup.setType(rateGroupType);
+        country.addRateGroup(rateGroup);
+        return rateGroup;
+    }
+
+    private Country createCountry(String countryName) {
+        return new Country(countryName);
+    }
+
+    private List<RateItem> generateRateItemList() {
         List<RateItem> rateItemList = new ArrayList<RateItem>();
+
         RateKey rateKey = new RateKey("France", "2010", RateGroupType.EFFECTIVE);
         RateValue rateValue = new RateValue(1.12, "Euro");
         RateItem rateItem = new RateItem(rateKey, rateValue);
         rateItemList.add(rateItem);
 
-        List<Country> modelExpected = new ArrayList<Country>();
-        Country country = new Country("France");
-        RateGroup rateGroup = new RateGroup();
-        rateGroup.setCurrency(new CurrencyRate("Euro", CurrencyCode.Euro));
-        rateGroup.setType(RateGroupType.EFFECTIVE);
-        Rate rate = new Rate();
-        rate.setYear("2010");
-        rate.setValue(1.12);
-        rateGroup.addRate(rate);
-        country.addRateGroup(rateGroup);
-        modelExpected.add(country);
-        assertThat(rateItemManager.rateItemListToModel(rateItemList), is(modelExpected));
+        rateKey = new RateKey("Allemagne", "2010", RateGroupType.EFFECTIVE);
+        rateValue = new RateValue(1.13, "Euro");
+        rateItem = new RateItem(rateKey, rateValue);
+        rateItemList.add(rateItem);
+
+        rateKey = new RateKey("France", "2009", RateGroupType.EFFECTIVE);
+        rateValue = new RateValue(1.14, "Euro");
+        rateItem = new RateItem(rateKey, rateValue);
+        rateItemList.add(rateItem);
+
+        rateKey = new RateKey("USA", "2010", RateGroupType.NOMINATIVE);
+        rateValue = new RateValue(1.15, "Dollar");
+        rateItem = new RateItem(rateKey, rateValue);
+        rateItemList.add(rateItem);
+
+        rateKey = new RateKey("France", "2010", RateGroupType.NOMINATIVE);
+        rateValue = new RateValue(1.16, "Euro");
+        rateItem = new RateItem(rateKey, rateValue);
+        rateItemList.add(rateItem);
+
+        rateKey = new RateKey("France", "2008", RateGroupType.NOMINATIVE);
+        rateValue = new RateValue(1.17, "Euro");
+        rateItem = new RateItem(rateKey, rateValue);
+        rateItemList.add(rateItem);
+
+        return rateItemList;
     }
 }

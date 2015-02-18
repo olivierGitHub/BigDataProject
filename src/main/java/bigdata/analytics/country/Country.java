@@ -2,10 +2,7 @@ package bigdata.analytics.country;
 
 import bigdata.analytics.rategroup.RateGroup;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +13,7 @@ import java.util.Objects;
 @Entity
 public class Country {
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "country")
     private final List<RateGroup> rateGroups = new ArrayList<RateGroup>();
     String countryName;
     @GeneratedValue

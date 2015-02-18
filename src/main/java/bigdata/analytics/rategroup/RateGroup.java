@@ -1,5 +1,6 @@
 package bigdata.analytics.rategroup;
 
+import bigdata.analytics.country.Country;
 import bigdata.analytics.rate.CurrencyRate;
 import bigdata.analytics.rate.Rate;
 
@@ -15,13 +16,15 @@ import java.util.Objects;
 @Entity
 public class RateGroup {
 
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
+    Country country;
     @Id
     @GeneratedValue
     private int id;
     private RateGroupType type;
     @ManyToOne(fetch = FetchType.EAGER)
     private CurrencyRate currency;
-    @OneToMany
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "rateGroup")
     private List<Rate> rates = new ArrayList<Rate>();
 
     public List<Rate> getRates() {
@@ -57,9 +60,17 @@ public class RateGroup {
         this.currency = currency;
     }
 
+    public Country getCountry() {
+        return country;
+    }
+
+    public void setCountry(Country country) {
+        this.country = country;
+    }
+
     @Override
     public int hashCode() {
-        return Objects.hash(rates, id, type, currency);
+        return Objects.hash(id, type, currency, rates);
     }
 
     @Override
@@ -71,10 +82,10 @@ public class RateGroup {
             return false;
         }
         final RateGroup other = (RateGroup) obj;
-        return Objects.equals(this.rates, other.rates)
-                && Objects.equals(this.id, other.id)
+        return Objects.equals(this.id, other.id)
                 && Objects.equals(this.type, other.type)
-                && Objects.equals(this.currency, other.currency);
+                && Objects.equals(this.currency, other.currency)
+                && Objects.equals(this.rates, other.rates);
     }
 
     @Override

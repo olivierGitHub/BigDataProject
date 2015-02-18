@@ -8,7 +8,7 @@ import bigdata.analytics.rategroup.RateGroupAssembler;
 
 import javax.inject.Inject;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -24,7 +24,7 @@ public class RateItemManager {
 
     public List<Country> rateItemListToModel(List<RateItem> rateItemList) {
         List<Country> countryList = new ArrayList<Country>();
-        Map<String, Country> countryMap = new HashMap<String, Country>();
+        Map<String, Country> countryMap = new LinkedHashMap<String, Country>();
         for (RateItem rateItem : rateItemList) {
             convertItemToCountryModel(rateGroupAssembler, rateAssembler, countryList, countryMap, rateItem);
         }
@@ -33,11 +33,22 @@ public class RateItemManager {
 
     private void convertItemToCountryModel(RateGroupAssembler rateGroupAssembler, RateAssembler rateAssembler, List<Country> countryList, Map<String, Country> countryMap, RateItem rateItem) {
         Country country = getCountryFromRateItemList(countryMap, rateItem);
-        RateGroup rateGroup = rateGroupAssembler.fromRateItem(rateItem);
+        RateGroup rateGroup = getRateGroupFromRateItemListByType(countryMap, rateItem, country);
         Rate rate = rateAssembler.fromRateItem(rateItem);
         rateGroup.addRate(rate);
-        country.addRateGroup(rateGroup);
         countryList.add(country);
+    }
+
+    private RateGroup getRateGroupFromRateItemListByType(Map<String, Country> countryMap, RateItem rateItem, Country country) {
+        for (RateGroup rateGroup : countryMap.get(rateItem.getRateKey().getCountryName()).getRateGroups()) {
+            if (rateGroup.getType().equals(rateItem.getRateKey().getRateGroupeType())) {
+                rateGroup = rateGroupAssembler.fromRateItem(rateItem, rateGroup);
+                return rateGroup;
+            }
+        }
+        RateGroup newRateGroup = rateGroupAssembler.fromRateItem(rateItem);
+        country.addRateGroup(newRateGroup);
+        return newRateGroup;
     }
 
     private Country getCountryFromRateItemList(Map<String, Country> countryMap, RateItem rateItem) {

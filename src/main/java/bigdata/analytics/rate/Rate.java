@@ -1,8 +1,8 @@
 package bigdata.analytics.rate;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import bigdata.analytics.rategroup.RateGroup;
+
+import javax.persistence.*;
 import java.util.Objects;
 
 /**
@@ -16,6 +16,8 @@ public class Rate {
     private int id;
     private String year;
     private Double value;
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
+    private RateGroup rateGroup;
 
     public int getId() {
         return id;
@@ -39,6 +41,14 @@ public class Rate {
 
     public void setValue(Double value) {
         this.value = value;
+    }
+
+    public RateGroup getRateGroup() {
+        return rateGroup;
+    }
+
+    public void setRateGroup(RateGroup rateGroup) {
+        this.rateGroup = rateGroup;
     }
 
     @Override
