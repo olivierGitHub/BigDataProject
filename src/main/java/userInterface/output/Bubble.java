@@ -18,6 +18,7 @@ public class Bubble {
 
     public String getVariation(){
         Double rateN = null;
+
         if (bubble.getXValue() instanceof Double) {
             rateN = (Double) bubble.getXValue();
             if ((rateN-rateN_1)>0)

@@ -76,7 +76,7 @@
       <file leaf-file-name="BubbleChartOutput.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/userInterface/output/BubbleChartOutput.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="53" selection-start="1573" selection-end="1573" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="1122">
+            <state line="29" column="59" selection-start="816" selection-end="816" vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="1122">
               <folding />
             </state>
           </provider>
@@ -94,7 +94,7 @@
       <file leaf-file-name="Bubble.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/userInterface/output/Bubble.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="28" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0" vertical-offset="218" max-vertical-offset="697">
+            <state line="20" column="0" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0" vertical-offset="218" max-vertical-offset="714">
               <folding />
             </state>
           </provider>
@@ -115,10 +115,22 @@
       <file leaf-file-name="BubblesList.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/userInterface/output/BubblesList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="24" selection-start="419" selection-end="419" vertical-scroll-proportion="0.21253406" vertical-offset="143" max-vertical-offset="595">
+            <state line="25" column="8" selection-start="790" selection-end="790" vertical-scroll-proportion="0.907357" vertical-offset="58" max-vertical-offset="629">
               <folding>
                 <element signature="method#BubblesList#0;class#BubblesList#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OCDE_file.csv" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OCDE_file.csv">
+          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -750,7 +762,7 @@
       <workItem from="1423740330328" duration="199000" />
       <workItem from="1424142338534" duration="3732000" />
       <workItem from="1424168800906" duration="961000" />
-      <workItem from="1424212604211" duration="5061000" />
+      <workItem from="1424212604211" duration="5718000" />
     </task>
     <task id="LOCAL-00001" summary="ajout config JPA&#10;&#10;au cas ou&#10;">
       <created>1422060590477</created>
@@ -832,11 +844,15 @@
       <created>1424222211418</created>
       <updated>1424222211418</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Ajout UI output&#10;&#10;RAF: refactoring&#10;         vérifier la pertinence des résultats affichés&#10;">
+      <created>1424223447440</created>
+      <updated>1424223447440</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37706000" />
+    <option name="totallyTimeSpent" value="38363000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -911,7 +927,8 @@
     <MESSAGE value="refactor&#10;&#10;pour clarté&#10;" />
     <MESSAGE value="Ajout UI output&#10;&#10;RAF: refactoring&#10;         résoudre souci  inversion axe x y" />
     <MESSAGE value="Ajout UI output&#10;&#10;RAF: refactoring&#10;         résoudre souci  inversion axe x y&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout UI output&#10;&#10;RAF: refactoring&#10;         résoudre souci  inversion axe x y&#10;" />
+    <MESSAGE value="Ajout UI output&#10;&#10;RAF: refactoring&#10;         vérifier la pertinence des résultats affichés&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout UI output&#10;&#10;RAF: refactoring&#10;         vérifier la pertinence des résultats affichés&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -921,13 +938,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="21" selection-start="425" selection-end="835" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="1258">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="238">
@@ -1245,23 +1255,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/OCDE_file.csv">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/userInterface/output/BubbleChartOutput.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="53" selection-start="1573" selection-end="1573" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="1122">
+        <state line="29" column="59" selection-start="816" selection-end="816" vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="1122">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/userInterface/output/Bubble.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="28" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0" vertical-offset="218" max-vertical-offset="697">
+        <state line="20" column="0" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0" vertical-offset="218" max-vertical-offset="714">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/userInterface/output/BubblesList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="24" selection-start="419" selection-end="419" vertical-scroll-proportion="0.21253406" vertical-offset="143" max-vertical-offset="595">
+        <state line="25" column="8" selection-start="790" selection-end="790" vertical-scroll-proportion="0.907357" vertical-offset="58" max-vertical-offset="629">
           <folding>
             <element signature="method#BubblesList#0;class#BubblesList#0" expanded="false" />
           </folding>

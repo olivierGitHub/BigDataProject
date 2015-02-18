@@ -26,8 +26,8 @@ public class BubbleChartOutput extends Application {
     private void init(Stage primaryStage) {
         Group root = new Group();
         primaryStage.setScene(new Scene(root));
-        NumberAxis yAxis = new NumberAxis("Taux année N", 0d, 150d, 20d);
-        NumberAxis xAxis = new NumberAxis("Country", 0d, 250d, 20d);
+        NumberAxis yAxis = new NumberAxis("Taux année N", 40d, 150d, 20d);
+        NumberAxis xAxis = new NumberAxis("Country", 0d, 220d, 20d);
 
         //BubbleChart.Series devNull = new BubbleChart.Series("null", FXCollections.observableArrayList(new XYChart.Data(0d, 0d, 0d)));
 

@@ -16,12 +16,14 @@ public class BubblesList {
     }
 
     public void fetch(Bubble bubble){
+
         if (bubble.getVariation().equals("positive"))
             listPositive.add(bubble.getBubble());
         else if (bubble.getVariation().equals("negative"))
             listNegative.add(bubble.getBubble());
         else if (bubble.getVariation().equals("nulle"))
             listNull.add(bubble.getBubble());
+
     }
 
     public ObservableList getListNegative() {
