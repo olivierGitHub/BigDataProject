@@ -26,8 +26,8 @@ public class BubbleChartOutput extends Application {
     private void init(Stage primaryStage) {
         Group root = new Group();
         primaryStage.setScene(new Scene(root));
-        NumberAxis xAxis = new NumberAxis("Taux année N", 0d, 150d, 20d);
-        NumberAxis yAxis = new NumberAxis("Country", 0d, 250d, 20d);
+        NumberAxis yAxis = new NumberAxis("Taux année N", 0d, 150d, 20d);
+        NumberAxis xAxis = new NumberAxis("Country", 0d, 250d, 20d);
 
         //BubbleChart.Series devNull = new BubbleChart.Series("null", FXCollections.observableArrayList(new XYChart.Data(0d, 0d, 0d)));
 
@@ -45,8 +45,8 @@ public class BubbleChartOutput extends Application {
                 variation = variation -(2*variation);
             Bubble bubble = new Bubble(
                     new XYChart.Data(
-                            year_N,
                             idCountry*6,
+                            year_N,
                             variation*1.5),
                     year_N_1);
             bubblesList.fetch(bubble);

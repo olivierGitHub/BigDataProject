@@ -13,7 +13,6 @@ public class BubblesList {
     ObservableList listNull = FXCollections.observableArrayList();
 
     public BubblesList(){
-
     }
 
     public void fetch(Bubble bubble){
