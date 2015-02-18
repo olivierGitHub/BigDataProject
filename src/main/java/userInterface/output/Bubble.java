@@ -21,10 +21,12 @@ public class Bubble {
 
         if (bubble.getXValue() instanceof Double) {
             rateN = (Double) bubble.getXValue();
-            if ((rateN-rateN_1)>=0)
+            if ((rateN-rateN_1)>0)
                 variation = "positive";
-            else
+            else if ((rateN-rateN_1)<0)
                 variation = "negative";
+            else
+                variation = "nulle";
         }
         return variation;
     }

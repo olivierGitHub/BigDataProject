@@ -10,6 +10,7 @@ public class BubblesList {
 
     ObservableList listNegative = FXCollections.observableArrayList();
     ObservableList listPositive = FXCollections.observableArrayList();
+    ObservableList listNull = FXCollections.observableArrayList();
 
     public BubblesList(){
 
@@ -20,6 +21,8 @@ public class BubblesList {
             listPositive.add(bubble.getBubble());
         else if (bubble.getVariation().equals("negative"))
             listNegative.add(bubble.getBubble());
+        else if (bubble.getVariation().equals("nulle"))
+            listNull.add(bubble.getBubble());
     }
 
     public ObservableList getListNegative() {
@@ -27,6 +30,9 @@ public class BubblesList {
     }
     public ObservableList getListPositive() {
         return listPositive;
+    }
+    public ObservableList getListNull() {
+        return listNull;
     }
 
 }

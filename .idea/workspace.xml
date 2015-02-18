@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eaccb8c3-b305-4cfb-8c61-e6c8830e65ad" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/userInterface/output/Bubble.java" afterPath="$PROJECT_DIR$/src/main/java/userInterface/output/Bubble.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/userInterface/output/BubbleChartOutput.java" afterPath="$PROJECT_DIR$/src/main/java/userInterface/output/BubbleChartOutput.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/userInterface/output/BubblesList.java" afterPath="$PROJECT_DIR$/src/main/java/userInterface/output/BubblesList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BigDataProject.iws" />
@@ -74,7 +76,7 @@
       <file leaf-file-name="BubbleChartOutput.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/userInterface/output/BubbleChartOutput.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="64" selection-start="746" selection-end="746" vertical-scroll-proportion="0.6101695" vertical-offset="56" max-vertical-offset="1105">
+            <state line="51" column="38" selection-start="1842" selection-end="1842" vertical-scroll-proportion="0.33898306" vertical-offset="543" max-vertical-offset="1122">
               <folding />
             </state>
           </provider>
@@ -92,7 +94,7 @@
       <file leaf-file-name="Bubble.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/userInterface/output/Bubble.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="13" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+            <state line="26" column="39" selection-start="669" selection-end="669" vertical-scroll-proportion="0.0" vertical-offset="218" max-vertical-offset="714">
               <folding />
             </state>
           </provider>
@@ -113,7 +115,7 @@
       <file leaf-file-name="BubblesList.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/userInterface/output/BubblesList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="107" max-vertical-offset="561">
+            <state line="24" column="45" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="629">
               <folding />
             </state>
           </provider>
@@ -132,7 +134,10 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="33" column="76" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0" vertical-offset="354" max-vertical-offset="680">
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#524#534#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -171,6 +176,8 @@
         <option value="$PROJECT_DIR$/src/main/java/dataAccess/DaoData.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/userInterface/output/Bubble.java" />
+        <option value="$PROJECT_DIR$/src/main/java/userInterface/output/BubblesList.java" />
         <option value="$PROJECT_DIR$/src/main/java/userInterface/output/BubbleChartOutput.java" />
       </list>
     </option>
@@ -741,7 +748,7 @@
       <workItem from="1423740330328" duration="199000" />
       <workItem from="1424142338534" duration="3732000" />
       <workItem from="1424168800906" duration="961000" />
-      <workItem from="1424212604211" duration="2741000" />
+      <workItem from="1424212604211" duration="4205000" />
     </task>
     <task id="LOCAL-00001" summary="ajout config JPA&#10;&#10;au cas ou&#10;">
       <created>1422060590477</created>
@@ -815,11 +822,15 @@
       <created>1424214474517</created>
       <updated>1424214474517</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Ajout UI output&#10;&#10;RAF: refactoring&#10;         résoudre souci  inversion axe x y&#10;">
+      <created>1424215363889</created>
+      <updated>1424215363889</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35386000" />
+    <option name="totallyTimeSpent" value="36850000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -893,7 +904,8 @@
     <MESSAGE value="ajout persistence (JPA) uniquement &quot;create&quot; et &quot;read&quot;&#10;&#10;au cas où, à voir si on part plus sur une archi JDBC avec une BDD crée manuellement ou si on conserve une création de base automatisé&#10;" />
     <MESSAGE value="refactor&#10;&#10;pour clarté&#10;" />
     <MESSAGE value="Ajout UI output&#10;&#10;RAF: refactoring&#10;         résoudre souci  inversion axe x y" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout UI output&#10;&#10;RAF: refactoring&#10;         résoudre souci  inversion axe x y" />
+    <MESSAGE value="Ajout UI output&#10;&#10;RAF: refactoring&#10;         résoudre souci  inversion axe x y&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout UI output&#10;&#10;RAF: refactoring&#10;         résoudre souci  inversion axe x y&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1023,7 +1035,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="23" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="646">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#524#534#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1099,7 +1114,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="48" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="612">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#524#534#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1138,7 +1156,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="255">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#524#534#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1211,27 +1232,30 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="76" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0" vertical-offset="203" max-vertical-offset="680">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#524#534#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/userInterface/output/Bubble.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="39" selection-start="669" selection-end="669" vertical-scroll-proportion="0.0" vertical-offset="218" max-vertical-offset="714">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/userInterface/output/BubblesList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="134" max-vertical-offset="561">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/userInterface/output/Bubble.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0" vertical-offset="313" max-vertical-offset="680">
+        <state line="24" column="45" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="629">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/userInterface/output/BubbleChartOutput.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="64" selection-start="746" selection-end="746" vertical-scroll-proportion="0.6101695" vertical-offset="56" max-vertical-offset="1105">
+        <state line="51" column="38" selection-start="1842" selection-end="1842" vertical-scroll-proportion="0.33898306" vertical-offset="543" max-vertical-offset="1122">
           <folding />
         </state>
       </provider>

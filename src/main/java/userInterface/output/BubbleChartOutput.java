@@ -29,7 +29,7 @@ public class BubbleChartOutput extends Application {
         NumberAxis xAxis = new NumberAxis("Taux année N", 0d, 150d, 20d);
         NumberAxis yAxis = new NumberAxis("Country", 0d, 250d, 20d);
 
-        BubbleChart.Series devNull = new BubbleChart.Series("null", FXCollections.observableArrayList(new XYChart.Data(0d, 0d, 0d)));
+        //BubbleChart.Series devNull = new BubbleChart.Series("null", FXCollections.observableArrayList(new XYChart.Data(0d, 0d, 0d)));
 
         BubblesList bubblesList = new BubblesList();
 
@@ -54,6 +54,7 @@ public class BubbleChartOutput extends Application {
 
         BubbleChart.Series negative = new BubbleChart.Series("Negative", bubblesList.getListNegative());
         BubbleChart.Series positive = new BubbleChart.Series("Positive", bubblesList.getListPositive());
+        BubbleChart.Series devNull = new BubbleChart.Series("Nulle", bubblesList.getListNull());
 
         ObservableList<BubbleChart.Series> bubbleChartData = FXCollections.observableArrayList(negative,devNull,positive);
 
