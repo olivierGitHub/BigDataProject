@@ -1,13 +1,5 @@
 package userInterface.connexion;
 
-import userInterface.connexion.entity.Login;
-import java.io.IOException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,6 +11,13 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import userInterface.connexion.entity.Login;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
 
 /**
  * Created by Herve on 18/02/2015.
@@ -35,7 +34,7 @@ public class LoginController implements Initializable {
     private Label message;
 
 
-    private List<userInterface.connexion.entity.Login> listLogin = new ArrayList<>();
+    private List<Login> listLogin = new ArrayList<Login>();
 
     private LoginQuery query = new LoginQuery();
 
