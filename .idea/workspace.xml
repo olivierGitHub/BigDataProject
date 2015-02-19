@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eaccb8c3-b305-4cfb-8c61-e6c8830e65ad" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BigDataProject.iml" afterPath="$PROJECT_DIR$/BigDataProject.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/userInterface/connexion/entity/Login.java" afterPath="$PROJECT_DIR$/src/main/java/userInterface/connexion/entity/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/userInterface/connexion/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/userInterface/connexion/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/userInterface/connexion/LoginQuery.java" afterPath="$PROJECT_DIR$/src/main/java/userInterface/connexion/LoginQuery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BigDataProject.iws" />
@@ -888,7 +880,7 @@
       <workItem from="1424297187742" duration="12000" />
       <workItem from="1424338251657" duration="166000" />
       <workItem from="1424338461888" duration="4677000" />
-      <workItem from="1424349550372" duration="125000" />
+      <workItem from="1424349550372" duration="176000" />
     </task>
     <task id="LOCAL-00001" summary="ajout config JPA&#10;&#10;au cas ou&#10;">
       <created>1422060590477</created>
@@ -978,11 +970,15 @@
       <created>1424225529960</created>
       <updated>1424225529960</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Ajout fonction initUser dans le DAO d'Hervé">
+      <created>1424349723595</created>
+      <updated>1424349723595</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47046000" />
+    <option name="totallyTimeSpent" value="47097000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1059,7 +1055,8 @@
     <MESSAGE value="Ajout UI output&#10;&#10;RAF: refactoring&#10;         résoudre souci  inversion axe x y&#10;" />
     <MESSAGE value="Ajout UI output&#10;&#10;RAF: refactoring&#10;         vérifier la pertinence des résultats affichés&#10;" />
     <MESSAGE value="Ajout UI output&#10;&#10;RAF: refactoring&#10;         vérifier la pertinence des résultats affichés car données pas assez disparates (trop homogènes)&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout UI output&#10;&#10;RAF: refactoring&#10;         vérifier la pertinence des résultats affichés car données pas assez disparates (trop homogènes)&#10;" />
+    <MESSAGE value="Ajout fonction initUser dans le DAO d'Hervé" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout fonction initUser dans le DAO d'Hervé" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
