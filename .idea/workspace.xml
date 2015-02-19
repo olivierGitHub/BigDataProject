@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eaccb8c3-b305-4cfb-8c61-e6c8830e65ad" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\copyright\profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <ignored path="BigDataProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -860,7 +859,7 @@
       <workItem from="1424338251657" duration="166000" />
       <workItem from="1424338461888" duration="4677000" />
       <workItem from="1424349550372" duration="176000" />
-      <workItem from="1424379813878" duration="216000" />
+      <workItem from="1424379813878" duration="300000" />
     </task>
     <task id="LOCAL-00001" summary="ajout config JPA&#10;&#10;au cas ou&#10;">
       <created>1422060590477</created>
@@ -1006,11 +1005,17 @@
       <option name="project" value="LOCAL" />
       <updated>1424379947470</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="git ignore - files deleted">
+      <created>1424380050437</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1424380050437</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47313000" />
+    <option name="totallyTimeSpent" value="47397000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1093,7 +1098,8 @@
     <MESSAGE value="Ajout UI output&#10;&#10;RAF: refactoring&#10;         vérifier la pertinence des résultats affichés car données pas assez disparates (trop homogènes)&#10;" />
     <MESSAGE value="Ajout fonction initUser dans le DAO d'Hervé" />
     <MESSAGE value="git ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="git ignore" />
+    <MESSAGE value="git ignore - files deleted" />
+    <option name="LAST_COMMIT_MESSAGE" value="git ignore - files deleted" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
