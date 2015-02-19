@@ -42,6 +42,7 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        query.initUser();
         listLogin = query.listLogin();
     }
 
