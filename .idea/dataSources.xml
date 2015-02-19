@@ -5,8 +5,6 @@
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/bigdata</jdbc-url>
-      <user-name>root</user-name>
-      <user-password>dfcbdfcedfc7dfc3dfc4</user-password>
       <libraries>
         <library>
           <url>file://C:\Users\oliver\.m2\repository\mysql\mysql-connector-java\5.1.28\mysql-connector-java-5.1.28.jar</url>
@@ -15,4 +13,3 @@
     </data-source>
   </component>
 </project>
-
