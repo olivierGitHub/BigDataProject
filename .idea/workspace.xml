@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eaccb8c3-b305-4cfb-8c61-e6c8830e65ad" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+    <list default="true" id="eaccb8c3-b305-4cfb-8c61-e6c8830e65ad" name="Default" comment="git ignore">
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\workspace.xml" afterPath="" />
     </list>
     <ignored path="BigDataProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -125,8 +125,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.030141843" vertical-offset="0" max-vertical-offset="564">
-              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.09042553" vertical-offset="0" max-vertical-offset="564">
+              <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -859,7 +859,7 @@
       <workItem from="1424338251657" duration="166000" />
       <workItem from="1424338461888" duration="4677000" />
       <workItem from="1424349550372" duration="176000" />
-      <workItem from="1424379813878" duration="300000" />
+      <workItem from="1424379813878" duration="385000" />
     </task>
     <task id="LOCAL-00001" summary="ajout config JPA&#10;&#10;au cas ou&#10;">
       <created>1422060590477</created>
@@ -1011,11 +1011,23 @@
       <option name="project" value="LOCAL" />
       <updated>1424380050437</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="git ignore - files deleted">
+      <created>1424380118816</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1424380118816</updated>
+    </task>
+    <task id="LOCAL-00027" summary="git ignore">
+      <created>1424380171612</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1424380171612</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47397000" />
+    <option name="totallyTimeSpent" value="47482000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1039,9 +1051,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1040" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32879817" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32879817" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -1097,9 +1109,9 @@
     <MESSAGE value="Ajout UI output&#10;&#10;RAF: refactoring&#10;         vérifier la pertinence des résultats affichés&#10;" />
     <MESSAGE value="Ajout UI output&#10;&#10;RAF: refactoring&#10;         vérifier la pertinence des résultats affichés car données pas assez disparates (trop homogènes)&#10;" />
     <MESSAGE value="Ajout fonction initUser dans le DAO d'Hervé" />
-    <MESSAGE value="git ignore" />
     <MESSAGE value="git ignore - files deleted" />
-    <option name="LAST_COMMIT_MESSAGE" value="git ignore - files deleted" />
+    <MESSAGE value="git ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="git ignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1478,8 +1490,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.030141843" vertical-offset="0" max-vertical-offset="564">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.09042553" vertical-offset="0" max-vertical-offset="564">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
           <folding />
         </state>
       </provider>
