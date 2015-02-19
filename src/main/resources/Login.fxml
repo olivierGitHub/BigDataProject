@@ -18,7 +18,10 @@
                 <Font size="14.0" />
             </font>
         </Label>
+      <Label layoutX="116.0" layoutY="38.0" text="Please, Log in before access">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>
-
-

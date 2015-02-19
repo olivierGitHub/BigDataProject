@@ -18,7 +18,6 @@ public class Login extends Application {
         Scene scene = new Scene(root);
 
         String css = "/Style.css";
-
         scene.getStylesheets().add(css);
 
         stage.setScene(scene);

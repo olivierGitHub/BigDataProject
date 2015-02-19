@@ -52,10 +52,14 @@ public class LoginController implements Initializable {
             if(username.getText().equals(l.getUsername())){
                 if(password.getText().equals(l.getPassword())){
                     (((Node)event.getSource()).getScene()).getWindow().hide();
-                    Parent parent = FXMLLoader.load(getClass().getResource("/Main.fxml"));
+                    Parent parent = FXMLLoader.load(getClass().getResource("/HomePage.fxml"));
                     Scene scene = new Scene(parent);
+
+                    String css = "/Style.css";
+
+                    scene.getStylesheets().add(css);
                     Stage stage = new Stage();
-                    stage.setTitle("Login");
+                    stage.setTitle("Welcome to Data Vizor Application");
                     stage.setScene(scene);
                     stage.show();
                 } else {
