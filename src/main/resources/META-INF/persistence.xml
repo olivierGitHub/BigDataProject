@@ -4,10 +4,11 @@
     <persistence-unit name="BigDataProjectPU">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
-            <property name="hibernate.connection.url" value="jdbc:h2:mem;INIT=create schema IF NOT EXISTS bigdata" />
+            <property name="hibernate.connection.url" value="jdbc:h2:database/
+            ;INIT=create schema IF NOT EXISTS bigdata" />
             <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
-            <property name="hibernate.connection.username" value="root"/>
-            <property name="hibernate.connection.password" value="admin"/>
+            <property name="hibernate.connection.username" value="sa"/>
+            <property name="hibernate.connection.password" value=""/>
 
             <property name="hibernate.archive.autodetection" value="class"/>
             <property name="hibernate.show_sql" value="false"/>
