@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="3884498228">
-    <data-source source="LOCAL" name="NewPersistenceUnit" uuid="b04b1012-6918-4d8b-8a31-d1c9dd65dc23">
-      <driver-ref>mysql</driver-ref>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/fireup</jdbc-url>
-      <user-name>root</user-name>
-      <user-password>dfcbdfcedfc7dfc3dfc4</user-password>
-      <libraries />
-    </data-source>
-    <data-source source="LOCAL" name="BigDataProjectPU" uuid="abf43051-0f61-4400-9735-63f774b0f41e">
+  <component name="DataSourceManagerImpl" format="xml" hash="874362584">
+    <data-source source="LOCAL" name="BigDataProjectPU" uuid="a25b739f-6a44-466a-8bc1-842033a8a7f9">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/bigdata</jdbc-url>
-      <user-name>root</user-name>
-      <user-password>dfcbdfcedfc7dfc3dfc4</user-password>
       <libraries>
         <library>
           <url>file://C:\Users\oliver\.m2\repository\mysql\mysql-connector-java\5.1.28\mysql-connector-java-5.1.28.jar</url>

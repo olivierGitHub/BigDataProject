@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8" fx:controller="userInterface.connexion.HomePageController">
+    <children>
+        <Label layoutX="130.0" layoutY="14.0" text="DATA VIZOR APP">
+            <font>
+                <Font name="Arial Black" size="36.0"/>
+            </font>
+        </Label>
+        <Line endX="308.0" layoutX="286.0" layoutY="68.0" startX="-280.0"/>
+        <Button layoutX="188.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleButtonActionOpenFile"
+                prefHeight="25.0" prefWidth="226.0" text="Open a File">
+
+        </Button>
+        <Button layoutX="188.0" layoutY="265.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="226.0"
+                text="View DataViz">
+
+        </Button>
+        <!-- <ComboBox layoutX="188.0" layoutY="266.0" prefHeight="25.0" prefWidth="226.0" promptText="Sélectionnez l'année" /> -->
+        <MenuButton fx:id="menuButtonSelectYear" layoutX="188.0" layoutY="220.0" mnemonicParsing="false"
+                    onAction="#menuSelectYear" prefHeight="25.0" prefWidth="226.0" text="Sélectionnez l'année">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2002"/>
+                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2003"/>
+                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2004"/>
+                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2005"/>
+                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2006"/>
+                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2007"/>
+                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2008"/>
+                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2009"/>
+                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2010"/>
+                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2011"/>
+                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2012"/>
+                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2013 (estimations)"/>
+                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2014 (estimations)"/>
+                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2015 (hyposthèses)"/>
+            </items>
+        </MenuButton>
+    </children>
+</AnchorPane>

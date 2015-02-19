@@ -1,2 +1,4 @@
-.idea\
-BigDataProject.iml
+# Intellij
+.idea/
+*.iml
+target/

@@ -1,0 +1,35 @@
+/*
+    Created on : 14 févr. 2015, 16:37:58
+    Author     : Herve
+*/
+
+.root {
+    -fx-spacing: 10;
+    -fx-background-color: linear-gradient(lightyellow, #F1D48C);
+    -fx-padding: 5;
+}
+
+.button {
+/ / -fx-font-family : "Arial";
+    -fx-font-size: 15px;
+    -fx-background-color: linear-gradient(#3333ff, #339BFF);
+    -fx-text-fill: #ffffff;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+    -fx-text-fill: #ffffff;
+}
+
+#label {
+
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+#menuButtonSelectYear {
+    -fx-font-size: 15px;
+    -fx-background-color: linear-gradient(#3333ff, #339BFF);
+    -fx-text-fill: #ffffff;
+
+}
