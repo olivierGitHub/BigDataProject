@@ -5,9 +5,6 @@ import bigdata.analytics.rategroup.RateGroup;
 import javax.persistence.*;
 import java.util.Objects;
 
-/**
- * Created by Arnaud on 13/02/2015.
- */
 @Entity
 public class Rate {
 

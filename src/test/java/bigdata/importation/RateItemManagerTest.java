@@ -8,6 +8,7 @@ import bigdata.analytics.rate.RateAssembler;
 import bigdata.analytics.rategroup.RateGroup;
 import bigdata.analytics.rategroup.RateGroupAssembler;
 import bigdata.analytics.rategroup.RateGroupType;
+import bigdata.datastorage.dao.rategroup.RateGroupJpaDao;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -46,6 +47,8 @@ public class RateItemManagerTest {
     public void testRateItemListToModel() throws Exception {
         List<RateItem> rateItemList = generateRateItemList();
         List<Country> modelExpected = generateModelExpected();
+        RateGroupJpaDao dao = new RateGroupJpaDao();
+        dao.getRateGroupDtoByRateGroupType(RateGroupType.EFFECTIVE);
         assertThat(rateItemManager.rateItemListToModel(rateItemList), is(modelExpected));
     }
 

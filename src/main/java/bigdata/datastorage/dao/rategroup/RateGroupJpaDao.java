@@ -7,6 +7,7 @@ import bigdata.datastorage.impl.BaseJpa;
 
 import javax.inject.Named;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
@@ -30,7 +31,7 @@ public class RateGroupJpaDao extends BaseJpa implements RateGroupDao {
     @Override
     public List<CountryRateGroupDto> getRateGroupDtoByRateGroupType(RateGroupType rateGroupType) {
         EntityManager em = getEntityManagerFactory().createEntityManager();
-        TypedQuery<CountryRateGroupDto> query = em.createQuery("SELECT c.countryName, c.id, rg.id FROM Country c JOIN RateGroup rg WHERE rg.type = :rateGroupType", CountryRateGroupDto.class);
+        Query query = em.createQuery("SELECT rg.id, rg.country.countryName FROM RateGroup rg WHERE rg.type = :rateGroupType");
         query.setParameter("rateGroupType",rateGroupType);
         List<CountryRateGroupDto> result = query.getResultList();
         return result;
