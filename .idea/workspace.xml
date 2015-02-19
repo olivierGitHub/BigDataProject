@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eaccb8c3-b305-4cfb-8c61-e6c8830e65ad" name="Default" comment="Objet">
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__antlr_antlr_2_7_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__aopalliance_aopalliance_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__com_beust_jcommander_1_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__commons_logging_commons_logging_1_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__dom4j_dom4j_1_6_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__mysql_mysql_connector_java_5_1_28.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_beanshell_bsh_2_0b4.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_easytesting_fest_assert_core_2_0M10.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_easytesting_fest_util_1_2_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_hibernate_common_hibernate_commons_annotations_4_0_4_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_hibernate_hibernate_core_4_3_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_hibernate_hibernate_entitymanager_4_3_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_1_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_javassist_javassist_3_18_1_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_jboss_jandex_1_1_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_jboss_logging_jboss_logging_3_1_3_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_jboss_logging_jboss_logging_annotations_1_2_0_Beta1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_springframework_spring_web_3_0_5_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_testng_testng_6_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_yaml_snakeyaml_1_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__xml_apis_xml_apis_1_0_b2.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BigDataProject.iml" afterPath="$PROJECT_DIR$/BigDataProject.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="eaccb8c3-b305-4cfb-8c61-e6c8830e65ad" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\.name" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\copyright\profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\dataSources.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\JPA_2_0_2_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__javax_inject_javax_inject_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__junit_junit_4_12.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__net_sourceforge_jexcelapi_jxl_2_6.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_mockito_mockito_all_1_10_19.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_springframework_spring_aop_3_1_2_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_springframework_spring_asm_3_1_2_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_springframework_spring_beans_3_1_2_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_springframework_spring_context_3_1_2_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_springframework_spring_core_3_1_2_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\libraries\Maven__org_springframework_spring_expression_3_1_2_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\scopes\scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\.idea\workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\developpement\workspaces\workspaceIdea\BigDataProject\BigDataProject.iml" afterPath="" />
     </list>
     <ignored path="BigDataProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1143,7 +1142,7 @@
       <workItem from="1424183002172" duration="2813000" />
       <workItem from="1424245788709" duration="2038000" />
       <workItem from="1424248134713" duration="501000" />
-      <workItem from="1424381141683" duration="101000" />
+      <workItem from="1424381141683" duration="174000" />
     </task>
     <task id="LOCAL-00001" summary="ajout config JPA&#10;&#10;au cas ou&#10;">
       <created>1422060590477</created>
@@ -1349,11 +1348,17 @@
       <option name="project" value="LOCAL" />
       <updated>1424185639119</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="git erase">
+      <created>1424381262334</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1424381262334</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76105000" />
+    <option name="totallyTimeSpent" value="76178000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1379,9 +1384,10 @@
     <frame x="-1928" y="-8" width="1936" height="1040" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3276644" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1904762" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1391,7 +1397,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328541" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3276644" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3276644" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.50127226" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2489339" sideWeight="0.49872774" order="0" side_tool="false" content_ui="combo" />
@@ -1405,7 +1411,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30844155" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19155844" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="31" y="125" width="1256" height="676" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2900433" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1451,7 +1456,8 @@
     <MESSAGE value="Ajout d'une enum private comportant les Symbole et ajout dans la méthode set currency code de la récupération du symbole par l'enum." />
     <MESSAGE value="Ajout de la méthode getFileRate Remplissant les objet &#10;RateItem&#10;RateKey&#10;RateValue" />
     <MESSAGE value="maj" />
-    <option name="LAST_COMMIT_MESSAGE" value="maj" />
+    <MESSAGE value="git erase" />
+    <option name="LAST_COMMIT_MESSAGE" value="git erase" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
