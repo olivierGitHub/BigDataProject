@@ -6,6 +6,7 @@ import bigdata.datastorage.impl.BaseJpa;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
 import java.util.List;
 
 @Named
@@ -32,21 +33,32 @@ public class CountryJpaDao extends BaseJpa implements CountryDao {
 
     @Override
     public void update(Country obj) {
-
+        EntityManager em = getEntityManagerFactory().createEntityManager();
+        Query query = em.createQuery("UPDATE Country country SET country = :obj WHERE country.id = :obj.id");
+        query.setParameter("obj", obj);
     }
 
     @Override
     public Country read(int id) {
-        return null;
+        EntityManager em = getEntityManagerFactory().createEntityManager();
+        Query query = em.createQuery("SELECT country FROM Country country Where country.id = :idCountry");
+        query.setParameter("idCountry", id);
+        Country country = (Country) query.getSingleResult();
+        return country;
     }
 
     @Override
     public void delete(int id) {
-
+        EntityManager em = getEntityManagerFactory().createEntityManager();
+        Query query = em.createQuery("DELETE FROM Country country Where country.id = :idCountry");
+        query.setParameter("idCountry", id);
     }
 
     @Override
     public List<Country> getCountries() {
-        return null;
+        EntityManager em = getEntityManagerFactory().createEntityManager();
+        Query query = em.createQuery("SELECT country FROM Country country");
+        List<Country> result = query.getResultList();
+        return result;
     }
 }
