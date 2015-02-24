@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" prefHeight="300.0" prefWidth="450.0"
-            xmlns="http://javafx.com/javafx/8" fx:controller="userInterface.connexion.LoginController">
+            xmlns="http://javafx.com/javafx/8" fx:controller="bigdata.userInterface.connexion.LoginController">
     <children>
         <TextField fx:id="username" layoutX="126.0" layoutY="99.0" prefHeight="30.0" prefWidth="200.0"
                    promptText="Username"/>

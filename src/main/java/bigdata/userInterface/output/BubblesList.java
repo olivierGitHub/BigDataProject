@@ -1,4 +1,4 @@
-package userInterface.output;
+package bigdata.userInterface.output;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

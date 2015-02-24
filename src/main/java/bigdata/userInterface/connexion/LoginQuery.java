@@ -1,6 +1,6 @@
-package userInterface.connexion;
+package bigdata.userInterface.connexion;
 
-import userInterface.connexion.entity.Login;
+import bigdata.userInterface.connexion.entity.Login;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

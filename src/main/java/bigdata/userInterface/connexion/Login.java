@@ -1,4 +1,4 @@
-package userInterface.connexion;
+package bigdata.userInterface.connexion;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

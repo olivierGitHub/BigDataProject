@@ -4,14 +4,15 @@ import bigdata.analytics.rategroup.RateGroup;
 import bigdata.analytics.rategroup.RateGroupType;
 import bigdata.datastorage.impl.BaseJpa;
 
-import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
-@Named
 public class RateGroupJpaDao extends BaseJpa implements RateGroupDao {
+
+    public RateGroupJpaDao() {
+    }
 
     @Override
     public RateGroup getRateGroupByCriterias(RateGroupType rateGroupType, Integer countryId) {

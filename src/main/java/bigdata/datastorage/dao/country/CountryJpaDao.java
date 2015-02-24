@@ -3,13 +3,11 @@ package bigdata.datastorage.dao.country;
 import bigdata.analytics.country.Country;
 import bigdata.datastorage.impl.BaseJpa;
 
-import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 import java.util.List;
 
-@Named
 public class CountryJpaDao extends BaseJpa implements CountryDao {
 
 

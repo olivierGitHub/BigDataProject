@@ -6,7 +6,6 @@ import bigdata.analytics.rate.RateAssembler;
 import bigdata.analytics.rategroup.RateGroup;
 import bigdata.analytics.rategroup.RateGroupAssembler;
 
-import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -17,10 +16,8 @@ import java.util.Map;
  */
 public class RateItemManager {
 
-    @Inject
-    RateGroupAssembler rateGroupAssembler;
-    @Inject
-    RateAssembler rateAssembler;
+    RateGroupAssembler rateGroupAssembler = new RateGroupAssembler();
+    RateAssembler rateAssembler = new RateAssembler();
 
     public List<Country> rateItemListToModel(List<RateItem> rateItemList) {
         List<Country> countryList = new ArrayList<Country>();

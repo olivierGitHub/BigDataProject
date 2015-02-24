@@ -1,4 +1,4 @@
-package userInterface.output;
+package bigdata.userInterface.output;
 
 import javafx.scene.chart.XYChart;
 

@@ -4,9 +4,6 @@ import bigdata.analytics.rate.CurrencyCode;
 import bigdata.analytics.rate.CurrencyRate;
 import bigdata.importation.RateItem;
 
-import javax.inject.Named;
-
-@Named
 public class RateGroupAssembler {
 
     public RateGroup fromRateItem(RateItem rateItem, RateGroup rateGroup) {

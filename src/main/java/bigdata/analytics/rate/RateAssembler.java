@@ -2,9 +2,6 @@ package bigdata.analytics.rate;
 
 import bigdata.importation.RateItem;
 
-import javax.inject.Named;
-
-@Named
 public class RateAssembler {
 
     public Rate fromRateItem(RateItem rateItem) {

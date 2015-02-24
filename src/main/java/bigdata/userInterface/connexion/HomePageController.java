@@ -5,10 +5,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import userInterface.output.BubbleChartOutput;
 
 import javax.inject.Inject;
 import java.awt.*;
@@ -19,13 +19,12 @@ import java.util.ResourceBundle;
 
 public class HomePageController implements Initializable {
 
-    private String selectedYear;
+    /*
      @FXML
-     ComboBox comboBoxSelectYear;
-//    @FXML
-//    MenuButton menuButtonSelectYear;
-    @Inject
-    private ImportationService importationService;
+     ComboBox comboBoxSelectYear; */
+    @FXML
+    MenuButton menuButtonSelectYear;
+    private ImportationService importationService = new ImportationServiceImpl();
     /**
      * Initializes the controller class.
      */
@@ -36,7 +35,6 @@ public class HomePageController implements Initializable {
     @FXML
     private void handleButtonActionOpenFile(ActionEvent event) throws IOException {
 
-//        System.out.println("You want to open a file !");
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -83,12 +81,5 @@ public class HomePageController implements Initializable {
     @FXML
     private void chartOpenButtonAction(ActionEvent event) throws IOException {
 
-        try {
-            new BubbleChartOutput().start(new Stage());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-    }
 
 }

@@ -1,4 +1,4 @@
-package userInterface.connexion.entity;
+package bigdata.userInterface.connexion.entity;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;

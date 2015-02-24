@@ -1,5 +1,6 @@
-package userInterface.connexion;
+package bigdata.userInterface.connexion;
 
+import bigdata.userInterface.connexion.entity.Login;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +12,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import userInterface.connexion.entity.Login;
 
 import java.io.IOException;
 import java.net.URL;
@@ -48,7 +48,7 @@ public class LoginController implements Initializable {
 
     @FXML
     private void loginAction(ActionEvent event) throws IOException {
-        for (userInterface.connexion.entity.Login l : listLogin) {
+        for (bigdata.userInterface.connexion.entity.Login l : listLogin) {
             if (username.getText().equals(l.getUsername())) {
                 if (password.getText().equals(l.getPassword())) {
                     (((Node) event.getSource()).getScene()).getWindow().hide();
