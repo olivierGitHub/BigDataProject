@@ -4,13 +4,18 @@ import bigdata.analytics.rate.CurrencyCode;
 
 import java.util.Objects;
 
-/**
- * Created by Arnaud on 18/02/2015.
- */
 public class RateDto {
+
+    private static final RateDto NULL_OBJECT = new RateDto(null, "0", 1d);
     CurrencyCode currencyCode;
     String year;
     double value;
+
+    public RateDto(CurrencyCode currencyCode, String year, double value) {
+        this.currencyCode = currencyCode;
+        this.year = year;
+        this.value = value;
+    }
 
     public CurrencyCode getCurrencyCode() {
         return currencyCode;

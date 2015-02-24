@@ -12,11 +12,5 @@ import java.util.List;
  */
 public interface RateGroupDao extends Dao<RateGroup> {
 
-    public List<RateGroup> getRateGroupsByType(RateGroupType type);
-
-    public List<RateGroup> getRateGroupsByCountryAndType(Integer countryId, RateGroupType type);
-
-    public List<RateGroup> getRateGroups(Integer countryId);
-
-    public List<CountryRateGroupDto> getRateGroupDtoByRateGroupType(RateGroupType rateGroupType);
+    public RateGroup getRateGroupByCriterias(RateGroupType rateGroupType, Integer countryId);
 }

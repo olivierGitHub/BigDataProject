@@ -1,39 +1,33 @@
 package bigdata.analytics.dto;
 
+import javax.persistence.*;
 import java.util.Objects;
 
-/**
- * Created by Arnaud on 18/02/2015.
- */
+@SqlResultSetMapping(name="carkey",
+        entities=@EntityResult(entityClass=CountryRateGroupDto.class,
+                fields = {
+                        @FieldResult(name="idCountry", column = "country_id"),
+                        @FieldResult(name="countryName", column = "country_name"),
+                        @FieldResult(name="rateGroupId", column = "rate_group_id")
+                }))
+
 public class CountryRateGroupDto {
-    String countryName;
-    int idCountry;
-    int rateGroupId;
-    RateDto selectedYear;
-    RateDto previousSelectedYear;
+    private String countryName;
+    private int idCountry;
+    private int rateGroupId;
+    private RateDto selectedYear;
+    private RateDto previousSelectedYear;
 
     public String getCountryName() {
         return countryName;
-    }
-
-    public void setCountryName(String countryName) {
-        this.countryName = countryName;
     }
 
     public int getIdCountry() {
         return idCountry;
     }
 
-    public void setIdCountry(int idCountry) {
-        this.idCountry = idCountry;
-    }
-
     public int getRateGroupId() {
         return rateGroupId;
-    }
-
-    public void setRateGroupId(int rateGroupId) {
-        this.rateGroupId = rateGroupId;
     }
 
     public RateDto getSelectedYear() {

@@ -5,6 +5,7 @@ import bigdata.analytics.rate.CurrencyRate;
 import bigdata.analytics.rate.Rate;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Created by Arnaud on 12/02/2015.
  */
 @Entity
-public class RateGroup {
+public class RateGroup implements Serializable{
 
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
     Country country;
