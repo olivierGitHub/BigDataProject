@@ -12,5 +12,6 @@ import java.util.List;
 public interface FileReader {
     void takeReader(String workbook) throws IOException, BiffException;
     void takeReader(File file) throws IOException, BiffException;
+    List<String> getAllYears();
     List<RateItem> getFileRate();
 }

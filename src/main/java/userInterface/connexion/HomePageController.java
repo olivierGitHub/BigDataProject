@@ -5,10 +5,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.MenuItem;
+import javafx.scene.control.ComboBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import userInterface.output.BubbleChartOutput;
 
 import javax.inject.Inject;
 import java.awt.*;
@@ -19,11 +19,11 @@ import java.util.ResourceBundle;
 
 public class HomePageController implements Initializable {
 
-    /*
+
      @FXML
-     ComboBox comboBoxSelectYear; */
-    @FXML
-    MenuButton menuButtonSelectYear;
+     ComboBox comboBoxSelectYear;
+//    @FXML
+//    MenuButton menuButtonSelectYear;
     @Inject
     private ImportationService importationService;
     /**
@@ -36,7 +36,7 @@ public class HomePageController implements Initializable {
     @FXML
     private void handleButtonActionOpenFile(ActionEvent event) throws IOException {
 
-        System.out.println("You want to open a file !");
+//        System.out.println("You want to open a file !");
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -60,24 +60,37 @@ public class HomePageController implements Initializable {
         File file = fileChooser.showOpenDialog(stage);
         if (file != null) {
             importationService.importFileData(file);
+            initSelectYear(file);
         }
 
     }
 
-
+    private void initSelectYear( File file) throws IOException {
+        ImportationService importationService = new ImportationService();
+        
+        this.comboBoxSelectYear.setDisable(false);
+        this.comboBoxSelectYear.getItems().addAll(importationService.getYearFileData(file));
+    }
+    
     @FXML
-    private void menuSelectYear(ActionEvent event) throws IOException {
-
-        MenuItem menu = (MenuItem) event.getSource();
-
-        menuButtonSelectYear.setText(menu.getText());
-
+    public void menuSelectYear (ActionEvent event) throws IOException{
+        
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
+    
+    @FXML
+    private void chartOpenButtonAction(ActionEvent event) throws IOException {
 
+        try {
+            new BubbleChartOutput().start(new Stage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 
 }

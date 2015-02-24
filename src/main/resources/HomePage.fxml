@@ -4,6 +4,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
+<?import javafx.collections.*?>
+        
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" prefHeight="400.0" prefWidth="600.0"
             xmlns="http://javafx.com/javafx/8" fx:controller="userInterface.connexion.HomePageController">
     <children>
@@ -22,24 +24,29 @@
 
         </Button>
         <!-- <ComboBox layoutX="188.0" layoutY="266.0" prefHeight="25.0" prefWidth="226.0" promptText="Sélectionnez l'année" /> -->
-        <MenuButton fx:id="menuButtonSelectYear" layoutX="188.0" layoutY="220.0" mnemonicParsing="false"
-                    onAction="#menuSelectYear" prefHeight="25.0" prefWidth="226.0" text="Sélectionnez l'année">
+        <ComboBox fx:id="comboBoxSelectYear" layoutX="188.0" layoutY="266.0" prefHeight="25.0" prefWidth="226.0" promptText="Sélectionnez l'année" disable="true">
             <items>
-                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2002"/>
-                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2003"/>
-                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2004"/>
-                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2005"/>
-                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2006"/>
-                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2007"/>
-                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2008"/>
-                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2009"/>
-                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2010"/>
-                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2011"/>
-                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2012"/>
-                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2013 (estimations)"/>
-                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2014 (estimations)"/>
-                <MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2015 (hyposthèses)"/>
+                <FXCollections fx:factory="observableArrayList" />
             </items>
-        </MenuButton>
+        </ComboBox>
+        <!--<MenuButton fx:id="menuButtonSelectYear" layoutX="188.0" layoutY="220.0" mnemonicParsing="false"-->
+                    <!--onAction="#menuSelectYear" prefHeight="25.0" prefWidth="226.0" text="Sélectionnez l'année">-->
+            <!--<items>-->
+                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2002"/>-->
+                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2003"/>-->
+                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2004"/>-->
+                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2005"/>-->
+                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2006"/>-->
+                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2007"/>-->
+                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2008"/>-->
+                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2009"/>-->
+                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2010"/>-->
+                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2011"/>-->
+                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2012"/>-->
+                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2013 (estimations)"/>-->
+                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2014 (estimations)"/>-->
+                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2015 (hyposthèses)"/>-->
+            <!--</items>-->
+        <!--</MenuButton>-->
     </children>
 </AnchorPane>

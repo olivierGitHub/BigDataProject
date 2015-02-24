@@ -6,6 +6,7 @@ import jxl.read.biff.BiffException;
 import javax.inject.Named;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -27,6 +28,17 @@ public class ImportationService {
         }
     }
     
-
-    
+    public List<String> getYearFileData(File file){
+        List<String> resultList = new ArrayList<String>();
+        FileReader excelReader = new ExcelReader();
+        try {
+            excelReader.takeReader(file);
+            resultList = excelReader.getAllYears();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (BiffException e) {
+            e.printStackTrace();
+        }
+        return resultList;
+    }
 }
