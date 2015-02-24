@@ -1,11 +1,6 @@
 package bigdata.importation;
 
-import bigdata.importation.excel.ExcelReader;
-import jxl.read.biff.BiffException;
-
-import javax.inject.Named;
 import java.io.File;
-import java.io.IOException;
 import java.util.List;
 
 /**
@@ -13,4 +8,5 @@ import java.util.List;
  */
 public interface ImportationService {
     void importFileData(File file);
+    List<String> getYearFileData(File file);
 }

@@ -35,7 +35,6 @@ public class AnalyticsService {
                         ));
             }
         }
-
         return null;
     }
 }

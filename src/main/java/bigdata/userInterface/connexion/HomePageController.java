@@ -1,16 +1,15 @@
-package userInterface.connexion;
+package bigdata.userInterface.connexion;
 
 import bigdata.importation.ImportationService;
+import bigdata.importation.ImportationServiceImpl;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.MenuItem;
+import javafx.scene.control.ComboBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import javax.inject.Inject;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
@@ -18,12 +17,10 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class HomePageController implements Initializable {
-
-    /*
+    private String selectedYear;
      @FXML
-     ComboBox comboBoxSelectYear; */
-    @FXML
-    MenuButton menuButtonSelectYear;
+     ComboBox comboBoxSelectYear;
+    
     private ImportationService importationService = new ImportationServiceImpl();
     /**
      * Initializes the controller class.
@@ -64,7 +61,7 @@ public class HomePageController implements Initializable {
     }
 
     private void initSelectYear( File file) throws IOException {
-        ImportationService importationService = new ImportationService();
+        ImportationService importationService = new ImportationServiceImpl();
         
         this.comboBoxSelectYear.setDisable(false);
         this.comboBoxSelectYear.getItems().addAll(importationService.getYearFileData(file));
@@ -79,7 +76,7 @@ public class HomePageController implements Initializable {
     }
     
     @FXML
-    private void chartOpenButtonAction(ActionEvent event) throws IOException {
+    private void chartOpenButtonAction(ActionEvent event) throws IOException {}
 
 
 }
