@@ -26,7 +26,7 @@ public class RateGroupJpaDao extends BaseJpa implements RateGroupDao {
         query.setParameter("countryId", countryId);
         query.setParameter("type", type);
         List<RateGroup> result = query.getResultList();
-        return null;
+        return result;
     }
 
     @Override
