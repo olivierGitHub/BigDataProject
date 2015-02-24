@@ -1,15 +1,6 @@
 package bigdata.analytics.dto;
 
-import javax.persistence.*;
 import java.util.Objects;
-
-@SqlResultSetMapping(name="carkey",
-        entities=@EntityResult(entityClass=CountryRateGroupDto.class,
-                fields = {
-                        @FieldResult(name="idCountry", column = "country_id"),
-                        @FieldResult(name="countryName", column = "country_name"),
-                        @FieldResult(name="rateGroupId", column = "rate_group_id")
-                }))
 
 public class CountryRateGroupDto {
     private String countryName;
