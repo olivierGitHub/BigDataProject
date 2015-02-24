@@ -19,7 +19,7 @@ import java.util.ResourceBundle;
 
 public class HomePageController implements Initializable {
 
-
+    private String selectedYear;
      @FXML
      ComboBox comboBoxSelectYear;
 //    @FXML
@@ -70,11 +70,9 @@ public class HomePageController implements Initializable {
         
         this.comboBoxSelectYear.setDisable(false);
         this.comboBoxSelectYear.getItems().addAll(importationService.getYearFileData(file));
-    }
-    
-    @FXML
-    public void menuSelectYear (ActionEvent event) throws IOException{
-        
+        this.comboBoxSelectYear.setOnAction((ActionEvent ev) -> {
+            selectedYear = comboBoxSelectYear.getSelectionModel().getSelectedItem().toString();
+        });
     }
 
     @Override

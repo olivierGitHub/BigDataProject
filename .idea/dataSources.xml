@@ -4,7 +4,8 @@
     <data-source source="LOCAL" name="BigDataProjectPU" uuid="a25b739f-6a44-466a-8bc1-842033a8a7f9">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/bigdata</jdbc-url>
+      <jdbc-url>jdbc:h2:~/bigdata</jdbc-url>
+      <user-name>sa</user-name>
       <libraries>
         <library>
           <url>file://C:\Users\oliver\.m2\repository\mysql\mysql-connector-java\5.1.28\mysql-connector-java-5.1.28.jar</url>
