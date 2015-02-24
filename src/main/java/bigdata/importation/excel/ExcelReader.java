@@ -31,7 +31,11 @@ public class ExcelReader implements FileReader {
     public void takeReader(String workbook) throws IOException, BiffException {
         this.workbook = Workbook.getWorkbook(new File(workbook));
     }
-
+    
+    @Override
+    public void takeReader(File file) throws IOException, BiffException {
+        this.workbook = Workbook.getWorkbook(file);
+    }
     
     public ArrayList<String> takeLineString(int sheetNumber, int rowNumber) throws IllegalArgumentException{
         ArrayList<String> ligne = new ArrayList<String>();

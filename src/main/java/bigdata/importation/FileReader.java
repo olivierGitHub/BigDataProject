@@ -2,6 +2,7 @@ package bigdata.importation;
 
 import jxl.read.biff.BiffException;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -10,5 +11,6 @@ import java.util.List;
  */
 public interface FileReader {
     void takeReader(String workbook) throws IOException, BiffException;
+    void takeReader(File file) throws IOException, BiffException;
     List<RateItem> getFileRate();
 }

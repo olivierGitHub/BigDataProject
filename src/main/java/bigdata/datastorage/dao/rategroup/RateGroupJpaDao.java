@@ -1,12 +1,13 @@
 package bigdata.datastorage.dao.rategroup;
 
-import bigdata.analytics.dto.CountryRateGroupDto;
 import bigdata.analytics.rategroup.RateGroup;
 import bigdata.analytics.rategroup.RateGroupType;
 import bigdata.datastorage.impl.BaseJpa;
 
 import javax.inject.Named;
-import javax.persistence.*;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Named
