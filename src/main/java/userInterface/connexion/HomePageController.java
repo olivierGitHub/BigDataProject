@@ -1,5 +1,6 @@
 package userInterface.connexion;
 
+import bigdata.importation.ImportationService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -9,6 +10,7 @@ import javafx.scene.control.MenuItem;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import javax.inject.Inject;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
@@ -17,12 +19,13 @@ import java.util.ResourceBundle;
 
 public class HomePageController implements Initializable {
 
+    /*
+     @FXML
+     ComboBox comboBoxSelectYear; */
     @FXML
     MenuButton menuButtonSelectYear;
-
-   /*
-    @FXML
-    ComboBox comboBoxSelectYear; */
+    @Inject
+    private ImportationService importationService;
     /**
      * Initializes the controller class.
      */
@@ -56,18 +59,9 @@ public class HomePageController implements Initializable {
         fileChooser.setInitialDirectory(defaultDirectory);
         File file = fileChooser.showOpenDialog(stage);
         if (file != null) {
-            openFile(file);
+            importationService.importFileData(file);
         }
 
-    }
-
-
-    private void openFile(File file) {
-        try {
-            desktop.open(file);
-        } catch (IOException ex) {
-
-        }
     }
 
 

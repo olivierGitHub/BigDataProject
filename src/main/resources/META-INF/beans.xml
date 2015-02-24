@@ -6,5 +6,6 @@
 
     <context:component-scan base-package="bigdata.datastorage.dao.*"/>
     <context:component-scan base-package="bigdata.analytics.*"/>
+    <context:component-scan base-package="bigdata.importation.*"/>
 
 </beans>
