@@ -19,7 +19,7 @@ public class RateJpaDao extends BaseJpa implements RateDao {
     @Override
     public List<Rate> getRates(Integer rateGroupId) {
         EntityManager em = getEntityManagerFactory().createEntityManager();
-        Query query = em.createQuery("SELECT rate.* FROM Rate rate LEFT JOIN RateGroup rg ON rg.id = rate.id WHERE rate.id = :rateGroupId");
+        Query query = em.createQuery("SELECT rate FROM Rate rate LEFT JOIN RateGroup rg ON rg.id = rate.id WHERE rate.id = :rateGroupId");
         query.setParameter("rateGroupId", rateGroupId);
         List<Rate> result = query.getResultList();
         return result;
@@ -53,7 +53,7 @@ public class RateJpaDao extends BaseJpa implements RateDao {
     @Override
     public Rate read(int id) {
         EntityManager em = getEntityManagerFactory().createEntityManager();
-        Query query = em.createQuery("SELECT * FROM Rate rate Where rate.id = :idRate");
+        Query query = em.createQuery("SELECT rate FROM Rate rate Where rate.id = :idRate");
         query.setParameter("idRate", id);
         Rate rateGroup = (Rate) query.getSingleResult();
         return rateGroup;

@@ -75,7 +75,7 @@ public class RateGroupJpaDao extends BaseJpa implements RateGroupDao {
     @Override
     public RateGroup read(int id) {
         EntityManager em = getEntityManagerFactory().createEntityManager();
-        Query query = em.createQuery("SELECT * FROM RateGroup rg Where rg.id = :idRateGroup");
+        Query query = em.createQuery("SELECT rg FROM RateGroup rg Where rg.id = :idRateGroup");
         query.setParameter("idRateGroup", id);
         RateGroup rateGroup = (RateGroup) query.getSingleResult();
         return rateGroup;
