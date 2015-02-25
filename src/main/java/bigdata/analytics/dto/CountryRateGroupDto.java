@@ -9,6 +9,12 @@ public class CountryRateGroupDto {
     private RateDto selectedYear;
     private RateDto previousSelectedYear;
 
+    public CountryRateGroupDto(int idCountry, String countryName, int rateGroupId) {
+        this.idCountry = idCountry;
+        this.countryName = countryName;
+        this.rateGroupId = rateGroupId;
+    }
+
     public String getCountryName() {
         return countryName;
     }

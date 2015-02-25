@@ -1,6 +1,5 @@
 package bigdata.datastorage.dao.rategroup;
 
-import bigdata.analytics.dto.CountryRateGroupDto;
 import bigdata.analytics.rategroup.RateGroup;
 import bigdata.analytics.rategroup.RateGroupType;
 import bigdata.datastorage.dao.Dao;
@@ -12,5 +11,5 @@ import java.util.List;
  */
 public interface RateGroupDao extends Dao<RateGroup> {
 
-    public RateGroup getRateGroupByCriterias(RateGroupType rateGroupType, Integer countryId);
+    public List<RateGroup> getRateGroupByRateGroupType(RateGroupType rateGroupType);
 }
