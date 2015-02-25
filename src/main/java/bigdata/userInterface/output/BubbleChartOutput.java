@@ -1,5 +1,9 @@
 package bigdata.userInterface.output;
 
+import bigdata.analytics.AnalyticsService;
+import bigdata.analytics.AnalyticsServiceImpl;
+import bigdata.analytics.dto.CountryRateGroupDto;
+import bigdata.analytics.rategroup.RateGroupType;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -7,7 +11,11 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.chart.BubbleChart;
 import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BubbleChartOutput extends Application {
 
@@ -25,28 +33,27 @@ public class BubbleChartOutput extends Application {
         NumberAxis yAxis = new NumberAxis("Taux année N", 40d, 150d, 20d);
         NumberAxis xAxis = new NumberAxis("Country", 0d, 220d, 20d);
 
-        //BubbleChart.Series devNull = new BubbleChart.Series("null", FXCollections.observableArrayList(new XYChart.Data(0d, 0d, 0d)));
-
         BubblesList bubblesList = new BubblesList();
 
-//        List<DataTaux> listDataTaux = DaoData.getInstance().readALL();
-//
-//        for(DataTaux dataTaux  : listDataTaux){
-//            double year_N = Double.parseDouble(dataTaux.getYear2012().replace(',','.'));
-//            System.out.println(dataTaux.getYear2012().replace(',', '.'));
-//            double year_N_1 = Double.parseDouble(dataTaux.getYear2011().replace(',', '.'));
-//            double variation = year_N - year_N_1;
-//            double idCountry = dataTaux.getId();
-//            if (variation<0)
-//                variation = variation -(2*variation);
-//            Bubble bubble = new Bubble(
-//                    new XYChart.Data(
-//                            idCountry*6,
-//                            year_N,
-//                            variation*1.5),
-//                    year_N_1);
-//            bubblesList.fetch(bubble);
-//        }
+        AnalyticsService analyticsService = new AnalyticsServiceImpl();
+
+        List<CountryRateGroupDto> listCountryRateGroupDto = analyticsService.getRateGroupByType(RateGroupType.SHORT_TERM,"2010");
+
+        for(CountryRateGroupDto countryRateGroupDto  : listCountryRateGroupDto){
+            double year_N = countryRateGroupDto.getSelectedYear().getValue();
+            //System.out.println(dataTaux.getYear2012().replace(',', '.'));
+            double year_N_1 = countryRateGroupDto.getPreviousSelectedYear().getValue();
+            double variation = year_N - year_N_1;
+            double idCountry = countryRateGroupDto.getIdCountry();
+            variation = Math.abs(variation);
+            Bubble bubble = new Bubble(
+                    new XYChart.Data(
+                            idCountry*6,
+                            year_N,
+                            variation*1.5),
+                    year_N_1);
+            bubblesList.fetch(bubble);
+        }
 
         BubbleChart.Series negative = new BubbleChart.Series("Negative", bubblesList.getListNegative());
         BubbleChart.Series positive = new BubbleChart.Series("Positive", bubblesList.getListPositive());
