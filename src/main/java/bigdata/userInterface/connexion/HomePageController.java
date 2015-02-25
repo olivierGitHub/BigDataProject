@@ -2,6 +2,7 @@ package bigdata.userInterface.connexion;
 
 import bigdata.importation.ImportationService;
 import bigdata.importation.ImportationServiceImpl;
+import bigdata.userInterface.output.BubbleChartOutput;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -56,7 +57,6 @@ public class HomePageController implements Initializable {
         File file = fileChooser.showOpenDialog(stage);
         if (file != null) {
             importationService.importFileData(file);
-            ProgressIndicatorSample progressIndicatorSample = new ProgressIndicatorSample();
 
             initSelectYear(file);
             
@@ -86,5 +86,10 @@ public class HomePageController implements Initializable {
 
     @FXML
     private void chartOpenButtonAction(ActionEvent event) throws IOException {
+        try {
+            new BubbleChartOutput().start(new Stage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

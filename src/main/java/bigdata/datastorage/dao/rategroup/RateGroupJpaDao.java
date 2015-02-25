@@ -16,7 +16,7 @@ public class RateGroupJpaDao extends BaseJpa implements RateGroupDao {
 
     @Override
     public List<RateGroup> getRateGroupByRateGroupType(RateGroupType rateGroupType) {
-        EntityManager em = getEntityManagerFactory().createEntityManager();
+        EntityManager em = super.getEntityManagerFactory().createEntityManager();
         TypedQuery<RateGroup> query = em.createQuery("select rg from RateGroup rg where rg.type = :type", RateGroup.class);
         query.setParameter("type", rateGroupType);
         return query.getResultList();
