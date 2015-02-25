@@ -56,7 +56,10 @@ public class HomePageController implements Initializable {
         File file = fileChooser.showOpenDialog(stage);
         if (file != null) {
             importationService.importFileData(file);
+            ProgressIndicatorSample progressIndicatorSample = new ProgressIndicatorSample();
+
             initSelectYear(file);
+            
         }
 
     }
@@ -84,6 +87,4 @@ public class HomePageController implements Initializable {
     @FXML
     private void chartOpenButtonAction(ActionEvent event) throws IOException {
     }
-
-
 }

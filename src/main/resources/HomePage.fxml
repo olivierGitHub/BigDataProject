@@ -19,11 +19,10 @@
                 prefHeight="25.0" prefWidth="226.0" text="Open a File">
 
         </Button>
-        <Button layoutX="188.0" layoutY="265.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="226.0"
-                text="View DataViz">
+        <Button layoutX="188.0" layoutY="265.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="226.0" onAction="#chartOpenButtonAction" text="View DataViz">
 
         </Button>
-        <!--<MenuButton fx:id="menuButtonSelectYear" layoutX="188.0" layoutY="220.0" mnemonicParsing="false"--> <!--onAction="#menuSelectYear" prefHeight="25.0" prefWidth="226.0" text="Sélectionnez l'année">--> <!--<items>-->
+        
         <ComboBox fx:id="comboBoxSelectYear" layoutX="188.0" layoutY="220.0" promptText="Sélectionnez l'année" disable="true">
             <items>
                 <FXCollections fx:factory="observableArrayList" />
