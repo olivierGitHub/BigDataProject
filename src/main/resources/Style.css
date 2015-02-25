@@ -27,7 +27,7 @@
     -fx-font-weight: bold;
 }
 
-#menuButtonSelectYear {
+#comboBoxSelectYear {
     -fx-font-size: 15px;
     -fx-background-color: linear-gradient(#3333ff, #339BFF);
     -fx-text-fill: #ffffff;

@@ -23,30 +23,11 @@
                 text="View DataViz">
 
         </Button>
-        <!-- <ComboBox layoutX="188.0" layoutY="266.0" prefHeight="25.0" prefWidth="226.0" promptText="Sélectionnez l'année" /> -->
-        <ComboBox fx:id="comboBoxSelectYear" layoutX="188.0" layoutY="266.0" prefHeight="25.0" prefWidth="226.0" promptText="Sélectionnez l'année" disable="true">
+        <!--<MenuButton fx:id="menuButtonSelectYear" layoutX="188.0" layoutY="220.0" mnemonicParsing="false"--> <!--onAction="#menuSelectYear" prefHeight="25.0" prefWidth="226.0" text="Sélectionnez l'année">--> <!--<items>-->
+        <ComboBox fx:id="comboBoxSelectYear" layoutX="188.0" layoutY="220.0" promptText="Sélectionnez l'année" disable="true">
             <items>
                 <FXCollections fx:factory="observableArrayList" />
             </items>
         </ComboBox>
-        <!--<MenuButton fx:id="menuButtonSelectYear" layoutX="188.0" layoutY="220.0" mnemonicParsing="false"-->
-                    <!--onAction="#menuSelectYear" prefHeight="25.0" prefWidth="226.0" text="Sélectionnez l'année">-->
-            <!--<items>-->
-                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2002"/>-->
-                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2003"/>-->
-                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2004"/>-->
-                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2005"/>-->
-                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2006"/>-->
-                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2007"/>-->
-                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2008"/>-->
-                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2009"/>-->
-                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2010"/>-->
-                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2011"/>-->
-                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2012"/>-->
-                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2013 (estimations)"/>-->
-                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2014 (estimations)"/>-->
-                <!--<MenuItem mnemonicParsing="false" onAction="#menuSelectYear" text="2015 (hyposthèses)"/>-->
-            <!--</items>-->
-        <!--</MenuButton>-->
     </children>
 </AnchorPane>
