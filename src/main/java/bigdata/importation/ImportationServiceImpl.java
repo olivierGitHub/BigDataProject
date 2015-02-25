@@ -47,5 +47,20 @@ public class ImportationServiceImpl implements ImportationService {
         }
         return resultList;
     }
-    
+
+    @Override
+    public List<String> getRateGroupList(File file) {
+        FileReader excelReader = new ExcelReader();
+        List<String> result = new ArrayList<>();
+        try {
+            excelReader.takeReader(file);
+            result = excelReader.getAllNameSheet();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (BiffException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
 }

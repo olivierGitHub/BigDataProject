@@ -2,6 +2,7 @@ package bigdata.userInterface.connexion;
 
 import bigdata.importation.ImportationService;
 import bigdata.importation.ImportationServiceImpl;
+import bigdata.userInterface.output.BubbleChartOutput;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -10,6 +11,7 @@ import javafx.scene.Node;
 import javafx.scene.control.ComboBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import org.controlsfx.dialog.Dialogs;
 
 import java.awt.*;
 import java.io.File;
@@ -19,9 +21,15 @@ import java.util.ResourceBundle;
 
 public class HomePageController implements Initializable {
     private String selectedYear;
+    private String selectedType;
+    private boolean selectYear = false;
+    private boolean selectType = false;
+    
     @FXML
     ComboBox comboBoxSelectYear;
-
+    @FXML
+    ComboBox comboBoxRateGroup;
+    
     private ImportationService importationService = new ImportationServiceImpl();
     /**
      * Initializes the controller class.
@@ -56,10 +64,8 @@ public class HomePageController implements Initializable {
         File file = fileChooser.showOpenDialog(stage);
         if (file != null) {
             importationService.importFileData(file);
-            ProgressIndicatorSample progressIndicatorSample = new ProgressIndicatorSample();
-
             initSelectYear(file);
-            
+            selectRateGroup(file);
         }
 
     }
@@ -74,6 +80,7 @@ public class HomePageController implements Initializable {
                     @Override
                     public void handle(ActionEvent actionEvent) {
                         selectedYear = comboBoxSelectYear.getSelectionModel().getSelectedItem().toString();
+                        selectYear = true;
                     }
                 }
         );
@@ -86,5 +93,37 @@ public class HomePageController implements Initializable {
 
     @FXML
     private void chartOpenButtonAction(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        
+        if (selectType && selectYear){
+            try {
+                new BubbleChartOutput().start(new Stage());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }else {
+            Dialogs.create()
+                    .owner(stage)
+                    .title("NO DATA SELECTED!")
+                    .masthead("NO DATA SELECTED!")
+                    .message("Please select type and year before and a file!")
+                    .showError();
+        }
+    }
+
+    public void selectRateGroup(File file) {
+        ImportationService importationService = new ImportationServiceImpl();
+
+        this.comboBoxRateGroup.setDisable(false);
+        this.comboBoxRateGroup.getItems().addAll(importationService.getRateGroupList(file));
+        this.comboBoxRateGroup.setOnAction(
+                new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent actionEvent) {
+                        selectedType = comboBoxRateGroup.getSelectionModel().getSelectedItem().toString();
+                        selectType = true;
+                    }
+                }
+        );
     }
 }
