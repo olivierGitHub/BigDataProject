@@ -47,7 +47,7 @@ public class RateItemManagerTest {
         List<RateItem> rateItemList = generateRateItemList();
         List<Country> modelExpected = generateModelExpected();
 //        RateGroupJpaDao dao = new RateGroupJpaDao();
-//        dao.getRateGroupByCriterias(RateGroupType.EFFECTIVE);
+//        dao.getRateGroupByRateGroupType(RateGroupType.EFFECTIVE);
         assertThat(rateItemManager.rateItemListToModel(rateItemList), is(modelExpected));
     }
 

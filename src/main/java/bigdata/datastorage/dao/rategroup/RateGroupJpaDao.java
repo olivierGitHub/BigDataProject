@@ -15,14 +15,11 @@ public class RateGroupJpaDao extends BaseJpa implements RateGroupDao {
     }
 
     @Override
-    public RateGroup getRateGroupByCriterias(RateGroupType rateGroupType, Integer countryId) {
+    public List<RateGroup> getRateGroupByRateGroupType(RateGroupType rateGroupType) {
         EntityManager em = getEntityManagerFactory().createEntityManager();
-        TypedQuery<RateGroup> query = em.createQuery("select rg from RateGroup rg where rg.country.id = :countryId and rg.type = :type", RateGroup.class);
-        query.setParameter("countryId", countryId);
+        TypedQuery<RateGroup> query = em.createQuery("select rg from RateGroup rg where rg.type = :type", RateGroup.class);
         query.setParameter("type", rateGroupType);
-        List<RateGroup> resultList = query.getResultList();
-        if(resultList == null || resultList.size() > 1) return null;
-        else return resultList.get(0);
+        return query.getResultList();
     }
 
     @Override
