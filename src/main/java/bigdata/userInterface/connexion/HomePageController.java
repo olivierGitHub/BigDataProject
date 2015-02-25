@@ -44,8 +44,8 @@ public class HomePageController implements Initializable {
         fileChooser.getExtensionFilters().add(extensionFilter);
         */
         fileChooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter("Excel files (*.xlsx)", "*.xlsx"),
-                new FileChooser.ExtensionFilter("Excel files 97-2003 (*.xls)", "*.xls")
+                new FileChooser.ExtensionFilter("Excel files 97-2003 (*.xls)", "*.xls"),
+                new FileChooser.ExtensionFilter("Excel files (*.xlsx)", "*.xlsx")
         );
 
         fileChooser.setTitle("DATA VIZOR : Ouvrir le fichier source");

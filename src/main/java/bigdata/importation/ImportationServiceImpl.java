@@ -1,5 +1,7 @@
 package bigdata.importation;
 
+import bigdata.analytics.country.Country;
+import bigdata.datastorage.dao.country.CountryJpaDao;
 import bigdata.importation.excel.ExcelReader;
 import jxl.read.biff.BiffException;
 
@@ -19,6 +21,12 @@ public class ImportationServiceImpl implements ImportationService {
         try {
             excelReader.takeReader(file);
             List<RateItem> rateItemList = excelReader.getFileRate();
+            RateItemManager rateItemManager = new RateItemManager();
+            List<Country> resultListCountry = rateItemManager.rateItemListToModel(rateItemList);
+            for (Country country : resultListCountry) {
+                CountryJpaDao dao = new CountryJpaDao();
+                dao.create(country);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         } catch (BiffException e) {

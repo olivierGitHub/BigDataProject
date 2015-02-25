@@ -8,15 +8,16 @@ public enum CurrencyCode {
     Dollar("USD"),
     Euro("EUR"),
     Livre("GBP"),
-    Peso("C"),
-    Couronne("K"),
-    Sheqel("₪"),
-    Yen("¥"),
-    Won("₩"),
-    Zloty("z"),
-    Tolar("tolars"),
+    Peso("PES"),
+    Couronne("COU"),
+    Sheqel("SHE"),
+    Yen("YEN"),
+    Won("WON"),
+    Zloty("ZLT"),
+    Tolar("TOL"),
     Franc("F"),
-    Lire("T");
+    Lire("L"),
+    Forint("For");
 
     private String code = "";
 
