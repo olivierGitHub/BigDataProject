@@ -52,14 +52,19 @@ public class BubbleChartOutput extends Application {
             double year_N_1 = countryRateGroupDto.getPreviousSelectedYear().getValue();
             double variation = year_N - year_N_1;
             double idCountry = countryRateGroupDto.getIdCountry();
+            System.out.println("vue: idCountry = " + idCountry);
+            System.out.println("vue: variation = " + variation);
+            System.out.println("vue: year_N_1 = " + year_N_1);
+            System.out.println("vue: year_N = " + year_N);
+
             variation = Math.abs(variation);
             Bubble bubble = new Bubble(
                     new XYChart.Data(
                             idCountry*6,
                             year_N,
                             variation*1.5),
-                    year_N_1);
-//            bubble.setHoveredProperty(text,countryRateGroupDto.getCountryName());
+                    year_N_1,year_N);
+            //bubble.setHoveredProperty(text,countryRateGroupDto.getCountryName());
             bubblesList.fetch(bubble);
         }
 
@@ -69,10 +74,12 @@ public class BubbleChartOutput extends Application {
 
         ObservableList<BubbleChart.Series> bubbleChartData = FXCollections.observableArrayList(negative, devNull, positive);
 
-        BubbleChart chart = new BubbleChart(xAxis, yAxis, bubbleChartData);
-        root.getChildren().add(chart);
-    }
+        BubbleChart chart = new BubbleChart(xAxis, yAxis/*, bubbleChartData*/);
 
+        root.getChildren().add(chart);
+        chart.getData().addAll(negative,devNull,positive);
+    }
+    
     @Override
     public void start(Stage primaryStage) throws Exception {
         init(primaryStage);
