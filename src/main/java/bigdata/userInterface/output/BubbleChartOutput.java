@@ -7,11 +7,14 @@ import bigdata.analytics.rategroup.RateGroupType;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.geometry.VPos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.chart.BubbleChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
@@ -32,6 +35,10 @@ public class BubbleChartOutput extends Application {
         primaryStage.setScene(new Scene(root));
         NumberAxis yAxis = new NumberAxis("Taux année N", 40d, 150d, 20d);
         NumberAxis xAxis = new NumberAxis("Country", 0d, 220d, 20d);
+        final Text text = new Text(0,0, "");
+        text.setStyle("-fx-font-size: 22;");
+        text.setTextOrigin(VPos.TOP);
+        text.setTextAlignment(TextAlignment.CENTER);
 
         BubblesList bubblesList = new BubblesList();
 
@@ -52,6 +59,7 @@ public class BubbleChartOutput extends Application {
                             year_N,
                             variation*1.5),
                     year_N_1);
+            bubble.setHoveredProperty(text,countryRateGroupDto.getCountryName());
             bubblesList.fetch(bubble);
         }
 

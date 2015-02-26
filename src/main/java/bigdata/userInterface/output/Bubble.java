@@ -1,6 +1,9 @@
 package bigdata.userInterface.output;
 
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.scene.chart.XYChart;
+import javafx.scene.text.Text;
 
 public class Bubble {
 
@@ -30,6 +33,18 @@ public class Bubble {
 
     public XYChart.Data getBubble() {
         return bubble;
+    }
+
+    public void setHoveredProperty(Text text,String countryName){
+        bubble.getNode().hoverProperty().addListener(new InvalidationListener() {
+            public void invalidated(Observable ov) {
+                if (bubble.getNode().isHover()) {
+                    text.setText(countryName);
+                } else {
+                    text.setText("");
+                }
+            }
+        });
     }
 
 }
