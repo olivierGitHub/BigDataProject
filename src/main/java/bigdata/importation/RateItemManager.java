@@ -23,16 +23,18 @@ public class RateItemManager {
         List<Country> countryList = new ArrayList<Country>();
         Map<String, Country> countryMap = new LinkedHashMap<String, Country>();
         for (RateItem rateItem : rateItemList) {
-            convertItemToCountryModel(rateGroupAssembler, rateAssembler, countryList, countryMap, rateItem);
+            convertItemToCountryModel(countryList, countryMap, rateItem);
         }
         return new ArrayList<Country>(countryMap.values());
     }
 
-    private void convertItemToCountryModel(RateGroupAssembler rateGroupAssembler, RateAssembler rateAssembler, List<Country> countryList, Map<String, Country> countryMap, RateItem rateItem) {
+    private void convertItemToCountryModel(List<Country> countryList, Map<String, Country> countryMap, RateItem rateItem) {
         Country country = getCountryFromRateItemList(countryMap, rateItem);
         RateGroup rateGroup = getRateGroupFromRateItemListByType(countryMap, rateItem, country);
         Rate rate = rateAssembler.fromRateItem(rateItem);
+        rate.setRateGroup(rateGroup);
         rateGroup.addRate(rate);
+        rateGroup.setCountry(country);
         countryList.add(country);
     }
 

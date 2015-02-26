@@ -1,8 +1,9 @@
 package bigdata.analytics.rategroup;
 
 import bigdata.analytics.country.Country;
-import bigdata.analytics.rate.CurrencyRate;
 import bigdata.analytics.rate.Rate;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -17,15 +18,15 @@ import java.util.Objects;
 @Entity
 public class RateGroup implements Serializable{
 
-    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
+    @ManyToOne
     Country country;
+    String currency;
     @Id
     @GeneratedValue
     private int id;
     private RateGroupType type;
-    @ManyToOne(fetch = FetchType.EAGER)
-    private CurrencyRate currency;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "rateGroup")
+    @Cascade(CascadeType.ALL)
     private List<Rate> rates = new ArrayList<Rate>();
 
     public List<Rate> getRates() {
@@ -52,12 +53,11 @@ public class RateGroup implements Serializable{
         this.type = type;
     }
 
-
-    public CurrencyRate getCurrency() {
+    public String getCurrency() {
         return currency;
     }
 
-    public void setCurrency(CurrencyRate currency) {
+    public void setCurrency(String currency) {
         this.currency = currency;
     }
 

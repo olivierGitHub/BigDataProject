@@ -23,8 +23,8 @@ public class ImportationServiceImpl implements ImportationService {
             List<RateItem> rateItemList = excelReader.getFileRate();
             RateItemManager rateItemManager = new RateItemManager();
             List<Country> resultListCountry = rateItemManager.rateItemListToModel(rateItemList);
+            CountryJpaDao dao = new CountryJpaDao();
             for (Country country : resultListCountry) {
-                CountryJpaDao dao = new CountryJpaDao();
                 dao.create(country);
             }
         } catch (IOException e) {

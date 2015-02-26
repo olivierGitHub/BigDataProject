@@ -1,6 +1,7 @@
 package bigdata.analytics.country;
 
 import bigdata.analytics.rategroup.RateGroup;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import java.util.Objects;
 public class Country {
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "country")
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
     private final List<RateGroup> rateGroups = new ArrayList<RateGroup>();
     String countryName;
     @GeneratedValue

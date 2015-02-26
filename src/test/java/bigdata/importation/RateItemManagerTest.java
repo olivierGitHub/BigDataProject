@@ -1,8 +1,6 @@
 package bigdata.importation;
 
 import bigdata.analytics.country.Country;
-import bigdata.analytics.rate.CurrencyCode;
-import bigdata.analytics.rate.CurrencyRate;
 import bigdata.analytics.rate.Rate;
 import bigdata.analytics.rate.RateAssembler;
 import bigdata.analytics.rategroup.RateGroup;
@@ -60,14 +58,14 @@ public class RateItemManagerTest {
         country = createCountry("France");
         rateGroup = addNewRateGroupToCountry(
                 country,
-                createCurrencyRate("Euro", CurrencyCode.Euro),
+                "Euro",
                 RateGroupType.EFFECTIVE
         );
         rate = addNewRateToRateGroup(rateGroup, "2010", rate(1.12));
         rate = addNewRateToRateGroup(rateGroup, "2009", rate(1.14));
         rateGroup = addNewRateGroupToCountry(
                 country,
-                createCurrencyRate("Euro", CurrencyCode.Euro),
+                "Euro",
                 RateGroupType.NOMINATIVE
         );
         rate = addNewRateToRateGroup(rateGroup, "2010", rate(1.16));
@@ -77,7 +75,7 @@ public class RateItemManagerTest {
         country = createCountry("Allemagne");
         rateGroup = addNewRateGroupToCountry(
                 country,
-                createCurrencyRate("Euro", CurrencyCode.Euro),
+                "Euro",
                 RateGroupType.EFFECTIVE
         );
         rate = addNewRateToRateGroup(rateGroup, "2010", rate(1.13));
@@ -86,7 +84,7 @@ public class RateItemManagerTest {
         country = createCountry("USA");
         rateGroup = addNewRateGroupToCountry(
                 country,
-                createCurrencyRate("Dollar", CurrencyCode.Dollar),
+                "Dollar",
                 RateGroupType.NOMINATIVE
         );
         rate = addNewRateToRateGroup(rateGroup, "2010", rate(1.15));
@@ -107,11 +105,7 @@ public class RateItemManagerTest {
         return rate;
     }
 
-    private CurrencyRate createCurrencyRate(String currencyName, CurrencyCode currencyCode) {
-        return new CurrencyRate(currencyName, currencyCode);
-    }
-
-    private RateGroup addNewRateGroupToCountry(Country country, CurrencyRate currencyRate, RateGroupType rateGroupType) {
+    private RateGroup addNewRateGroupToCountry(Country country, String currencyRate, RateGroupType rateGroupType) {
         RateGroup rateGroup = new RateGroup();
         rateGroup.setCurrency(currencyRate);
         rateGroup.setType(rateGroupType);

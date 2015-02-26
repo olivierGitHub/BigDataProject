@@ -13,6 +13,8 @@ public class CountryRateGroupDto {
         this.idCountry = idCountry;
         this.countryName = countryName;
         this.rateGroupId = rateGroupId;
+        selectedYear = RateDto.NULL_OBJECT;
+        previousSelectedYear = RateDto.NULL_OBJECT;
     }
 
     public String getCountryName() {

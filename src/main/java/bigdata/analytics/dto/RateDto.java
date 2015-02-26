@@ -1,28 +1,26 @@
 package bigdata.analytics.dto;
 
-import bigdata.analytics.rate.CurrencyCode;
-
 import java.util.Objects;
 
 public class RateDto {
 
-    private static final RateDto NULL_OBJECT = new RateDto(null, "0", 1d);
-    CurrencyCode currencyCode;
+    public static final RateDto NULL_OBJECT = new RateDto(null, "0", 1d);
+    String currency;
     String year;
     double value;
 
-    public RateDto(CurrencyCode currencyCode, String year, double value) {
-        this.currencyCode = currencyCode;
+    public RateDto(String currencyCode, String year, double value) {
+        this.currency = currencyCode;
         this.year = year;
         this.value = value;
     }
 
-    public CurrencyCode getCurrencyCode() {
-        return currencyCode;
+    public String getCurrency() {
+        return currency;
     }
 
-    public void setCurrencyCode(CurrencyCode currencyCode) {
-        this.currencyCode = currencyCode;
+    public void setCurrency(String currency) {
+        this.currency = currency;
     }
 
     public String getYear() {
@@ -43,7 +41,7 @@ public class RateDto {
 
     @Override
     public int hashCode() {
-        return Objects.hash(currencyCode, year, value);
+        return Objects.hash(currency, year, value);
     }
 
     @Override
@@ -55,7 +53,7 @@ public class RateDto {
             return false;
         }
         final RateDto other = (RateDto) obj;
-        return Objects.equals(this.currencyCode, other.currencyCode)
+        return Objects.equals(this.currency, other.currency)
                 && Objects.equals(this.year, other.year)
                 && Objects.equals(this.value, other.value);
     }

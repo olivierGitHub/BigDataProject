@@ -23,15 +23,14 @@ public class AnalyticsServiceImpl implements AnalyticsService {
     @Override
     public List<CountryRateGroupDto> getRateGroupByType(RateGroupType rateGroupType, String year) {
         RateGroupDao dao = new RateGroupJpaDao();
-        List<CountryRateGroupDto> rateGroupDtoList = new ArrayList<CountryRateGroupDto>();
+        List<CountryRateGroupDto> countryRateGroupDtoList = new ArrayList<CountryRateGroupDto>();
         List<RateGroup> rateGroupList = dao.getRateGroupByRateGroupType(rateGroupType);
 
-        String previousYear = Double.toString(Double.parseDouble(year) - 1);
-        List<CountryRateGroupDto> countryRateGroupDtoList = new ArrayList<CountryRateGroupDto>();
+        String previousYear = Integer.toString(Integer.parseInt(year) - 1);
         for (RateGroup eachRateGroup : rateGroupList) {
             createDtoForEachRateGroup(year, previousYear, countryRateGroupDtoList, eachRateGroup);
         }
-        return rateGroupDtoList;
+        return countryRateGroupDtoList;
     }
 
     private void createDtoForEachRateGroup(String year, String previousYear, List<CountryRateGroupDto> countryRateGroupDtoList, RateGroup eachRateGroup) {
@@ -49,13 +48,13 @@ public class AnalyticsServiceImpl implements AnalyticsService {
     private void createRateDtoForEachRate(String year, String previousYear, RateGroup eachRateGroup, CountryRateGroupDto dto, Rate eachRate) {
         if (eachRate.getYear().equals(year)) {
             dto.setSelectedYear(new RateDto(
-                    eachRateGroup.getCurrency().getCurrencyCode(),
+                    eachRateGroup.getCurrency(),
                     year,
                     eachRate.getValue()
             ));
         } else if (eachRate.getYear().equals(previousYear)) {
             dto.setPreviousSelectedYear(new RateDto(
-                    eachRateGroup.getCurrency().getCurrencyCode(),
+                    eachRateGroup.getCurrency(),
                     previousYear,
                     eachRate.getValue()
             ));
