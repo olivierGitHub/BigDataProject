@@ -4,6 +4,7 @@ import bigdata.analytics.AnalyticsService;
 import bigdata.analytics.AnalyticsServiceImpl;
 import bigdata.analytics.dto.CountryRateGroupDto;
 import bigdata.analytics.rategroup.RateGroupType;
+import bigdata.userInterface.connexion.SelectYearType;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -44,7 +45,7 @@ public class BubbleChartOutput extends Application {
 
         AnalyticsService analyticsService = new AnalyticsServiceImpl();
 
-        List<CountryRateGroupDto> listCountryRateGroupDto = analyticsService.getRateGroupByType(RateGroupType.SHORT_TERM,"2010");
+        List<CountryRateGroupDto> listCountryRateGroupDto = analyticsService.getRateGroupByType(RateGroupType.valueOf(SelectYearType.selectType),SelectYearType.selectYear);
 
         for(CountryRateGroupDto countryRateGroupDto  : listCountryRateGroupDto){
             double year_N = countryRateGroupDto.getSelectedYear().getValue();

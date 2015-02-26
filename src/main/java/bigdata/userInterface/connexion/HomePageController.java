@@ -20,8 +20,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class HomePageController implements Initializable {
-    private String selectedYear;
-    private String selectedType;
     private boolean selectYear = false;
     private boolean selectType = false;
     
@@ -79,7 +77,7 @@ public class HomePageController implements Initializable {
                 new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent actionEvent) {
-                        selectedYear = comboBoxSelectYear.getSelectionModel().getSelectedItem().toString();
+                        SelectYearType.selectYear = comboBoxSelectYear.getSelectionModel().getSelectedItem().toString();
                         selectYear = true;
                     }
                 }
@@ -120,7 +118,7 @@ public class HomePageController implements Initializable {
                 new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent actionEvent) {
-                        selectedType = comboBoxRateGroup.getSelectionModel().getSelectedItem().toString();
+                        SelectYearType.selectType = comboBoxRateGroup.getSelectionModel().getSelectedItem().toString();
                         selectType = true;
                     }
                 }
