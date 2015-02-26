@@ -15,18 +15,24 @@
             </font>
         </Label>
         <Line endX="308.0" layoutX="286.0" layoutY="68.0" startX="-280.0"/>
-        <Button layoutX="188.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleButtonActionOpenFile"
-                prefHeight="25.0" prefWidth="226.0" text="Open a File">
-
-        </Button>
-        <Button layoutX="188.0" layoutY="265.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="226.0" onAction="#chartOpenButtonAction" text="View DataViz">
-
-        </Button>
         
-        <ComboBox fx:id="comboBoxSelectYear" layoutX="188.0" layoutY="220.0" promptText="Sélectionnez l'année" disable="true">
+        <Button layoutX="188.0" layoutY="140" mnemonicParsing="false" onAction="#handleButtonActionOpenFile"
+                prefHeight="25.0" prefWidth="226.0" text="Open a File">
+        </Button>
+
+        <ComboBox fx:id="comboBoxSelectYear" layoutX="188.0" layoutY="180" promptText="Sélectionnez l'année" disable="true">
             <items>
                 <FXCollections fx:factory="observableArrayList" />
             </items>
         </ComboBox>
+
+        <ComboBox fx:id="comboBoxRateGroup" layoutX="188.0" layoutY="220" promptText="Sélectionnez le typee" disable="true">
+            <items>
+                <FXCollections fx:factory="observableArrayList" />
+            </items>
+        </ComboBox>
+        
+        <Button fx:id="btnGoDataViz" layoutX="188.0" layoutY="260" mnemonicParsing="false" prefHeight="25.0" prefWidth="226.0" onAction="#chartOpenButtonAction" text="View DataViz">
+        </Button>
     </children>
 </AnchorPane>

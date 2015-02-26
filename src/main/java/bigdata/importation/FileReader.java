@@ -4,6 +4,7 @@ import jxl.read.biff.BiffException;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,4 +15,5 @@ public interface FileReader {
     void takeReader(File file) throws IOException, BiffException;
     List<String> getAllYears();
     List<RateItem> getFileRate();
+    ArrayList<String> getAllNameSheet();
 }

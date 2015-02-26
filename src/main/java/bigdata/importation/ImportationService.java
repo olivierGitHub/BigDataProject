@@ -9,4 +9,5 @@ import java.util.List;
 public interface ImportationService {
     void importFileData(File file);
     List<String> getYearFileData(File file);
+    List<String> getRateGroupList(File file);
 }
