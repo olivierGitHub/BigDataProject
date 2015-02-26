@@ -19,11 +19,10 @@ import java.util.logging.Logger;
  * Created by alco on 09/02/2015.
  */
 public class ExcelReader implements FileReader {
-    Workbook workbook;
     private final static Logger logger = Logger.getLogger(ExcelReader.class.getName());
-    
     private static final String CURRENCY_UNIT = "Unite monetaire";
     private static final double DEFAULT_VALUE_THREEDOT = -1;
+    Workbook workbook;
 
     public ExcelReader(){}
 
@@ -293,7 +292,7 @@ public class ExcelReader implements FileReader {
                             try{
                                 tauxValue = Double.parseDouble(contentValue.replace(',','.'));
                                 RateValue rateValue = new RateValue(tauxValue,uniteMonetaire);
-                                RateKey rateKey = new RateKey(getCountry(y),getYear(y),rateGrouptype.valueOf(nameSheet));
+                                RateKey rateKey = new RateKey(getCountry(y), getYear(x), rateGrouptype.valueOf(nameSheet));
                                 RateItem rateItem = new RateItem(rateKey,rateValue);
                                 rateItemList.add(rateItem);
                             }catch  (Exception e1){

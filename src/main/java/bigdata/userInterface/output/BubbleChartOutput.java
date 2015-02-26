@@ -18,7 +18,6 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class BubbleChartOutput extends Application {
@@ -60,7 +59,7 @@ public class BubbleChartOutput extends Application {
                             year_N,
                             variation*1.5),
                     year_N_1);
-            bubble.setHoveredProperty(text,countryRateGroupDto.getCountryName());
+//            bubble.setHoveredProperty(text,countryRateGroupDto.getCountryName());
             bubblesList.fetch(bubble);
         }
 

@@ -35,7 +35,7 @@ public class Bubble {
         return bubble;
     }
 
-    public void setHoveredProperty(Text text,String countryName){
+    public void setHoveredProperty(final Text text, final String countryName) {
         bubble.getNode().hoverProperty().addListener(new InvalidationListener() {
             public void invalidated(Observable ov) {
                 if (bubble.getNode().isHover()) {

@@ -51,7 +51,7 @@ public class ImportationServiceImpl implements ImportationService {
     @Override
     public List<String> getRateGroupList(File file) {
         FileReader excelReader = new ExcelReader();
-        List<String> result = new ArrayList<>();
+        List<String> result = new ArrayList<String>();
         try {
             excelReader.takeReader(file);
             result = excelReader.getAllNameSheet();

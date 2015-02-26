@@ -8,7 +8,7 @@ import javax.persistence.Persistence;
  */
 public abstract class BaseJpa {
 
-    private EntityManagerFactory emf;
+    private static EntityManagerFactory emf;
 
     protected EntityManagerFactory getEntityManagerFactory() {
         if (emf == null) {
