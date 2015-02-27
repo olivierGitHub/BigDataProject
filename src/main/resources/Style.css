@@ -5,7 +5,7 @@
 
 .root {
     -fx-spacing: 10;
-    -fx-background-color: linear-gradient(lightyellow, #F1D48C);
+    -fx-background-color: linear-gradient(lightsteelblue, darkcyan);
     -fx-padding: 5;
 }
 
