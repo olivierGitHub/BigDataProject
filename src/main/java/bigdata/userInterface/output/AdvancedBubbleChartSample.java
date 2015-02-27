@@ -73,19 +73,20 @@ public class AdvancedBubbleChartSample extends Application {
         xAxis.setLabel("X Axis");
         yAxis.setLabel("Y Axis");
         // add starting data
-        XYChart.Series<Number,Number> series1 = new XYChart.Series<Number,Number>();
-        series1.setName("Data Series 1");
-        series1.getData().addAll(bubblesList.getListNegative());
+        XYChart.Series<Number,Number> positifSerie = new XYChart.Series<Number,Number>();
+        positifSerie.setName("Data Series 1");
+        positifSerie.getData().addAll(bubblesList.getListNegative());
+
+        XYChart.Series<Number,Number> nullSerie = new XYChart.Series<Number,Number>();
+        nullSerie.setName("Data Series 2");
+        nullSerie.getData().addAll(bubblesList.getListPositive());
         
-        XYChart.Series<Number,Number> series2 = new XYChart.Series<Number,Number>();
-        series2.setName("Data Series 2");
-        series2.getData().addAll(bubblesList.getListPositive());
+        XYChart.Series<Number,Number> negativeSerie = new XYChart.Series<Number,Number>();
+        negativeSerie.setName("Data Series 3");
+        negativeSerie.getData().addAll(bubblesList.getListNull());
+
         
-        XYChart.Series<Number,Number> series3 = new XYChart.Series<Number,Number>();
-        series3.setName("Data Series 3");
-        series3.getData().addAll(bubblesList.getListNull());
-        
-        bc.getData().addAll(series1, series2,series3);
+        bc.getData().addAll(positifSerie, negativeSerie, nullSerie);
         return bc;
     }
 
