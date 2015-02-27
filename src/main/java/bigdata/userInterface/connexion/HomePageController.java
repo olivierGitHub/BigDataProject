@@ -2,6 +2,7 @@ package bigdata.userInterface.connexion;
 
 import bigdata.importation.ImportationService;
 import bigdata.importation.ImportationServiceImpl;
+import bigdata.userInterface.output.AdvancedBubbleChartSample;
 import bigdata.userInterface.output.BubbleChartOutput;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -108,6 +109,27 @@ public class HomePageController implements Initializable {
                     .showError();
         }
     }
+
+    @FXML
+    private void chart2OpenButtonAction(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        if (selectType && selectYear){
+            try {
+                new AdvancedBubbleChartSample().start(new Stage());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }else {
+            Dialogs.create()
+                    .owner(stage)
+                    .title("NO DATA SELECTED!")
+                    .masthead("NO DATA SELECTED!")
+                    .message("Please select type and year before and a file!")
+                    .showError();
+        }
+    }
+
 
     public void selectRateGroup(File file) {
         ImportationService importationService = new ImportationServiceImpl();

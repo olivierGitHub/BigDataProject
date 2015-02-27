@@ -34,5 +34,8 @@
         
         <Button fx:id="btnGoDataViz" layoutX="188.0" layoutY="260" mnemonicParsing="false" prefHeight="25.0" prefWidth="226.0" onAction="#chartOpenButtonAction" text="View DataViz">
         </Button>
+        
+        <Button fx:id="btnGoDataViz2" layoutX="188.0" layoutY="300" mnemonicParsing="false" prefHeight="25.0" prefWidth="226.0" onAction="#chart2OpenButtonAction" text="View DataViz advanced">
+        </Button>
     </children>
 </AnchorPane>

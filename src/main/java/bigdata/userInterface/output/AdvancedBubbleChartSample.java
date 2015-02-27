@@ -1,44 +1,44 @@
-package bigdata.userInterface.output;
-
+package bigdata.userInterface.output; /**
+ * Copyright (c) 2008, 2012 Oracle and/or its affiliates.
+ * All rights reserved. Use is subject to license terms.
+ */
 import bigdata.analytics.AnalyticsService;
 import bigdata.analytics.AnalyticsServiceImpl;
 import bigdata.analytics.dto.CountryRateGroupDto;
 import bigdata.analytics.rategroup.RateGroupType;
 import bigdata.userInterface.connexion.SelectYearType;
 import javafx.application.Application;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.geometry.VPos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.chart.BubbleChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
 import java.util.List;
 
-public class BubbleChartOutput extends Application {
+/**
+ * An advanced bubble chart with a variety of actions and settable properties.
+ *
+ * @see javafx.scene.chart.BubbleChart
+ * @see javafx.scene.chart.Chart
+ * @see javafx.scene.chart.NumberAxis
+ * @see javafx.scene.chart.ScatterChart
+ * @see javafx.scene.chart.XYChart
+ */
 
-    public BubbleChartOutput() {
-
-    }
-
-    public static void main(String[] args) {
-        launch(args);
-    }
+public class AdvancedBubbleChartSample extends Application {
 
     private void init(Stage primaryStage) {
         Group root = new Group();
         primaryStage.setScene(new Scene(root));
-        NumberAxis yAxis = new NumberAxis("Taux année N", 40d, 150d, 20d);
-        NumberAxis xAxis = new NumberAxis("Country", 0d, 220d, 20d);
-        final Text text = new Text(0,0, "");
-        text.setStyle("-fx-font-size: 22;");
-        text.setTextOrigin(VPos.TOP);
-        text.setTextAlignment(TextAlignment.CENTER);
+        root.getChildren().add(createChart());
+    }
+
+    protected BubbleChart<Number, Number> createChart() {
+        final NumberAxis xAxis = new NumberAxis();
+        final NumberAxis yAxis = new NumberAxis();
+        final BubbleChart<Number,Number> bc = new BubbleChart<Number,Number>(xAxis,yAxis);
 
         BubblesList bubblesList = new BubblesList();
 
@@ -68,17 +68,30 @@ public class BubbleChartOutput extends Application {
         BubbleChart.Series positive = new BubbleChart.Series("Positive", bubblesList.getListPositive());
         BubbleChart.Series devNull = new BubbleChart.Series("Nulle", bubblesList.getListNull());
 
-        ObservableList<BubbleChart.Series> bubbleChartData = FXCollections.observableArrayList(negative, devNull, positive);
-
-        BubbleChart chart = new BubbleChart(xAxis, yAxis/*, bubbleChartData*/);
-
-        root.getChildren().add(chart);
-        chart.getData().addAll(negative,devNull,positive);
+        // setup chart
+        bc.setTitle("Advanced BubbleChart");
+        xAxis.setLabel("X Axis");
+        yAxis.setLabel("Y Axis");
+        // add starting data
+        XYChart.Series<Number,Number> series1 = new XYChart.Series<Number,Number>();
+        series1.setName("Data Series 1");
+        series1.getData().addAll(bubblesList.getListNegative());
+        
+        XYChart.Series<Number,Number> series2 = new XYChart.Series<Number,Number>();
+        series2.setName("Data Series 2");
+        series2.getData().addAll(bubblesList.getListPositive());
+        
+        XYChart.Series<Number,Number> series3 = new XYChart.Series<Number,Number>();
+        series3.setName("Data Series 3");
+        series3.getData().addAll(bubblesList.getListNull());
+        
+        bc.getData().addAll(series1, series2,series3);
+        return bc;
     }
-    
-    @Override
-    public void start(Stage primaryStage) throws Exception {
+
+    @Override public void start(Stage primaryStage) throws Exception {
         init(primaryStage);
         primaryStage.show();
     }
+    public static void main(String[] args) { launch(args); }
 }
